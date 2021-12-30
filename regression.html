@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Machine Learning cơ bản</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #29bdff;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 15%;
+  height: 1000px; /* only for demonstration, should be removed */
+  background: #f8f8f8;
+  padding: 20px;
+}
+img{
+
+
+  width : 80%;
+  height : 70%;
+  /*border: 3px solid green;*/
+
+}
+.center {
+  margin: auto;
+  width: 50%;
+  /*border: 3px solid purple;*/
+  padding: 10px;
+  text-align: center;
+}
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 85%;
+  background-color: #f8f8f8;
+  height: auto; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+h1 {
+   color: #29bdff;
+}
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 5px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2 style="color: #29bdff">Machine Learning cơ bản</h2>
+<p>Trong blog này, mình sẽ tổng hợp toàn bộ kiến thức cơ bản về Học Máy</p>
+
+<section>
+  <nav>
+    <ul  style="color: #29bdff" >
+      <li ><a href="index.html">I. Giới thiệu Học Máy</a></li>
+      <li><a href="regression.html">II. Hồi quy</a></li>
+      <li><a href="#">III. Phân loại - Phân cụm</a></li>
+      <li><a href="#">IV. Neural Network</a></li>
+    </ul>
+  </nav>
+
+  <article>
+
+  </article>
+</section>
+
+<footer>
+  <p>Update sau nhé!!!!</p>
+</footer>
+
+</body>
+</html>
+
