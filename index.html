@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="img/Machine%20learning.png" type="image/x-icon">
+
 <title>Machine Learning cơ bản</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +28,7 @@ header {
 nav {
   float: left;
   width: 15%;
-  height: 1000px; /* only for demonstration, should be removed */
+  height: auto; /* only for demonstration, should be removed */
   background: #f8f8f8;
   padding: 20px;
 }
@@ -88,15 +90,18 @@ footer {
 <body>
 
 <h2 style="color: #29bdff">Machine Learning cơ bản</h2>
-<p>Trong blog này, mình sẽ tổng hợp toàn bộ kiến thức cơ bản về Học Máy</p>
+<p>Trong blog này, chúng ta sẽ tổng hợp toàn bộ kiến thức cơ bản về Học Máy</p>
 
 <section>
   <nav>
     <ul  style="color: #29bdff" >
-      <li ><a href="index.html">I. Giới thiệu Học Máy</a></li>
-      <li><a href="regression.html">II. Hồi quy</a></li>
-      <li><a href="#">III. Phân loại - Phân cụm</a></li>
-      <li><a href="#">IV. Neural Network</a></li>
+      <li><a href="index.html">I. Giới thiệu Học Máy</a></li><br>
+        <li>
+            <a href="#">II. Tiền xử lý dữ liệu</a>
+        </li><br>
+      <li><a href="regression.html">III. Hồi quy</a></li><br>
+      <li><a href="#">IV. Phân loại - Phân cụm</a></li><br>
+      <li><a href="#">V. Neural Network</a></li>
     </ul>
   </nav>
 
@@ -214,8 +219,42 @@ footer {
       <br>
       <p>Ví dụ trực quan về classification và clustering</p>
     </div>
+      <h4>7. Học ngoại tuyến và Học trực tuyến</h4>
+      <div>
+          <dt>Học ngoại tuyến:</dt>
+          <dd>- Hay còn được gọi học theo batch là cách học không có khả năng gia tăng, mô hình sẽ được huấn luyện với tất cả các dữ liệu khả dụng.</dd>
+          <dd>- Học như này sẽ tốt rất nhiều thời gian và tài nguyên tính toán và hệ thống hoàn tất mọi việc học khi triển khai vào thực tế</dd>
+          <dd>- Nếu như ta có thêm dữ liệu mới và muốn cập nhật thì ta cần phải đào tạo lại hệ thống mới bao gồm dữ liệu cũ và dữ liệu mới</dd>
+          <dd>- May mắn là hiện tại việc đào tạo và đánh giá hệ thống không quá khó khăn và hoàn toàn tự động</dd>
+          <dt>Học trực tuyến</dt>
+          <dd>- Nó khác với lại học ngoại tuyến đó là mô hình có khả năng gia tăng tuần tự truyền dữ liệu theo từng điểm hoặc lô nhỏ (mini-batch)</dd>
+          <dd>- Phương pháp còn phù hợp với tài nguyên tính toán bị giới hạn</dd>
+          <dd>- Các thuật toán học trực tuyến cũng có thể huấn luyện các hệ thống có dữ liệu khổng lồ mà không chứa hết trong bộ nhớ chính đó còn được gọi cái tên là: học out-of-core</dd>
+          <dd>- Tham số quan trọng của học trực tuyến đó tốc độ thích ứng dữ liệu đang thay đổi (learning rate)</dd>
+      </div>
     <h4>
-      7. Chia tập dữ liệu: Training set - Validation set - Test set
+        8. Model based learning và Instance based learning
+    </h4>
+      <div>
+          <dt>Instance-based learning</dt>
+          <dd>- Còn được gọi là học trên mẫu và chúng ta có thể hiểu cách đơn giản là học thuộc lòng các mẫu </dd>
+          <dd>- Để khai quát với các mẫu dữ liệu mới thì ta đi tính độ tương đồng so với dữ liệu mẫu đã học</dd>
+          <div class="center">
+              <img src="img/instance_based.jpg">
+              <br>
+              <p>Ví dụ về Instance-based learning</p>
+          </div>
+
+          <dt>Model-based learning</dt>
+          <dd>- Còn được gọi là học theo mô hình, xây dựng một mô hình từ dự liệu rồi dùng mô hình đó để đưa ra dự đoán đó là một cách khác để khái quát hóa dữ liệu </dd>
+          <div class = 'center'>
+              <img src="img/model_based.jpg">
+              <br>
+              <p>Ví dự về Model-based learning</p>
+          </div>
+      </div>
+    <h4>
+      9. Chia tập dữ liệu: Training set - Validation set - Test set
     </h4>
     <dt>Training set(Tập huấn luyện):</dt>
     <dd>- Là tập dữ liệu để chạy thuật toán học</dd>
@@ -238,7 +277,7 @@ footer {
     </div>
 
     <h4>
-      8. Overfitting - Underfitting
+      10. Overfitting - Underfitting
     </h4>
     <dt>Overfitting:</dt>
     <dd>- Là trường hợp quá khớp với tập dữ liệu trainning có nghĩa là những điểm nhiễu trong tập dữ liệu training cũng học,
@@ -258,7 +297,7 @@ footer {
       <p>Ví dụ trực quan về overfit và underfit.</p>
     </div>
     <h4>
-      9. Bias - Variance
+      11. Bias - Variance
     </h4>
       <div>
     <dt>Bias</dt>
@@ -281,7 +320,7 @@ footer {
     </div>
       </div>
       <h4>
-      10. Gradient Descent
+      12. Gradient Descent
     </h4>
       <div>
       <p>
@@ -364,7 +403,7 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
           </div>
           </div>
     <h4>
-      11. Loss function
+      13. Loss function
     </h4>
       <div>
           <p>
@@ -393,8 +432,17 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
           </dd>
           <a href="https://www.section.io/engineering-education/understanding-loss-functions-in-machine-learning/">Tham Khảo về Loss Function</a>
       </div>
+      <h4>
+          14. Các phương thức đánh giá hiệu suất mô hình.
+      </h4>
+      <div>
+          <dt>Regression</dt>
+          <dd>- Để đánh giá hiệu suất của mô hình hồi quy chúng ta không đưa ra độ chính của mô hình mà chúng ta cần tính toán chi phí lỗi giữa giá trị thực tế và giá trị dự đoán</dd>
+          <dt>Classification</dt>
+          <dd>- Để đánh giá của mô hình phân loại thì chúng ta có rất nhiều phương thức để đánh giá</dd>
 
 
+      </div>
 
 
   </article>
