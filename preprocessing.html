@@ -82,14 +82,14 @@ footer {
 <body>
 <div class="wrapper-masthead">
       <div class="container">
-        <header  class="masthead clearfix" style="padding: 20px;color: #f8f8f8 ; background-color: #29bdff">
+        <header  class="masthead clearfix" style="padding: 5px;color: #29bdff ; background-color: #29bdff;background-image:url(/img/background.png)">
           <div class="site-info">
             <h2 class="site-name" style="text-align: center">Machine Learning cơ bản</h2>
             <p style="text-align: center;">Trong blog này, chúng ta sẽ tổng hợp toàn bộ kiến thức cơ bản về Học Máy</p>
               <div style="text-align: right">
-                  <a href="https://www.facebook.com/nam.150720/">Contact</a> &nbsp;
-                  <a href="https://www.topcv.vn/xem-cv/AVNfC1QGVFkFAloCUgJfU1BRXVQGAQMKCA4BVAfe1b" target="_blank" >About</a> &nbsp;
-                  <a href="https://github.com/nam157">Github</a>
+                  <a href="https://www.facebook.com/nam.150720/" style="color: #29bdff">Contact</a> &nbsp;
+                  <a href="https://www.topcv.vn/xem-cv/AVNfC1QGVFkFAloCUgJfU1BRXVQGAQMKCA4BVAfe1b" target="_blank" style="color: #29bdff">About</a> &nbsp;
+                  <a href="https://github.com/nam157" style="color: #29bdff">Github</a>
 
               </div>
 
@@ -100,20 +100,37 @@ footer {
 
 <section>
   <nav>
+      <h2>Mục lục</h2>
     <ul  style="color: #29bdff" >
-        <li><a href="index.html">I. Giới thiệu Học Máy</a></li><br>
-        <li><a href="preprocessing.html">II. Tiền xử lý dữ liệu</a></li><br>
-        <li><a href="regression.html">III. Hồi quy</a></li><br>
-        <li><a href="classifi_cluster.html">IV. Phân loại - Phân cụm</a></li><br>
-        <li><a href="neural.html">V. Neural Network</a></li>
+        <li><a href="index.html" style="color: darkblue">I. Giới thiệu Học Máy</a></li><br>
+        <li><a href="preprocessing.html" style="color: darkblue">II. Tiền xử lý dữ liệu</a></li><br>
+        <li><a href="regression.html" style="color: darkblue">III. Hồi quy</a></li><br>
+        <li><a href="classifi_cluster.html" style="color: darkblue">IV. Phân loại - Phân cụm</a></li><br>
+        <li><a href="neural.html" style="color: darkblue">V. Neural Network</a></li>
     </ul>
+      <br><br>
+      <ul>
+          <h4>Gợi ý một số khóa học:</h4>
+          <ul>
+              <li style="color: darkblue">1. <a href="https://www.udemy.com/course/feature-engineering-for-machine-learning/" style="color: darkblue">Feature Engineering for Machine Learning</a> </li>
+              <li style="color: darkblue">2. <a href="https://www.udemy.com/course/feature-selection-for-machine-learning/" style="color: darkblue">Feature Selection for Machine Learning</a> </li>
+          </ul>
+      </ul>
   </nav>
 
   <article>
-      <h1>II. Tiền xử lý dữ liệu </h1>
-      <h4>1. Xử lý dữ liệu bị khuyết (Missing Data)</h4>
-      <div>
+      <h1 style="color: darkblue">II. Tiền xử lý dữ liệu </h1>
+      <div class="center">
+          <img src="img/sss.jpg" width="500">
+          <br>
+          <p>Feature Engineering for Machine Learning — Online Course — Image by the author</p>
+      </div>
 
+
+
+      <h4>1. Xử lý dữ liệu bị khuyết (Missing Data)</h4>
+
+      <div>
           <dt>Một số khái niệm về giả định dữ liệu:</dt>
           <dd>- Dữ liệu khuyết không phải ngẫu nhiên (MNAR), nếu có 1 cơ chế hoặc có 1 lý do nào đó khiến các giá trị bị khuyết được đưa vào tập dữ liệu.</dd>
           <dd>- Dữ liệu khuyết hoàn toàn ngẫu nhiên  (MCAR), dữ liệu khuyết hoàn toàn là ngẫu nhiên với xác suất khuyết là như nhau.</dd>
@@ -123,7 +140,12 @@ footer {
               <img src="img/missing-data09-28-2017_015846.jpg"  height="350" width="350">
           </div>
           <br>
+
           <dt>Các phương pháp xử lý dữ liệu bị khuyết:</dt>
+          <div class="center">
+          <img src="img/missing_data.jpg" width="650" height="350"><br>
+          <p>Các kỹ thuật gán missing data</p>
+      </div>
           <ul>
               <li>Phương pháp 1: Xóa đi giá trị khuyết</li>
               <ul>
@@ -191,6 +213,10 @@ footer {
           <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3668100/">Bài viết tham khảo</a>
       </div>
       <h4>2. Mã hóa dữ liệu (Categorical Data Encoding )</h4>
+      <div class="center">
+          <img src="img/1_mKdqHZfJUFGGszTAZRPTiw.png" width="650" height="350"><br>
+          <p>Categorical encoding techniques — Image by the author</p>
+      </div>
       <div>
           <ul>
               <li>Mã hóa onehot (One Hot Encoding)</li>
@@ -443,6 +469,7 @@ footer {
                     X_train_scaled = scaler_minmax.transform(scaler_mean.transform(X_train))
                     X_test_scaled = scaler_minmax.transform(scaler_mean.transform(X_test))
                 </code></pre>
+          <a href="https://github.com/nam157/courses_ML/blob/main/pre-processing/Outlier_scale/10.3%20Co%20gi%C3%A3n%20%C4%91%E1%BA%B7c%20tr%C6%B0ng.ipynb" style="color: darkblue">Source code tham khảo</a>
       </div>
       <br><br>
 
@@ -590,9 +617,7 @@ footer {
                   </div>
                   </ul>
           </ul>
-
-
-
+          <a href="https://github.com/nam157/courses_ML/tree/main/pre-processing/Feature%20selection" style="color: darkblue">Source code tham khảo</a>
       </div>
 
   </article>
