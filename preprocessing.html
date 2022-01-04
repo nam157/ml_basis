@@ -82,14 +82,14 @@ footer {
 <body>
 <div class="wrapper-masthead">
       <div class="container">
-        <header  class="masthead clearfix" style="padding: 5px;color: #29bdff ;background-image:url(img/background.png)">
+        <header  class="masthead clearfix" style="padding: 5px;color: #29bdff ; background-image:url(img/background.png)">
           <div class="site-info">
             <h2 class="site-name" style="text-align: center">Machine Learning cơ bản</h2>
             <p style="text-align: center;">Trong blog này, chúng ta sẽ tổng hợp toàn bộ kiến thức cơ bản về Học Máy</p>
               <div style="text-align: right">
-                  <a href="https://www.facebook.com/nam.150720/" style="color: #29bdff">Contact</a> &nbsp;
+                  <a href="https://www.facebook.com/nam.150720/" target="_blank" style="color: #29bdff">Contact</a> &nbsp;
                   <a href="https://www.topcv.vn/xem-cv/AVNfC1QGVFkFAloCUgJfU1BRXVQGAQMKCA4BVAfe1b" target="_blank" style="color: #29bdff">About</a> &nbsp;
-                  <a href="https://github.com/nam157" style="color: #29bdff">Github</a>
+                  <a href="https://github.com/nam157" target="_blank" style="color: #29bdff">Github</a>
 
               </div>
 
@@ -616,8 +616,100 @@ footer {
                   </pre>
                   </div>
                   </ul>
+              <a href="https://github.com/nam157/courses_ML/tree/main/pre-processing/Feature%20selection" style="color: darkblue">Source code tham khảo</a>
+              <li>Rời rạc hóa (Discretisation)</li>
+              <div class="center">
+                  <img src="img/discretization.png" width="600" height="300"><br>
+                  <p>Discretization of variables</p>
+              </div>
+              <ul>
+                  <li>Rời rạc hóa là tiến trình chuyển đổi dữ liên tục sang dữ liệu rời rạc bằng cách tạo 1 tập hợp các khoảng liên tục trải dài trong phạm vi giá trị của biến</li>
+                  <li>Rời rạc hóa còn được gọi là binning, trong đó mỗi khoảng này cũng được gọi là bin. Rời rạc hóa có thể cải thiện chêch lệch giá trị của biến, cũng như xử lý outlier. Chúng ta sẽ tiếp cận với 2 phương pháp: Supervised và Unsupervised  </li>
+                  <li>Rời rạc hóa không có giám sát</li>
+                  <ul>
+                      <li>Rời rạc hóa sử dụng khoảng cách bằng nhau</li>
+                      <ul>
+                          <li>Chia phạm vị giá trị có thể của các biến thành N bin hoặc các khoảng</li>
+                          <li>Các khoảng/bin này sẽ có khoảng cách bằng nhau. Nó được thực hiện bằng cách lấy giá trị lớn nhất trừ cho giá trị nhỏ nhất rồi chia có khoảng mình mong muốn</li>
+                          <li>Chúng ta sẽ sắp xếp các quan sát thuộc các bin đó, tuy nhiên cần chú ý nếu như là phân phối lệch thì không thể cải thiện lan truyền giá trị </li>
+                      </ul>
+                      <div>
+                          <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                            <code class="language-python" style="font-family: Consolas;text-align: left">
+                                #Gọi thư viện feature_engine
+                                from feature_engine.discretisation import EqualWidthDiscretiser
+                                #Chọn 8 khoảng bằng nhau và lựa chọn biến để rời rạc hóa
+                                disc = EqualWidthDiscretiser(bins=8, variables = ['age', 'fare'])
+                                disc.fit(X_train)
+                            </code>
+                          </pre>
+                      </div>
+                      <li>Rời rạc hóa sử dụng tần số bằng nhau</li>
+                      <ul>
+                          <li>Chia các phạm vi các giá trị có thể của biến thành một số khoảng mà mỗi khoảng lại chứa số quan sát xấp xỉ nhau, để tính ranh giới cho từng khoảng này, chúng ta sẽ tính các quantile của biến</li>
+                          <li>Kỹ thuật này giúp cải thiện chêch lệch giá trị và nó cũng xử lý outlier khi chúng ta được phân bổ vào vùng đầu hoặc cuối.</li>
+                          <li>Việc cải thiện chêch lệch giá trị sẽ giúp các mô hình tuyến tính giả định chêch lệch đều hơn, phân phối các giá trị của biến chuẩn hơn.</li>
+                      </ul>
+                      <div>
+                          <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                            <code class="language-python" style="font-family: Consolas;text-align: left">
+                                #Gọi thư viện feature_engine
+                                from feature_engine.discretisation import EqualFrequencyDiscretiser
+                                #Chọn 10 khoảng theo quan sát và lựa chọn biến để rời rạc hóa
+                                disc = EqualFrequencyDiscretiser(q=10, variables = ['age', 'fare'])
+                                disc.fit(X_train)
+                            </code>
+                          </pre>
+                      </div>
+                      <li>Rời hóa sử dụng K-means</li>
+                      <ul>
+                          <li>Rời rạc hóa sử dụng K-means gồm việc áp dụng phân cụm K-means vào biến liên tục để thu được các cụm khác nhau, mỗi cụm tương ứng với một bin mà chúng ta sẽ sắp xếp các giá trị của biến. </li>
+                          <li>Rời rạc hóa sử dụng K-means không cải thiện chênh lệch giá trị. Nó giúp xử lý outlier, mặc dù outlier có thể có ảnh hưởng đến vị trí tâm của các cụm. </li>
+                      </ul>
+                      <div>
+                          <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                            <code class="language-python" style="font-family: Consolas;text-align: left">
+                                #Gọi thư viện feature_engine
+                                from feature_engine.discretisation import KBinsDiscretizer
+                                disc = KBinsDiscretizer(n_bins=4, encode='ordinal', strategy='kmeans')
+                                disc.fit(X_train[['age', 'fare']])
+                            </code>
+                          </pre>
+                      </div>
+                  </ul>
+                  <li>Rời rạc hóa có giám sát</li>
+                  <ul>
+                      <li>Rời rạc hóa sử dụng Decision tree</li>
+                      <ul>
+                          <li>Chúng ta sẽ sử dụng DT để xác định k bin tối ưu mà chúng ta cần xắp xếp các giá trị biến. Khi DT đưa ra quyết định , nó sẽ chỉ định một quan sát cho một trong n lá cuối của DT. Vì DT có số lượng xác định các lá hoặc nút kết thúc nên nó sẽ biến đổi một biến liên tục thành một đầu ra rời rạc.</li>
+                          <li>DT giúp chúng ta xử lý outlier. Kỹ thuật này cũng hữu ích với các mô hình tuyến tính vì nó tránh việc phải thực hiện hai bước như chúng ta đã làm trước đây, khi rời rạc hóa biến trước tiên rồi sau đó mới mã hóa biến để có được mối quan hệ đơn điệu (sử dụng DT giúp chúng ta có thể làm hai việc cùng một lúc).</li>
+                      </ul>
+                      <div>
+                          <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                            <code class="language-python" style="font-family: Consolas;text-align: left">
+                                from feature_engine.discretisation import DecisionTreeDiscretiser
+                                #Lựa chọn tham số: cv là kiểm định chéo, variables có biến rời rạc hóa, param_grid các tham số cần tối ưu
+                                treeDisc = DecisionTreeDiscretiser(cv=10, scoring='accuracy',
+                                                                   variables=['age', 'fare'],
+                                                                   regression=False,
+                                                                   param_grid={'max_depth': [1, 2, 3],
+                                                                              'min_samples_leaf':[10,4]})
+
+                                treeDisc.fit(X_train, y_train)
+                            </code>
+                          </pre>
+                      </div>
+                  </ul>
+
+
+
+
+
+              </ul>
           </ul>
-          <a href="https://github.com/nam157/courses_ML/tree/main/pre-processing/Feature%20selection" style="color: darkblue">Source code tham khảo</a>
+
+
+
       </div>
 
   </article>
