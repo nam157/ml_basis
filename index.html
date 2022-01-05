@@ -95,7 +95,7 @@ footer {
         <header  class="masthead clearfix" style="padding: 5px;color: #29bdff ;background-image:url(img/background.png)">
           <div class="site-info">
             <h2 class="site-name" style="text-align: center">Machine Learning cơ bản</h2>
-            <p style="text-align: center;">Trong blog này, chúng ta sẽ tổng hợp toàn bộ kiến thức cơ bản về Học Máy</p>
+            <p style="text-align: center; color: #29bdff;"> Trong blog này, chúng ta sẽ tổng hợp toàn bộ kiến thức cơ bản về Học Máy</p>
               <div style="text-align: right">
 
                   <a href="https://www.facebook.com/nam.150720/" target="_blank" style="color: #29bdff">Contact</a> &nbsp;
@@ -123,7 +123,7 @@ footer {
       <ul>
           <h4>Gợi ý một số khóa học:</h4>
           <ul>
-              <li  style="color: darkblue">1. <a href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+MLP301x_1.1-A_EN+2020_T6/about"  style="color: darkblue">FUNiX: MLP301x_1.2-A_VN Giới thiệu về Học máy</a> </li>
+              <li  style="color: darkblue">1. <a href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+MLP301x_1.1-A_EN+2020_T6/about"  style="color: darkblue">FUNiX: Giới thiệu về Học máy</a> </li>
               <li  style="color: darkblue">2. <a href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+MLP302x_01_EN+2020_T1/about"  style="color: darkblue">Machine Learning: Regression</a> </li>
               <li  style="color: darkblue">3. <a href="https://www.udemy.com/course/machinelearning/"  style="color: darkblue">Machine Learning A-Z™: Hands-On Python & R In Data Science</a> </li>
               <li  style="color: darkblue">4. <a href="https://www.coursera.org/learn/machine-learning"  style="color: darkblue">Machine Learning Andrew Ng</a></li>
@@ -341,7 +341,7 @@ footer {
                   </ul>
                   <li> Early stopping</li>
                   <div class="center">
-                      <img src="img/img_eary.jpg"><br>
+                      <img src="img/img_eary.jpg" width="80%" height="50%"><br>
                       <p>Minh họa về early stopping</p>
                   </div>
                   <ul>
@@ -365,11 +365,32 @@ kết quả bài làm trên phần thứ hai là khả quan, ta có thể tự t
                   <ul>
                       <li>Trong nhiều trường hợp, chúng ta có rất hạn chế số lượng dữ liệu để xây dựng mô hình,chúng ta cần đặt câu hỏi chia tập dữ liệu thể nào cho phù hơp. Nếu lấy quá nhiều dữ liệu trong training set ra làm dữ liệu validation, phần dữ liệu còn lại của training set là không đủ để xây dựng mô hình. Lúc này, validation set phải thật nhỏ để giữ được lượng dữ liệu cho training đủ lớn. Tuy nhiên, một vấn đề khác nảy sinh. Khi validation set quá nhỏ, hiện tượng overfitting lại có thể xảy ra với training set còn lại.</li>
                       <li>Vì vậy ra đời cross-validation là cải tiển của validation </li>
-                  </ul>
+                      <li>Cách thức làm việc của cross-validation đó là nó chia tập traning ra k tập con không giao nhau và kích thước bằng nhau. Tại mỗi vào traning thì một trong số k tập đó được lấy ra làm validation, và mô hình sẽ được huấn luyện trên k-1 tập còn lại , như vậy chúng ta có thể đánh giá một tập dữ nhiều mẫu k và lựa chọn chia sao tốt nhất</li>
+                      <li>Bằng cách lấy trung bình các lần kiểm định, ta sẽ có một thước đo chính xác hơn nhiều cho chất lượng của mô hình</li>
+                      <li>Nhược điểm: số lượng mô hình huấn luyện tỷ lệ thuận với k tập, trong thực tế ta xây dựng nhiều bài toán lớn thì lượng tham số xác định rất lớn, khoảng giá trị rộng hơn điều này làm cho mô hình khó khả thi</li>
+                    </ul>
+                  <div class="center">
+                    <img src="img/cross_Validation.png" width="80%" height="50%"><br>
+                    <p>Ảnh minh họa về cross-validation</p>
+                  </div>
               </ul>
               <li>Dropout</li>
+              <ul>
+                <li>Dropout thường được sử dụng trong các bài toán về mạng nơ-ron, công việc nó làm đó là loại ngẫu nhiên các đơn vị ra khỏi mạng nơ-ron, sẽ như vậy ở mỗi vòng lặp cứ thế ta sẽ làm với mạng nơ-ron nhỏ hơn, vậy nên sử dụng mạng nơ-ron nhỏ hơn như vậy giống tiêu chuẩn trong mạng nơ-ron</li>
+                <li>Không kể chỉ ra nó tác động tương tự L2-norm mà Dropout còn có thể keep_prob khác ở mỗi lớp, dropout đầu vào phải gần với 1 vì chúng ta không muốn loại quá nhiều đặc trưng (Mình sẽ giải thích kỹ hơn ở phần neural network)</li>
+                <li>Nếu sợ một số lớp bị quá khớp hơn mấy lớp khác ta có thể cho giá trị keep_prob thấp hơn vài lớp, nếu làm như vậy thì khó kiểm định chéo</li>
+              </ul>
+              <div class="center">
+                <img src="img/dropout.png" width="80%" height="50%"><br>
+                <p>Hình ảnh minh họa về Dropout</p>
+              </div>
               <li>Data Augmentation</li>
-              <li>Nén mô hình</li>
+              <ul>
+                <li>Đơn giản là bạn muốn thêm dữ liệu vào mô hình để giảm bớt trình trạng overfit thì phương pháp này sẽ giúp bạn, cách thức thực hiện đó là bằng cách lấy trung bình các lần kiểm định, ta sẽ có một thước
+                  đo chính xác hơn nhiều cho chất lượng của mô hình</li>
+                <li>Dữ liệu mới thu được thì ko được tốt như dữ liệu độc lập thực tế, cần dùng thêm kĩ thuật tiêu chuẩn</li>
+              </ul>
+            
           </ul>
       </div>
     <h4>
@@ -489,26 +510,46 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
               Các hàm tổn thất đóng một vai trò quan trọng trong bất kỳ mô hình thống kê nào - chúng xác định một mục tiêu mà hiệu suất của mô hình được đánh giá dựa trên và các tham số mà mô hình học được được xác định bằng cách giảm thiểu một hàm tổn thất đã chọn. Các hàm tổn thất xác định thế nào là một dự đoán tốt và không. Nói tóm lại, việc chọn đúng hàm tổn thất sẽ quyết định mức độ ổn định của công cụ ước tính của bạn.
           </p>
           <dt>Loss functions for regression</dt>
-          <dd>
-              - Mean Absolute Error (MAE)
-          </dd>
-          <dd>
-              - Mean Squared Error (MSE)
-          </dd>
-          <dd>
-              - Mean Bias Error (MBE)
-          </dd>
+          <p>Hồi quy liên quan đến việc dự đoán một giá trị cụ thể có bản chất liên tục. Ước tính giá nhà hoặc dự đoán giá cổ phiếu là những ví dụ về hồi quy bởi vì người ta hướng tới việc xây dựng một mô hình dự đoán một số lượng có giá trị thực.</p>
+          <ul>
+            <li>Mean Squared Error (MSE)</li>
+            <ul>
+              <li>Công thức:<br> <img src="img/mse.svg"></li>
+              <li>Là một phép đo trung bình bình phương giữa giá trị dự đoán và giá trị thực tế. Nó chỉ quan tâm đến mức độ lỗi trung bình bất kể hướng của chúng</li>
+              <li>Thêm vào đó MSE giúp tính toán gradient hiệu quả hơn</li>
+              <li>Kết quả luôn dương, thêm vào đó khi mắc sai lầm thì thì hàm chi phí lỗi nặng hơn bởi bình phương</li>
+              <li>Ưu điểm: MSE rất tốt trong việc đảm bảo model hoạt động tốt và không dự đoán outlier với chi phí lớn. Vì ta sẽ đặt trọng số lớn hơn vào các giá trị outlier để giảm chi phí xuống</li>
+              <li>Nhược điểm: Nếu mô hình đưa ra 1 dự đoán rất tệ thì chi phí lỗi bình phương lên rất lớn, nó rất nhạy cảm outlier, tuy nhiên trong thực tế chúng ta không quan tâm mấy đến outlier mà hướng tới một mô hình toàn diện hoạt động đủ tốt với đa số</li>
+            </ul>
+            <li>Mean absolute error</li>
+            <ul>
+              <li>Công thức: <br><img src="img/mae.svg">  </li>
+              <li>Là 1 phép đo lường tổng độ lệch tuyệt đối giữa giá trị dự đoán và giá trị thực tế, cũng giống như MSE, nó đo độ lớn lớn không cần xem xét hướng</li>
+              <li>MAE phức tạp hơn cần lập trình tuyến tính thì mới dễ dàng tìm được gradient, và MAE mạnh mẽ với các điểm outlier vì nó không bình phương.</li>
+              <li>Ưu điểm: Chúng ta lấy giá trị tuyết đối, tất cả sai số sẽ được tính theo 1 thang đo tuyến tính, do đó không giống như MSE, không đặt quá nhiều trọng số vào outlier để giảm thang đó chung</li>
+              <li>Nhược điểm: Nếu chúng ta quan tâm tới các giá trị outlier thì MAE sẽ không hiệu quả. Nhưng khi các điểm ngoại lai cực hiếm gặp (như trong đường cong hình chuông), độ đo RMSE lại tốt hơn và được sử dụng phổ biến hơn.</li>
+
+            </ul>
+          </ul>
+          
 
           <dt>Loss functions for classification</dt>
-          <dd>
-              - Binary Cross Entropy Loss
-          </dd>
-          <dd>
-              - Categorical Cross Entropy Loss
-          </dd>
-          <dd>
-              - Hinge Loss
-          </dd>
+          <p>Các vấn đề phân loại liên quan đến việc dự đoán kết quả đầu ra của lớp rời rạc. Nó liên quan đến việc phân chia tập dữ liệu thành các lớp khác nhau và duy nhất dựa trên các tham số khác nhau để một bản ghi mới và chưa thấy có thể được đưa vào một trong các lớp. VD: Thư có thể được phân loại là thư rác hoặc không phải thư rác. Chúng ta hãy xem xét các hàm mất mát có thể được sử dụng cho các bài toán phân loại. </p>
+          <ul>
+            <li>Binary Cross Entropy Loss</li>
+            <ul>
+              <li>Là hàm chi phí hay được sử dụng trong vấn đề phân loại nhị phân, Entropy là thước đo ngẫu nhiên trong thông tin đang được xử lý, và entropy chéo là thước đo sự khác biệt của độ ngẫu nhiên giữa 2 biến ngẫu nhiên </li>
+              <li>Nó so sánh từng xác suất được dự đoán với kết quả đầu ra thực tế của lớp có thể là 1 hoặc 0, Sau đó, nó tính toán điểm phạt các xác suất dựa trên khoảng cách so với giá trị kỳ vọng. Điều này, có nghĩa là gần hay xa giá trị thực tế</li>
+              <li>Công thức: <br> <img src="img/entropy_loss_0_1.svg"> </li>
+            </ul>
+            <li>Categorical cross entropy loss</li>
+            <ul>
+              <li>Hàm phân loại chéo là một hàm mất mát được sử dụng trong các nhiệm vụ phân loại nhiều lớp. Đây là những nhiệm vụ trong đó ví dụ chỉ có thể thuộc về một trong số nhiều danh mục có thể có và mô hình phải quyết định loại nào.</li>
+              <li>Công thức: <br><img src="img/as.svg"> </li>
+            </ul>
+            
+          </ul>
+           
           <a href="https://www.section.io/engineering-education/understanding-loss-functions-in-machine-learning/">Tham Khảo về Loss Function</a>
       </div>
       <h4>
@@ -536,12 +577,12 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
                   <li>R2 là phép so sánh giữa tổng phần dư của các bình phương (SSres) với tổng bình phương (SStot). </li>
                   <li>SStot được tính toán bằng tổng bình phương của khoảng cách vuông góc giữa các điểm dữ liệu và đường trung bình</li>
                   <div class = 'center'>
-                      <img src="img/average-fitted-model1.png" width="500" height="350">
+                      <img src="img/average-fitted-model1.png" width="80%" height="50%">
                   </div>
 
                   <li>SSres được tính bằng tổng bình phương của khoảng cách vuông góc giữa các điểm dữ liệu và đường thẳng vừa vặn nhất</li>
                   <div class = 'center'>
-                      <img src="img/best-fitted-model.png" width="500" height="350">
+                      <img src="img/best-fitted-model.png" width="80%" height="50%">
                   </div>
                   <li>Công thức tổng quát: <br><br> <img src="img/CodeCogsEqn2.svg"> </li>
               </ul>
@@ -554,13 +595,13 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
               <ul>
                   <li>nó là một phép đo hiệu suất cho vấn đề phân loại học máy trong đó đầu ra có thể là hai hoặc nhiều lớp. Đó là một bảng với 4 sự kết hợp khác nhau của các giá trị dự đoán và thực tế.</li>
                   <div class="center">
-                      <img src="img/confused_matrix.jpeg" width="500" height="322">
+                      <img src="img/confused_matrix.jpeg"width="80%" height="50%">
                       <br>
                       <p>Ma trận nhầm lẫn (Image courtesy: My Photoshopped Collection)</p>
                   </div>
                   <li>Chúng ta sẽ tìm hiểu các thuật ngữ TP,FP,TN,FN</li>
                   <div class="center">
-                      <img src="img/matran_nhamlan.jpeg" width = '500' height="300"><br>
+                      <img src="img/matran_nhamlan.jpeg" width="80%" height="50%"><br>
                       <p>Ma trận nhầm lẫn (Image courtesy: My Photoshopped Collection)</p>
                   </div>
                   <li>TP: là bạn dự đoán dương tính và thực tế đúng - Bạn dự đoán người nữ đó mang thai - sự thật là đúng người đó có mạng thai</li>
@@ -578,7 +619,7 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
               <ul>
                   <li>Từ bảng ma trận nhầm lẫn chúng ta tính toán precision, và chúng ta có thể hơn đơn giản là từ các lớp mình dự đoán là dương tính thì có bao nhiêu là lớp dương tính thực sự (How many ?)</li>
                   <li>Precision càng lớn thì độ chính xác của điểm cần tìm càng cao, mục tiêu lý tưởng là precision là 1</li>
-                  <li>Tính toán Precision được tính như sau: <br> <img src="img/precision.svg"></li>
+                  <li>Tính toán Precision được tính như sau: <br> <img src="img/precision.svg" ></li>
               </ul>
               <li>Recall</li>
               <ul>
@@ -600,22 +641,22 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
                   <li>Để vẽ được đường cong ROC: nó dựa vào 2 trục đó TPR và FPR</li>
                   <li>Một số ví dụ về ngưỡng: </li>
                   <div class="center">
-                      <img src="img/threshold_1.png"><br>
+                      <img src="img/threshold_1.png" width="80%" height="70%"><br>
                       <p>AUC = 1</p>
                   </div>
                   <p>AUC = 1 Đây là một tình huống lý tưởng. Khi hai đường cong không trùng nhau có nghĩa là mô hình có một thước đo lý tưởng về khả năng phân tách. Nó hoàn toàn có thể phân biệt giữa lớp tích cực và lớp tiêu cực.</p>
                   <div class="center">
-                      <img src="img/threshold_0_7.png"><br>
+                      <img src="img/threshold_0_7.png" width="80%" height="70%"><br>
                       <p>AUC = 0.7</p>
                   </div>
                   <p>Khi hai bản phân phối chồng lên nhau, chúng tôi đưa ra lỗi loại 1 và loại 2. Tùy thuộc vào ngưỡng, chúng tôi có thể giảm thiểu hoặc tối đa hóa chúng. Khi AUC là 0,7, có nghĩa là có 70% cơ hội để mô hình có thể phân biệt giữa lớp tích cực và lớp tiêu cực.</p>
                    <div class="center">
-                      <img src="img/threshold_0_5.png"><br>
+                      <img src="img/threshold_0_5.png" width="80%" height="70%" ><br>
                       <p>AUC = 0.5</p>
                   </div>
                   <p>Đây là tình huống tồi tệ nhất. Khi AUC xấp xỉ 0,5, mô hình không có khả năng phân biệt để phân biệt giữa lớp tích cực và lớp tiêu cực.</p>
                   <div class="center">
-                      <img src="img/threshold_0.png"><br>
+                      <img src="img/threshold_0.png" width="80%" height="70%"><br>
                       <p>AUC = 0</p>
                   </div>
                   <p>Khi AUC gần bằng 0, mô hình thực sự đang chuyển động qua lại các lớp. Nó có nghĩa là mô hình đang dự đoán một lớp tiêu cực là một lớp tích cực và ngược lại.</p>
@@ -631,8 +672,8 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
   </article>
 </section>
 
-<footer>
-  <p>Update sau nhé!!!!</p>
+<footer style="background-color: #3a97c2">
+  <marquee width="50%">Ở chương này mình đã trình bày các kiến thức nền tảng về Machine Learning, mặc dù chưa đầy đủ hết về mọi khía cạnh nhưng cũng giúp cho bạn hiểu rõ về ý tưởng chung. Các bạn cứ từng bước một mới đi sâu được nhé, mọi thắc mắc gì hoặc thiếu sót gì bạn có thể contact với tôi </marquee>
 </footer>
 
 </body>
