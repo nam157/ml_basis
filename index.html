@@ -110,7 +110,8 @@ footer {
     </div>
 
 <section>
-  <nav>
+  <nav  data-toggle="wy-nav-shift" class="wy-nav-side">
+   
       <h2>Mục lục</h2>
     <ul>
         <li><a href="index.html"  style="color: darkblue">I. Giới thiệu Học Máy</a></li><br>
@@ -119,6 +120,8 @@ footer {
         <li><a href="classifi_cluster.html"  style="color: darkblue">IV. Phân loại - Phân cụm</a></li><br>
         <li><a href="neural.html"  style="color: darkblue">V. Neural Network</a></li>
     </ul>
+    
+
       <br><br>
       <ul>
           <h4>Gợi ý một số khóa học:</h4>
@@ -339,6 +342,50 @@ footer {
                       <li>Như chúng ta đã biết l1-norm thường ít ảnh hưởng với nhiêu hơn l2-norm, tuy nhiên, l1-norm hơi khó khăn với đạo hàm vì giá trị tuyệt đối không đạo hàm ở 0 làm cho việc tìm nghiệm lâu hơn</li>
                       <li>Phần này, mình sẽ nói cụ thể ở chương 3 Hồi quy</li>
                   </ul>
+                  <br>
+                  <span>Code</span>
+                  <div>
+                    <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                      <code class="language-python" style="font-family: Consolas;text-align: left">
+            def update_weights_l2_norm(X,y,w,step_size,num_iters,l2_penlaty):  #Cập nhật trọng số khi thêm l2-norm vào.
+                  costs = []
+                  for _ in range(num_iters):
+                  y_pr = predict(X,w)
+                  error = y_pr - y
+                  for i in range(len(w)):
+                      if i == 0:   #Khi lambda = 0 thì bài toán trở bài linear regression
+                          devivative  = feature_devivative(X[:,i],w[i],l2_penlaty,error,True)
+                      else:        #Khi lambda != 0 thì toán trở thành linear ridge
+                          devivative  = feature_devivative(X[:,i],w[i],l2_penlaty,error,False)
+                      w[i] = w[i] - step_size * devivative
+                      cost = loss_function(X,y,w,l2_penlaty)
+                  costs.append(cost)
+                  return w,costs
+                      </code>
+                    </pre>
+              </div>
+              <span>Code</span>
+                  <div>
+                    <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                      <code class="language-python" style="font-family: Consolas;text-align: left">
+                def update_weights_l1_norm(feature_matrix, output, initial_weights, l1_penalty, tolerance):
+                        m,n = feature_matrix.shape
+                        weights = np.array(initial_weights.copy())
+                        converged = False
+                        while not converged:
+                            change = []
+                            for i in range(n):
+                                old_weights_i = weights[i]
+                                weights[i] = lasso_step(i,feature_matrix,output,weights,l1_penalty)
+                                change_weight = abs(old_weights_i - weights[i])
+                                change.append(change_weight)
+                            if max(change) < tolerance:
+                                converged = True
+                        return weights
+                      
+                      </code>
+                    </pre>
+              </div>
                   <li> Early stopping</li>
                   <div class="center">
                       <img src="img/img_eary.jpg" width="80%" height="50%"><br>
@@ -373,6 +420,26 @@ kết quả bài làm trên phần thứ hai là khả quan, ta có thể tự t
                     <img src="img/cross_Validation.png" width="80%" height="50%"><br>
                     <p>Ảnh minh họa về cross-validation</p>
                   </div>
+                  <span>Code</span>
+                  <div>
+                    <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                      <code class="language-python" style="font-family: Consolas;text-align: left">
+                        from sklearn.model_selection import cross_val_score
+                        def kford(model,X,y):
+                            #K tập ở đây được chia thành 10 tập
+                            cv = KFold(10, shuffle=True, random_state=0).get_n_splits(X.values)
+
+                            scores = cross_val_score(
+                                model, X, y,scoring="neg_mean_squared_error", cv=cv)
+
+                            rmse_scores = np.sqrt(-scores)
+
+                            print("Scores:", rmse_scores)
+                            print("Mean:", rmse_scores.mean())
+                            print("Standard deviation:", rmse_scores.std())      
+                      </code>
+                    </pre>
+              </div>
               </ul>
               <li>Dropout</li>
               <ul>
@@ -443,6 +510,24 @@ chi phí (như MSE), cho đến khi thuật toán hội tụ tại điểm cực
               <br>
               <p>Hình minh họa learning rate trong GD</p>
           </div>
+          <span>Code</span>
+            <div>
+              <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                <code class="language-python" style="font-family: Consolas;text-align: left">
+                  def update_weight(X,y,w,step_size,num_iters):
+                        costs = []                                             #Lưu lại các chi phí
+                        for _ in range(num_iters):                             #Lặp số vòng lặp chỉ định
+                            y_pr = predict(X,w)                                #Đưa ra dự đoán
+                            error = y_pr - y                                   #Tính chí phí
+                            for i in range(len(w)):                            #Lặp qua các trọng số
+                                devivative = feature_derivative(error,X[:,i])  #Đạo hàm
+                                w[i] = w[i] - step_size * devivative           #áp dụng theo công thức cập nhật trọng số GD
+                            cost = loss_function(X,y,w)
+                            costs.append(cost)  
+                        return w,costs                                         #Trả về trọng số đã được cập nhất và chi phí
+                </code>
+              </pre>
+        </div>
           <p>
               - Hàm lồi: nghĩa là đoạn thẳng nối hai điểm bất kỳ trên đường cong không bao giờ cắt đường cong đó và hàm lồi là 1 hàm liên tục. <br>
               - Hàm lồi rất tuyệt vời trong GD vì  việc đồ thị không có điểm cực tiểu mà chỉ có một giá trị nhỏ nhất vì vậy việc hội tụ sẽ nhanh hơn.<br>
@@ -521,6 +606,15 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
               <li>Ưu điểm: MSE rất tốt trong việc đảm bảo model hoạt động tốt và không dự đoán outlier với chi phí lớn. Vì ta sẽ đặt trọng số lớn hơn vào các giá trị outlier để giảm chi phí xuống</li>
               <li>Nhược điểm: Nếu mô hình đưa ra 1 dự đoán rất tệ thì chi phí lỗi bình phương lên rất lớn, nó rất nhạy cảm outlier, tuy nhiên trong thực tế chúng ta không quan tâm mấy đến outlier mà hướng tới một mô hình toàn diện hoạt động đủ tốt với đa số</li>
             </ul>
+            <span>Code</span>
+            <div>
+              <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                <code class="language-python" style="font-family: Consolas;text-align: left">
+                  def MSE(yHat, y):
+                      return np.sum((yHat - y)**2) / y.size
+                </code>
+              </pre>
+        </div>
             <li>Mean absolute error</li>
             <ul>
               <li>Công thức: <br><img src="img/mae.svg">  </li>
@@ -530,6 +624,15 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
               <li>Nhược điểm: Nếu chúng ta quan tâm tới các giá trị outlier thì MAE sẽ không hiệu quả. Nhưng khi các điểm ngoại lai cực hiếm gặp (như trong đường cong hình chuông), độ đo RMSE lại tốt hơn và được sử dụng phổ biến hơn.</li>
 
             </ul>
+            <span>Code</span>
+            <div>
+              <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                <code class="language-python" style="font-family: Consolas;text-align: left">
+                  def mae(yHat, y):
+                      return np.sum(np.absolute(yHat - y)) / y.size
+                </code>
+              </pre>
+        </div>
           </ul>
           
 
@@ -542,6 +645,18 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
               <li>Nó so sánh từng xác suất được dự đoán với kết quả đầu ra thực tế của lớp có thể là 1 hoặc 0, Sau đó, nó tính toán điểm phạt các xác suất dựa trên khoảng cách so với giá trị kỳ vọng. Điều này, có nghĩa là gần hay xa giá trị thực tế</li>
               <li>Công thức: <br> <img src="img/entropy_loss_0_1.svg"> </li>
             </ul>
+            <span>Code:</span>
+            <div>
+              <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                <code class="language-python" style="font-family: Consolas;text-align: left">
+                  def CrossEntropy(yHat, y):
+                      if y == 1:
+                        return -log(yHat)
+                      else:
+                        return -log(1 - yHat)
+                </code>
+              </pre>
+        </div>
             <li>Categorical cross entropy loss</li>
             <ul>
               <li>Hàm phân loại chéo là một hàm mất mát được sử dụng trong các nhiệm vụ phân loại nhiều lớp. Đây là những nhiệm vụ trong đó ví dụ chỉ có thể thuộc về một trong số nhiều danh mục có thể có và mô hình phải quyết định loại nào.</li>
@@ -673,7 +788,7 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
 </section>
 
 <footer style="background-color: #3a97c2">
-  <marquee width="50%">Ở chương này mình đã trình bày các kiến thức nền tảng về Machine Learning, mặc dù chưa đầy đủ hết về mọi khía cạnh nhưng cũng giúp cho bạn hiểu rõ về ý tưởng chung. Các bạn cứ từng bước một mới đi sâu được nhé, mọi thắc mắc gì hoặc thiếu sót gì bạn có thể contact với tôi </marquee>
+  <marquee width="50%">Ở chương này mình đã trình bày các kiến thức nền tảng về Machine Learning, mặc dù chưa đầy đủ hết về mọi khía cạnh nhưng cũng giúp cho bạn hiểu rõ về ý tưởng chung. Các bạn cứ từng bước một mới đi sâu được nhé, mọi thắc mắc gì hoặc thiếu sót gì bạn có thể liên hệ với tôi </marquee>
 </footer>
 
 </body>
