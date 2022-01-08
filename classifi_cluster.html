@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <link rel="icon" href="img/Machine%20learning.png" type="image/x-icon">
+    <link href="source/prism.css" rel="stylesheet"/>
+
 <title>Machine Learning cơ bản</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -80,6 +82,7 @@ footer {
 </style>
 </head>
 <body>
+  <script src="source/prism.js"></script>
   <div class="wrapper-masthead">
     <div class="container">
       <header  class="masthead clearfix" style="padding: 5px;color: #29bdff ; background-image:url(img/background.png)">
@@ -108,6 +111,7 @@ footer {
       <li><a href="classifi_cluster.html" style="color: darkblue">IV. Phân loại - Phân cụm</a></li><br>
       <li><a href="neural.html" style="color: darkblue">V. Neural Network</a></li>
     </ul>
+    <hr>
     <h4>Gợi ý một số khóa học</h4>
       <ul>
               <li  style="color: darkblue">1. <a href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+MLP301x_1.1-A_EN+2020_T6/about"  style="color: darkblue"  target="_blank">FUNiX: Giới thiệu về Học máy</a> </li><br>
@@ -118,6 +122,7 @@ footer {
               <li style="color: darkblue" >5. <a href="https://www.coursera.org/learn/ml-regression" style="color: darkblue"  target="_blank">Machine Learning: Regression</a></li><br>
       </ul>
       <ul>
+        <hr>
         <h4>Gợi ý một số cuốn sách</h4>
         <ul>
           <li><a href="https://machinelearningcoban.com/about/" style="color: darkblue" >1. Machine learning cơ bản (Vũ Hữu Tiệp)</a></li><br>
@@ -201,7 +206,7 @@ footer {
       </ul><br>
       <span>Code</span>
                   <div>
-                    <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                    <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
                       <code class="language-python" style="font-family: Consolas;text-align: left">
                         #Import các thư viện liên quan
                         import numpy as np
@@ -307,7 +312,7 @@ footer {
       </ul>
       <span>Code</span>
       <div>
-        <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+        <pre style="color: rgb(2, 2, 2); padding: 1px;width: auto; ">
           <code class="language-python" style="font-family: Consolas;text-align: left">
             
             def SVM(x,y):
@@ -384,7 +389,7 @@ footer {
       </ul>
       <span>Code</span>
       <div>
-        <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+        <pre style="color: rgb(2, 2, 2); padding: 1px;width: auto; ">
           <code class="language-python" style="font-family: Consolas;text-align: left">
     def entropy(target_col):
             elements,counts = np.unique(target_col,return_counts = True)
@@ -471,7 +476,7 @@ footer {
       </ul>
       <span>Code</span>
       <div>
-        <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+        <pre style="color: rgb(2, 2, 2); padding: 1px;width: auto; ">
           <code class="language-python" style="font-family: Consolas;text-align: left">
             from sklearn import datasets
             from sklearn import metrics
@@ -512,7 +517,7 @@ footer {
     </ul>
     <span>Code</span>
       <div>
-        <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+        <pre style="color: rgb(2, 2, 2); padding: 1px;width: auto; ">
           <code class="language-python" style="font-family: Consolas;text-align: left">
             #giảm chiều dữ liệu
             from sklearn.decomposition import PCA 

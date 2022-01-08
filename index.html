@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link rel="icon" href="img/Machine%20learning.png" type="image/x-icon">
-
+    <link href="source/prism.css" rel="stylesheet"/>
 <title>Machine Learning cơ bản</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -90,6 +90,7 @@ footer {
 </style>
 </head>
 <body>
+<script src="source/prism.js"></script>
 <div class="wrapper-masthead">
       <div class="container">
         <header  class="masthead clearfix" style="padding: 5px;color: #29bdff ;background-image:url(img/background.png)">
@@ -121,7 +122,7 @@ footer {
         <li><a href="neural.html"  style="color: darkblue">V. Neural Network</a></li>
     </ul>
     
-
+      
       <br><hr><br>
       <ul>
           <h4>Gợi ý một số khóa học</h4>
@@ -133,7 +134,8 @@ footer {
             <li style="color: darkblue" >5. <a href="https://www.coursera.org/learn/ml-classification" target="_blank" style="color: darkblue">Machine Learning: Classification</a></li><br>
             <li style="color: darkblue" >5. <a href="https://www.coursera.org/learn/ml-regression" target="_blank" style="color: darkblue">Machine Learning: Regression</a></li>
           </ul>
-      </ul><hr>
+      </ul>
+      <hr>
       <ul>
         <h4>Gợi ý một số cuốn sách</h4>
         <ul>
@@ -355,29 +357,31 @@ footer {
                   </ul>
                   <br>
                   <span>Code</span>
+                  
                   <div>
-                    <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
-                      <code class="language-python" style="font-family: Consolas;text-align: left">
-            def update_weights_l2_norm(X,y,w,step_size,num_iters,l2_penlaty):  #Cập nhật trọng số khi thêm l2-norm vào.
+                    <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                      <code class="language-python"  style="font-family: Consolas;text-align: left">
+            def update_weights_l2_norm(X,y,w,step_size,num_iters,l2_penlaty): #Cập nhật trọng số khi thêm l2-norm vào
                   costs = []
                   for _ in range(num_iters):
-                  y_pr = predict(X,w)
-                  error = y_pr - y
-                  for i in range(len(w)):
-                      if i == 0:   #Khi lambda = 0 thì bài toán trở bài linear regression
-                          devivative  = feature_devivative(X[:,i],w[i],l2_penlaty,error,True)
-                      else:        #Khi lambda != 0 thì toán trở thành linear ridge
-                          devivative  = feature_devivative(X[:,i],w[i],l2_penlaty,error,False)
-                      w[i] = w[i] - step_size * devivative
-                      cost = loss_function(X,y,w,l2_penlaty)
+                    y_pr = predict(X,w)
+                    error = y_pr - y
+                    for i in range(len(w)):
+                        if i == 0:   #Khi lambda = 0 thì bài toán trở bài linear regression
+                            devivative  = feature_devivative(X[:,i],w[i],l2_penlaty,error,True)
+                        else:        #Khi lambda != 0 thì toán trở thành linear ridge
+                            devivative  = feature_devivative(X[:,i],w[i],l2_penlaty,error,False)
+                        w[i] = w[i] - step_size * devivative
+                        cost = loss_function(X,y,w,l2_penlaty)
                   costs.append(cost)
                   return w,costs
+          
                       </code>
                     </pre>
               </div>
               <span>Code</span>
                   <div>
-                    <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                    <pre style="color: rgb(2, 2, 2); padding: 1px;width: auto; ">
                       <code class="language-python" style="font-family: Consolas;text-align: left">
                 def update_weights_l1_norm(feature_matrix, output, initial_weights, l1_penalty, tolerance):
                         m,n = feature_matrix.shape
@@ -433,7 +437,7 @@ kết quả bài làm trên phần thứ hai là khả quan, ta có thể tự t
                   </div>
                   <span>Code</span>
                   <div>
-                    <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                    <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
                       <code class="language-python" style="font-family: Consolas;text-align: left">
                         from sklearn.model_selection import cross_val_score
                         def kford(model,X,y):
@@ -523,7 +527,7 @@ chi phí (như MSE), cho đến khi thuật toán hội tụ tại điểm cực
           </div>
           <span>Code</span>
             <div>
-              <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+              <pre style="color: rgb(2, 2, 2); padding: 1px;width: auto; ">
                 <code class="language-python" style="font-family: Consolas;text-align: left">
                   def update_weight(X,y,w,step_size,num_iters):
                         costs = []                                             #Lưu lại các chi phí
@@ -619,7 +623,7 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
             </ul>
             <span>Code</span>
             <div>
-              <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+              <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
                 <code class="language-python" style="font-family: Consolas;text-align: left">
                   def MSE(yHat, y):
                       return np.sum((yHat - y)**2) / y.size
@@ -637,7 +641,7 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
             </ul>
             <span>Code</span>
             <div>
-              <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+              <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
                 <code class="language-python" style="font-family: Consolas;text-align: left">
                   def mae(yHat, y):
                       return np.sum(np.absolute(yHat - y)) / y.size
@@ -658,7 +662,7 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
             </ul>
             <span>Code:</span>
             <div>
-              <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+              <pre style="color: rgb(2, 2, 2); padding: 1px;width: auto; ">
                 <code class="language-python" style="font-family: Consolas;text-align: left">
                   def CrossEntropy(yHat, y):
                       if y == 1:
