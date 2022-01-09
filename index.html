@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <link rel="icon" href="img/Machine%20learning.png" type="image/x-icon">
-
-<title>Machine Learning cơ bản</title>
+    <link href="source/prism.css" rel="stylesheet"/>
+<title>Hệ thống kiến thức Machine Learning</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -16,13 +16,13 @@ body {
 }
 
 /* Style the header */
-header {
-  background-color: #29bdff;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
+/*header {*/
+/*  background-color: #29bdff;*/
+/*  padding: 20px;*/
+/*  text-align: center;*/
+/*  font-size: 15px;*/
+/*  color: white;*/
+/*}*/
 
 /* Create two columns/boxes that floats next to each other */
 nav {
@@ -32,14 +32,14 @@ nav {
   background: #f8f8f8;
   padding: 20px;
 }
-img{
+/*img{*/
 
 
-  width : 80%;
-  height : 70%;
-  /*border: 3px solid green;*/
+/*  width : 80%;*/
+/*  height : 70%;*/
+/*  !*border: 3px solid green;*!*/
 
-}
+/*}*/
 .center {
   margin: auto;
   width: 50%;
@@ -49,7 +49,7 @@ img{
 }
 /* Style the list inside the menu */
 nav ul {
-  list-style-type: none;
+  list-style-type: None;
   padding: 0;
 }
 
@@ -85,62 +85,121 @@ footer {
     height: auto;
   }
 }
+
+
 </style>
 </head>
 <body>
+<script src="source/prism.js"></script>
+<div class="wrapper-masthead">
+      <div class="container">
+        <header  class="masthead clearfix" style="padding: 5px;color: #29bdff ;background-image:url(img/background.png)">
+          <div class="site-info">
+            <h2 class="site-name" style="text-align: center">Hệ thống kiến thức Machine Learning</h2>
+            <p style="text-align: center; color: #29bdff;"> Trong blog này, chúng ta sẽ tổng hợp toàn bộ kiến thức cơ bản về Học Máy</p>
+              <div style="text-align: right">
 
-<h2 style="color: #29bdff">Machine Learning cơ bản</h2>
-<p>Trong blog này, chúng ta sẽ tổng hợp toàn bộ kiến thức cơ bản về Học Máy</p>
+                  <a href="https://www.facebook.com/nam.150720/" target="_blank" style="color: #29bdff">Contact</a> &nbsp;
+                  <a href="https://www.topcv.vn/xem-cv/AVNfC1QGVFkFAloCUgJfU1BRXVQGAQMKCA4BVAfe1b" target="_blank" style="color: #29bdff">About</a> &nbsp;
+                  <a href="https://github.com/nam157" target="_blank" style="color: #29bdff">Github</a>
+
+              </div>
+
+          </div>
+        </header>
+      </div>
+    </div>
 
 <section>
-  <nav>
-    <ul  style="color: #29bdff" >
-      <li><a href="index.html">I. Giới thiệu Học Máy</a></li><br>
-        <li>
-            <a href="#">II. Tiền xử lý dữ liệu</a>
-        </li><br>
-      <li><a href="regression.html">III. Hồi quy</a></li><br>
-      <li><a href="#">IV. Phân loại - Phân cụm</a></li><br>
-      <li><a href="#">V. Neural Network</a></li>
+  <nav  data-toggle="wy-nav-shift" class="wy-nav-side">
+   
+      <h2>Mục lục</h2>
+    <ul>
+        <li><a href="index.html"  style="color: darkblue">I. Giới thiệu Học Máy</a></li><br>
+        <li><a href="preprocessing.html"  style="color: darkblue">II. Tiền xử lý dữ liệu</a></li><br>
+        <li><a href="regression.html"  style="color: darkblue">III. Hồi quy</a></li><br>
+        <li><a href="classifi_cluster.html"  style="color: darkblue">IV. Phân loại - Phân cụm</a></li><br>
+        <li><a href="neural.html"  style="color: darkblue">V. Neural Network</a></li>
     </ul>
+    
+      
+      <br><hr><br>
+      <ul>
+          <h4>Gợi ý một số khóa học</h4>
+          <ul>
+            <li  style="color: darkblue">1. <a href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+MLP301x_1.1-A_EN+2020_T6/about" target="_blank"  style="color: darkblue">FUNiX: Giới thiệu về Học máy</a> </li><br>
+            <li  style="color: darkblue">2. <a href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+MLP302x_01_EN+2020_T1/about"  target="_blank" style="color: darkblue">FUNiX: Machine Learning: Regression</a> </li><br>
+            <li  style="color: darkblue">3. <a href="https://www.udemy.com/course/machinelearning/" target="_blank"  style="color: darkblue">Machine Learning A-Z™: Hands-On Python & R In Data Science</a> </li><br>
+            <li  style="color: darkblue">4. <a href="https://www.coursera.org/learn/machine-learning" target="_blank"  style="color: darkblue">Machine Learning Andrew Ng</a></li><br>
+            <li style="color: darkblue" >5. <a href="https://www.coursera.org/learn/ml-classification" target="_blank" style="color: darkblue">Machine Learning: Classification</a></li><br>
+            <li style="color: darkblue" >5. <a href="https://www.coursera.org/learn/ml-regression" target="_blank" style="color: darkblue">Machine Learning: Regression</a></li>
+          </ul>
+      </ul>
+      <hr>
+      <ul>
+        <h4>Gợi ý một số cuốn sách</h4>
+        <ul>
+          <li><a href="https://machinelearningcoban.com/about/" style="color: darkblue" target="_blank">1. Machine learning cơ bản (Vũ Hữu Tiệp)</a></li><br>
+          <li><a href="https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1492032646/ref=pd_sbs_1/131-3703266-5310848?pd_rd_w=qXJuJ&pf_rd_p=3676f086-9496-4fd7-8490-77cf7f43f846&pf_rd_r=TP4FRDNXN6YPQWGF6DK9&pd_rd_r=87642d24-8edb-4959-b4d2-2dd6bf60aec5&pd_rd_wg=9iAe4&pd_rd_i=1492032646&psc=1" style="color: darkblue" target="_blank">2.Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems (Aurélien Géron) </a></li><br>
+          <li><a href="https://www.amazon.com/Deep-Learning-Adaptive-Computation-Machine/dp/0262035618/ref=pd_sbs_2/131-3703266-5310848?pd_rd_w=qXJuJ&pf_rd_p=3676f086-9496-4fd7-8490-77cf7f43f846&pf_rd_r=TP4FRDNXN6YPQWGF6DK9&pd_rd_r=87642d24-8edb-4959-b4d2-2dd6bf60aec5&pd_rd_wg=9iAe4&pd_rd_i=0262035618&psc=1 "style="color: darkblue" target="_blank">3. Deep Learning (Adaptive Computation and Machine Learning series)(Ian Goodfellow)</a></li>
+        </ul>
+      </ul>
+      <hr>
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61d9284c4df19ea7"></script>
+      <div class="addthis_inline_share_toolbox_ch26"></div>
   </nav>
 
   <article>
-    <h1>I. Khái niệm cở bản</h1>
+    <h1 style="color: darkblue">I. Khái niệm cơ bản</h1>
 
       <h4>
-          0. Khái niệm Machine Learing
+          0. Khái niệm Machine Learning
       </h4>
       <p>
           Một chương trình máy tính được cho là học từ kinh nghiệm E với tác vụ T và phép đo chất lượng P nào đó, nếu chất lượng của tác vụ T, được đo bởi P, cải thiện theo kinh nghiệm E. (Tom Mitchell, 1997)
       </p>
-
+      <h4>
+        1. Machine Learning và Deep Learning
+      </h4>
+      <p>
+        - AI cho phép máy móc suy nghĩ mà không cần bất kỳ sự can thiệp nào của con người. Nó là một lĩnh vực rộng lớn của khoa học máy tính.<br>
+        - Machine Learning là tính năng của AI, cho phép các chuyên gia đào tạo cho AI để nó nhận biết các mẫu dữ liệu và dự đoán.<br>
+        - Deep Learning là kỷ thuật nhỏ của ML, cho phép máy có thể tự đào tạo chính mình, và các phép tính toán học phức tạp hơn.<br>
+      </p>
+      <div class = 'center'>
+        <img src="img/AI-machine-learning-deep-learning.jpg" width= 80% height= 70%>
+        <br>
+        <p>Mối quan hệ giữa AI,ML,DL</p>
+        <br>
+        <a href="https://content.techgig.com/understanding-the-difference-between-ai-ml-and-dl/articleshow/75493798.cms"  style="color: darkblue" target="_blank">Bài viết tham khảo</a>
+      </div>
     <h4>
-      1. Xác suất và thông kê trong Học Máy.
+      2. Xác suất và thông kê trong Học Máy.
     </h4>
     <p>
       - Trong xác suất, chúng ta sẽ bắt đầu với model mô tả khả năng của sự kiện sẽ xảy ra. Sau đó dựa đoán khả năng xảy ra của sự kiện.
       <br>
       - Tóm lại có thể hiểu rằng là xây dựng 1 cái model dự đoán khả năng xảy ra trong tương lại dựa trên mô hình không có dữ liệu thực tế
       <br>
-      - Trong thông kê thì tương phản với xác suất, thông kê chúng ta sẽ suy luận từ data hoặc mô hình dự trên dữ liệu thực tế để quan sát.
+      - Trong thông kê thì tương phản với xác suất, thông kê chúng ta sẽ suy luận từ data hoặc mô hình dựa trên dữ liệu thực tế để quan sát.
       <br>
       - Xác suất là đi từ model sang data trong khi Thông kê là đi từ data sang model.
     </p>
     <div class = 'center'>
-      <img src="img/xs.png">
+      <img src="img/xs.png" width= 80% height= 70%>
       <br>
       <p>Mối quan hệ giữa xác suất và thông kê trong Học Máy.</p>
-      <a href="https://towardsdatascience.com/probability-vs-statistics-for-data-science-and-machine-learning-84f00bf67ce1">(Nguồn: https://towardsdatascience.com/probability-vs-statistics-for-data-science-and-machine-learning-84f00bf67ce1) </a>
+      <a href="https://towardsdatascience.com/probability-vs-statistics-for-data-science-and-machine-learning-84f00bf67ce1" target="_blank"  style="color: darkblue">(Nguồn: https://towardsdatascience.com/probability-vs-statistics-for-data-science-and-machine-learning-84f00bf67ce1) </a>
     </div>
+
     <h4>
-      2. Học có giám sát và Học không có giám sát (Supervised Learning - Unsupervised Learning)
+      3. Học có giám sát và Học không có giám sát (Supervised Learning - Unsupervised Learning)
     </h4>
     <p>
             - Supervised là thuật toán dựa đoán đầu ra của 1 hoặc nhiều mới dựa vào cặp (đầu vào, đầu ra) đã biết trước. Một tập biến đầu vào X= {X&sup1;,X&sup2;...X<sup>n</sup>} và tập đầu ra tương ứng Y= {Y&sup1;,Y&sup2;...Y<sup>n</sup>}
     </p>
     <div class = 'center'>
-      <img src="img/spv.jpg">
+      <img src="img/spv.jpg" width= 80% height= 70%>
       <br>
       <p>Ví dụ về học có giám sát</p>
     </div>
@@ -150,42 +209,28 @@ footer {
       - Giống như khi ta học, không có thầy cô giáo nào chỉ cho ta biết đó là chữ A hay chữ B. Cụm không giám sát được đặt tên theo nghĩa này.<br>
     </p>
     <div class = 'center'>
-      <img src="img/unsver.jpg">
+      <img src="img/unsver.jpg" width= 80% height= 70%>
       <br>
       <p>Ví dụ về học không có giám sát</p>
     </div>
-    <h4>
-      3. Machine Learning và Deep Learning
-    </h4>
-    <p>
-      - AI cho phép máy móc suy nghĩ mà không cần bất kỳ sự can thiệp nào của con người. Nó là một lĩnh vực rộng lớn của khoa học máy tính.
-      - Machine Learning là tính năng của AI, cho phép các chuyên gia đào tạo cho AI để nó nhận biết các mẫu dữ liệu và dự đoán.<br>
-      - Deep Learning là kỷ thuật nhỏ của ML, cho phép máy có thể tự đào tạo chính mình, và các phép tính toán học phức tạp hơn.
-    </p>
-    <div class = 'center'>
-      <img src="img/AI-machine-learning-deep-learning.jpg">
-      <br>
-      <p>Mối quan hệ giữa AI,ML,DL</p>
-      <br>
-      <a href="https://content.techgig.com/understanding-the-difference-between-ai-ml-and-dl/articleshow/75493798.cms">Bài viết tham khảo</a>
-    </div>
+    
     <h4>
       4. Supervised Learning: Regression,Classification,DNN
     </h4>
     <p>
     <dl>
-    <dt>Regression (Hồi quy):</dt>
+    <h5>Regression (Hồi quy):</h5>
       <dd>- Cơ bản là đầu ra của bài toán chính là dữ liệu liên tục</dd>
       <dd>- Một thuật toán Regression có thể dự đoán giá trị rời rạc nhưng giá trị rời rạc với đại lương nguyên </dd>
     <dd>- VD: Một căn nhà rộng x và có y phòng ngủ và cách trung tâm thành phố z sẽ có giá là bao nhiêu ?</dd>
-    <dt>Classification</dt>
+    <h5>Classification</h5>
       <dd>- Kết quả đầu ra chính là dữ liệu rời rạc (nhãn hoặc xác suất nhãn) </dd>
     <dd>- Một thuật toán classification có thể dự đoán giá trị liên tục nhưng giá trị liên tục ở dạng xác suất đối với nhãn</dd>
     <dd>VD: Gmail xác định xem một email có phải là spam hay không; các hãng tín dụng xác định xem một khách hàng có khả năng thanh toán nợ hay không</dd>
-    <dt>Deep neural network</dt>
+    <h5>Deep neural network</h5>
     <dd>- Cơ bản có thể hiểu là mạng nơ-ron nông(Logistic Regression) được nâng cấp số lớp ẩn lên </dd>
     <dd>- DNN có thể thực hiện nhiệm vụ 2 bài toán classification và regression </dd>
-    <dt>Điều quan trọng là phép đáng giá của Regression và Classification</dt>
+    <h5>Điều quan trọng là phép đáng giá của Regression và Classification</h5>
     <dd>- Dự đoán Classification có thể đánh giá bằng độ chính xác (accuracy),...</dd>
     <dd>- Dự đoán Regression có thể đánh giá bằng root mean squared error hoặc các hàm chi phí khác </dd>
   </dl>
@@ -193,18 +238,18 @@ footer {
     <h4>
       5. Unsupervised: Clustering,Auto Encoder Decoder, Luật Kết Hợp
     </h4>
-    <dt>Clustering:</dt>
+    <h5>Clustering:</h5>
     <dd>- Nhiệm vụ là chia dữ liệu vào cũng 1 nhóm, và các điểm trong nhóm đó giống nhau và khác với điểm dữ liệu trong nhóm khác.Về cơ bản là nó là tập hợp các đối tượng trên cơ sở giống nhau và không giống nhau giữa chúng</dd>
     <dd>VD: Ví dụ: phân nhóm khách hàng dựa trên hành vi mua hàng. Điều này cũng giống như việc ta đưa cho một đứa trẻ rất nhiều mảnh ghép với các hình thù và màu sắc khác nhau, ví dụ tam giác, vuông, tròn với màu xanh và đỏ, sau đó yêu cầu trẻ phân chúng thành từng nhóm. Mặc dù không cho trẻ biết mảnh nào tương ứng với hình nào hoặc màu nào, nhiều khả năng chúng vẫn có thể phân loại các mảnh ghép theo màu hoặc hình dạng</dd>
     <div class = 'center'>
-      <img src="img/cluster.jpeg">
+      <img src="img/cluster.jpeg" width= 80% height= 70%>
       <br>
       <p>Ví dụ về phân cụm (3 cụm)</p>
     </div>
-    <dt>Luật Kết Hợp:</dt>
+    <h5>Luật Kết Hợp:</h5>
     <dd>- Là bài toán mà khi chúng ta muốn khám phá ra một quy luật dựa trên nhiều dữ liệu cho trước</dd>
     <dd>VD: Ví như những khách hàng mua mặt hàng này sẽ mua thêm mặt hàng kia; hoặc khan giả xem phim này sẽ có xu hướng thích xem phim kia, dựa vào đó ta có thể xây dựng những hệ thống gợi ý khách hàng (Recommendation System) nhằm thúc đẩy nhu cầu mua sắm hoặc xem phim….</dd>
-    <dt>Auto Encoder Decoder:</dt>
+    <h5>Auto Encoder Decoder:</h5>
     <dd>- Autoencoder là một mô hình mạng nơ-ron có thể được sử dụng để học cách biểu diễn dữ liệu thô được nén. Một bộ Autoencoder có 2 phần đó là encoder và decoder sub-models. Encoder cố gằng nén đầu vào và Decoder cố gắng tái tạo đầu vào</dd>
     <h4>
       6. Clustering and Classification
@@ -215,18 +260,18 @@ footer {
       - Clustering là nó xác định các điểm tương đồng giữa các đối tượng, nó sẽ nhóm theo các điểm tương đồng và khác với các nhóm kia và thuộc nhóm về unsupervised learning. <br>
     </p>
     <div class = 'center'>
-      <img src="img/classif_clus.gif">
+      <img src="img/classif_clus.gif" width= 80% height= 70%>
       <br>
       <p>Ví dụ trực quan về classification và clustering</p>
     </div>
       <h4>7. Học ngoại tuyến và Học trực tuyến</h4>
       <div>
-          <dt>Học ngoại tuyến:</dt>
+          <h5>Học ngoại tuyến:</h5>
           <dd>- Hay còn được gọi học theo batch là cách học không có khả năng gia tăng, mô hình sẽ được huấn luyện với tất cả các dữ liệu khả dụng.</dd>
           <dd>- Học như này sẽ tốt rất nhiều thời gian và tài nguyên tính toán và hệ thống hoàn tất mọi việc học khi triển khai vào thực tế</dd>
           <dd>- Nếu như ta có thêm dữ liệu mới và muốn cập nhật thì ta cần phải đào tạo lại hệ thống mới bao gồm dữ liệu cũ và dữ liệu mới</dd>
           <dd>- May mắn là hiện tại việc đào tạo và đánh giá hệ thống không quá khó khăn và hoàn toàn tự động</dd>
-          <dt>Học trực tuyến</dt>
+          <h5>Học trực tuyến</h5>
           <dd>- Nó khác với lại học ngoại tuyến đó là mô hình có khả năng gia tăng tuần tự truyền dữ liệu theo từng điểm hoặc lô nhỏ (mini-batch)</dd>
           <dd>- Phương pháp còn phù hợp với tài nguyên tính toán bị giới hạn</dd>
           <dd>- Các thuật toán học trực tuyến cũng có thể huấn luyện các hệ thống có dữ liệu khổng lồ mà không chứa hết trong bộ nhớ chính đó còn được gọi cái tên là: học out-of-core</dd>
@@ -236,25 +281,205 @@ footer {
         8. Model based learning và Instance based learning
     </h4>
       <div>
-          <dt>Instance-based learning</dt>
+          <h5>Instance-based learning</h5>
           <dd>- Còn được gọi là học trên mẫu và chúng ta có thể hiểu cách đơn giản là học thuộc lòng các mẫu </dd>
           <dd>- Để khai quát với các mẫu dữ liệu mới thì ta đi tính độ tương đồng so với dữ liệu mẫu đã học</dd>
           <div class="center">
-              <img src="img/instance_based.jpg">
+              <img src="img/instance_based.jpg" width= 80% height= 70%>
               <br>
               <p>Ví dụ về Instance-based learning</p>
           </div>
 
-          <dt>Model-based learning</dt>
+          <h5>Model-based learning</h5>
           <dd>- Còn được gọi là học theo mô hình, xây dựng một mô hình từ dự liệu rồi dùng mô hình đó để đưa ra dự đoán đó là một cách khác để khái quát hóa dữ liệu </dd>
           <div class = 'center'>
-              <img src="img/model_based.jpg">
+              <img src="img/model_based.jpg" width= 80% height= 70%>
               <br>
               <p>Ví dự về Model-based learning</p>
           </div>
       </div>
+      <h4>
+      9. Overfitting - Underfitting
+    </h4>
+    <h5>Overfitting:</h5>
+    <dd>- Là trường hợp quá khớp với tập dữ liệu trainning có nghĩa là những điểm nhiễu trong tập dữ liệu training cũng học,
+      trường hợp overfit xảy ra khi tập dữ liệu training quá nhỏ hoặc model có quá nhiều tham số.</dd>
+    <dd>- Chi phí lỗi training error thấp mà validation error/test error quá cao thì điều có nghĩa tập dữ liệu overfit.</dd>
+    <dd>- Overfitting xảy ra khi phương sai quá lớn</dd>
+    <dd>- Để khắc phục vấn đề này thì có thể sử dụng: Regularization, Validation,Thêm dữ liệu training,...</dd>
+    <h5>Underfitting:</h5>
+    <dd>- Là trường hợp mô hình chưa khái quá hóa được dữ liệu traning cũng như chưa khái quan hóa tập dữ liệu mới.</dd>
+    <dd>- Một mô hình học máy không phù hợp không phải là một mô hình phù hợp và sẽ hiển nhiên vì nó sẽ có hiệu suất kém trên dữ liệu đào tạo. Hoặc là mô hình quá nhỏ</dd>
+    <dd>- Chi phí lỗi traning error và validation error/test error đều cao thì có nghĩa là model đang bị underfit</dd>
+    <dd>- Underfitting xảy ra khi độ lệch quá lớn</dd>
+    <dd>- Để khắc phục vấn đề này thì ta cần tăng thời gian học lên hoặc tăng chất lượng mô hình lên hoặc thay đổi mô hình khác,...</dd>
+    <div class = 'center'>
+      <img src="img/overfit.png" width= 80% height= 70%>
+      <br>
+      <p>Ví dụ trực quan về overfit và underfit.</p>
+    </div>
     <h4>
-      9. Chia tập dữ liệu: Training set - Validation set - Test set
+      10. Bias - Variance
+    </h4>
+      <div>
+    <h5>Bias</h5>
+    <dd>- nghĩa là độ lệch, biểu thị sự chênh lệch giữa giá trị trung bình mà mô hình dự đoán và giá trị thực tế của dữ liệu</dd>
+    <dd>- Low bias: thì ít giả định về hàm mục tiêu</dd>
+    <dd>- High bias: thì rất nhiều giả định về hàm mục tiêu và gây ra underfit và gây ra chi phí lỗi cao giữa cả 2 tập huấn luyện và tập kiểm tra</dd>
+    <h5>Variance</h5>
+    <dd>- nghĩa là phương sai, biểu thị độ phân tán của các giá trị mà mô hình dự đoán so với giá trị thực tế.</dd>
+    <dd>- Model quá phức tạp và gây ra overfitting và chi phí lỗi trên tập huấn luyện thấp mà trên tập kiểm tra thì cao</dd>
+    <h5>Trade off bias và phương sai</h5>
+    <dd>- Các thuật toán học máy tuyến tính thường có độ chệch cao nhưng độ sai lệch thấp.</dd>
+    <dd>- Các thuật toán học máy phi tuyến thường có độ chệch thấp nhưng độ sai lệch cao.</dd>
+    <dd>- Không có gì thoát khỏi mối quan hệ giữa độ chệch và phương sai trong học máy. Tăng độ chệch sẽ làm giảm phương sai. Tăng phương sai sẽ làm giảm độ chệch.</dd>
+    <dd>- Có một sự đánh đổi giữa hai mối quan tâm này và các thuật toán bạn chọn và cách bạn chọn để định cấu hình chúng đang tìm ra các số dư khác nhau trong sự đánh đổi này cho vấn đề của bạn. Trong thực tế, chúng tôi không thể tính toán các điều khoản sai lệch và phương sai thực sự bởi vì chúng tôi không biết chức năng đích cơ bản thực sự.
+        Tuy nhiên, với tư cách là một khuôn khổ, độ chệch và phương sai cung cấp các công cụ để hiểu hành vi của các thuật toán học máy trong việc theo đuổi hiệu suất dự đoán.</dd>
+          <div class = 'center'>
+      <img src="img/bias_vaarr.jpg" width= 80% height= 70%>
+      <br>
+      <p>Bias and Variance trade off</p>
+    </div>
+      </div>
+      <h4>11. Các kỹ thuật tránh overfitting</h4>
+      <div>
+          <ul>
+              <li>Regularization</li>
+              <ul>
+                  <li>Thêm trọng số vào hàm mất mát</li>
+                  <ul>
+                      <li>Bạn có thể hiểu đơn giản Là kĩ thuật thêm tham số để giảm trọng số trong mô hình hoặc có thể hiểu là thêm yếu tố ràng buộc cho trọng số w. Có 2 tham số ta hay thêm vào đó là L1-norm và L2-norm, 2 tham số này đều được thêm vào và tính toán với hàm loss</li>
+                      <li>Công thức khi thêm l2-norm vào hàm loss: <img src="img/congthucl2.svg" > </li>
+                      <li>Khi thêm l2-norm, sau quá trình traning thì các trọng số không quá lớn và tránh việc phụ thuộc vào 1 đặc trưng nào đó. Tham số lambda là tham số điều chỉnh mức độ tiêu chuẩn, lambda = 0 thì mô hình trở lại mô hình ban đầu, còn lambda khác 0 thì mô hình tiêu chuẩn. </li>
+                      <li>VD: Mô hình hồi quy tuyến tính khi thêm tham số tiêu chuẩn l2-norm thì thành mô hình hồi quy ridge</li>
+                      <li>Công thức khi thêm l1-norm vào hàm loss: <img src="img/congthucl1.svg" > </li>
+                      <li>Khi thêm l1-norm, sau quá trình traning thì các trọng số có xu hướng bằng 0, các trọng số bằng 0 thì tương đương với đặc trưng không quan trọng và cần loại bỏ, ngược lại thì các trọng số khác 0 thì tương ứng đặc trưng quan trọng ảnh hưởng tới kết quả đầu ra.</li>
+                      <li>VD: Mô hình hồi quy tuyến tính khi thêm tham số tiêu chuẩn l1-norm thì thành mô hình hồi quy lasso (Mô hình này thường được dùng lựa chọn đặc trưng) phần này mình có nói rõ chương 2</li>
+                      <li>Như chúng ta đã biết l1-norm thường ít ảnh hưởng với nhiêu hơn l2-norm, tuy nhiên, l1-norm hơi khó khăn với đạo hàm vì giá trị tuyệt đối không đạo hàm ở 0 làm cho việc tìm nghiệm lâu hơn</li>
+                      <li>Phần này, mình sẽ nói cụ thể ở chương 3 Hồi quy</li>
+                  </ul>
+                  <br>
+                  <span>Code</span>
+                  
+                  <div>
+                    <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                      <code class="language-python"  style="font-family: Consolas;text-align: left">
+            def update_weights_l2_norm(X,y,w,step_size,num_iters,l2_penlaty): #Cập nhật trọng số khi thêm l2-norm vào
+                  costs = []
+                  for _ in range(num_iters):
+                    y_pr = predict(X,w)
+                    error = y_pr - y
+                    for i in range(len(w)):
+                        if i == 0:   #Khi lambda = 0 thì bài toán trở bài linear regression
+                            devivative  = feature_devivative(X[:,i],w[i],l2_penlaty,error,True)
+                        else:        #Khi lambda != 0 thì toán trở thành linear ridge
+                            devivative  = feature_devivative(X[:,i],w[i],l2_penlaty,error,False)
+                        w[i] = w[i] - step_size * devivative
+                        cost = loss_function(X,y,w,l2_penlaty)
+                  costs.append(cost)
+                  return w,costs
+          
+                      </code>
+                    </pre>
+              </div>
+              <span>Code</span>
+                  <div>
+                    <pre style="color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                      <code class="language-python" style="font-family: Consolas;text-align: left">
+                def update_weights_l1_norm(feature_matrix, output, initial_weights, l1_penalty, tolerance):
+                        m,n = feature_matrix.shape
+                        weights = np.array(initial_weights.copy())
+                        converged = False
+                        while not converged:
+                            change = []
+                            for i in range(n):
+                                old_weights_i = weights[i]
+                                weights[i] = lasso_step(i,feature_matrix,output,weights,l1_penalty)
+                                change_weight = abs(old_weights_i - weights[i])
+                                change.append(change_weight)
+                            if max(change) < tolerance:
+                                converged = True
+                        return weights
+                      
+                      </code>
+                    </pre>
+              </div>
+                  <li> Early stopping</li>
+                  <div class="center">
+                      <img src="img/img_eary.jpg" width="80%" height="50%"><br>
+                      <p>Minh họa về early stopping</p>
+                  </div>
+                  <ul>
+                      <li>Thông thường trong quá traning thì hàm chi phí luôn có xu hướng giảm theo số vòng lặp, nhưng chúng ta đã biết nếu mô hình bị overfit thì chi phí training thấp còn ở validation thì cao.</li>
+                      <li>Cơ bản có thể hiểu early stopping dừng trước khi hội tụ, nhưng đặt ra dừng khi nào ? nhưng bạn thấy ở hình vẽ chúng ta cần đặt ngưỡng nếu tập traning giảm nhưng tập validation có xu hướng tăng thì chúng ta dừng.</li>
+                      <li>Phương pháp này bạn có thể thấy nó không được hoàn hảo, nhưng nó vẫn cho kết quả tốt nhưng chưa thực sự tối ưu thôi. Với lại trong những bài toán đơn giản và thời gian traning ít bạn có thể dành thời gian quan sát nhưng ở những bài toán lớn thì bạn không quan sát rõ nên đây là phương pháp rất tốt dừng trước khi quá muộn.</li>
+                  </ul>
+
+              </ul>
+              <li>Validation</li>
+              <ul>
+                  <li>Validation</li>
+                  <ul>
+                      <li>Khi bạn xây dựng một mô hình chi phí lỗi ở training và test đều rất nhỏ, mô hình xây dựng chỉ ở training và chúng chưa thể biết mô hình khái quát hóa thể nào trên tập test hoặc chất lượng trên tập test</li>
+                      <li>Vì vậy, thay vì chúng chia tập dữ liệu ban đầu 2 tập thì bây giờ chúng ta chia ra 3 tập: train/validation/test. Chúng ta sẽ trích 1 phần của traning để làm tập validation.</li>
+                      <li>Một VD trực quan: Giả sử các đề thi của các năm trước là training set, đề thi năm nay là test set mà ta chưa biết. Khi ôn tập, ta thường chia đề các năm trước ra hai phần: phần thứ nhất có thể xem lời giải và tài liệu để ôn tập, phần còn lại ta tự làm mà không sử dụng tài liệu để tự đánh giá kiến thức của mình. Lúc này, phần thứ nhất đóng vai trò là training set mới, trong khi phần thứ hai chính là validation set. Nếu
+kết quả bài làm trên phần thứ hai là khả quan, ta có thể tự tin hơn khi vào bài thi thật.</li>
+                      <li>Bây giờ chúng ta đã có 3 tập thì mỗi tập có nhiệm như sau: Tập traning sử dụng huấn luyện mô hình, tập validation sử dụng tối ưu mô hình và khái quát còn tập testing dùng để đánh giá mô hình nếu mô hình hoạt động tốt ở tập validation thì khả năng cao cũng hoạt động tốt ở tập test</li>
+                  </ul>
+                  <li>Cross-validation</li>
+                  <ul>
+                      <li>Trong nhiều trường hợp, chúng ta có rất hạn chế số lượng dữ liệu để xây dựng mô hình,chúng ta cần đặt câu hỏi chia tập dữ liệu thể nào cho phù hơp. Nếu lấy quá nhiều dữ liệu trong training set ra làm dữ liệu validation, phần dữ liệu còn lại của training set là không đủ để xây dựng mô hình. Lúc này, validation set phải thật nhỏ để giữ được lượng dữ liệu cho training đủ lớn. Tuy nhiên, một vấn đề khác nảy sinh. Khi validation set quá nhỏ, hiện tượng overfitting lại có thể xảy ra với training set còn lại.</li>
+                      <li>Vì vậy ra đời cross-validation là cải tiển của validation </li>
+                      <li>Cách thức làm việc của cross-validation đó là nó chia tập traning ra k tập con không giao nhau và kích thước bằng nhau. Tại mỗi vào traning thì một trong số k tập đó được lấy ra làm validation, và mô hình sẽ được huấn luyện trên k-1 tập còn lại , như vậy chúng ta có thể đánh giá một tập dữ nhiều mẫu k và lựa chọn chia sao tốt nhất</li>
+                      <li>Bằng cách lấy trung bình các lần kiểm định, ta sẽ có một thước đo chính xác hơn nhiều cho chất lượng của mô hình</li>
+                      <li>Nhược điểm: số lượng mô hình huấn luyện tỷ lệ thuận với k tập, trong thực tế ta xây dựng nhiều bài toán lớn thì lượng tham số xác định rất lớn, khoảng giá trị rộng hơn điều này làm cho mô hình khó khả thi</li>
+                    </ul>
+                  <div class="center">
+                    <img src="img/cross_Validation.png" width="80%" height="50%"><br>
+                    <p>Ảnh minh họa về cross-validation</p>
+                  </div>
+                  <span>Code</span>
+                  <div>
+                    <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                      <code class="language-python" style="font-family: Consolas;text-align: left">
+                        from sklearn.model_selection import cross_val_score
+                        def kford(model,X,y):
+                            #K tập ở đây được chia thành 10 tập
+                            cv = KFold(10, shuffle=True, random_state=0).get_n_splits(X.values)
+
+                            scores = cross_val_score(
+                                model, X, y,scoring="neg_mean_squared_error", cv=cv)
+
+                            rmse_scores = np.sqrt(-scores)
+
+                            print("Scores:", rmse_scores)
+                            print("Mean:", rmse_scores.mean())
+                            print("Standard deviation:", rmse_scores.std())      
+                      </code>
+                    </pre>
+              </div>
+              </ul>
+              <li>Dropout</li>
+              <ul>
+                <li>Dropout thường được sử dụng trong các bài toán về mạng nơ-ron, công việc nó làm đó là loại ngẫu nhiên các đơn vị ra khỏi mạng nơ-ron, sẽ như vậy ở mỗi vòng lặp cứ thế ta sẽ làm với mạng nơ-ron nhỏ hơn, vậy nên sử dụng mạng nơ-ron nhỏ hơn như vậy giống tiêu chuẩn trong mạng nơ-ron</li>
+                <li>Không kể chỉ ra nó tác động tương tự L2-norm mà Dropout còn có thể keep_prob khác ở mỗi lớp, dropout đầu vào phải gần với 1 vì chúng ta không muốn loại quá nhiều đặc trưng (Mình sẽ giải thích kỹ hơn ở phần neural network)</li>
+                <li>Nếu sợ một số lớp bị quá khớp hơn mấy lớp khác ta có thể cho giá trị keep_prob thấp hơn vài lớp, nếu làm như vậy thì khó kiểm định chéo</li>
+              </ul>
+              <div class="center">
+                <img src="img/dropout.png" width="80%" height="50%"><br>
+                <p>Hình ảnh minh họa về Dropout</p>
+              </div>
+              <li>Data Augmentation</li>
+              <ul>
+                <li>Đơn giản là bạn muốn thêm dữ liệu vào mô hình để giảm bớt trình trạng overfit thì phương pháp này sẽ giúp bạn, cách thức thực hiện đó là bằng cách lấy trung bình các lần kiểm định, ta sẽ có một thước
+                  đo chính xác hơn nhiều cho chất lượng của mô hình</li>
+                <li>Dữ liệu mới thu được thì ko được tốt như dữ liệu độc lập thực tế, cần dùng thêm kĩ thuật tiêu chuẩn</li>
+              </ul>
+            
+          </ul>
+      </div>
+    <h4>
+      12. Chia tập dữ liệu: Training set - Validation set - Test set
     </h4>
     <dt>Training set(Tập huấn luyện):</dt>
     <dd>- Là tập dữ liệu để chạy thuật toán học</dd>
@@ -271,56 +496,15 @@ footer {
       - Thông thường chia tập dữ liệu là 60/20/20. Tuy nhiên tùy vào trường hợp chúng ta chia dữ liệu sao cho hợp lý.
 </p>
     <div class = 'center'>
-      <img src="img/tapdl.jpg">
+      <img src="img/tapdl.jpg" width= 80% height= 70%>
       <br>
       <p>Ví dụ về chia tập dữ liệu.</p>
     </div>
 
-    <h4>
-      10. Overfitting - Underfitting
-    </h4>
-    <dt>Overfitting:</dt>
-    <dd>- Là trường hợp quá khớp với tập dữ liệu trainning có nghĩa là những điểm nhiễu trong tập dữ liệu training cũng học,
-      trường hợp overfit xảy ra khi tập dữ liệu training quá nhỏ hoặc model có quá nhiều tham số.</dd>
-    <dd>- Chi phí lỗi training error thấp mà validation error/test error quá cao thì điều có nghĩa tập dữ liệu overfit.</dd>
-    <dd>- Overfitting xảy ra khi phương sai quá lớn</dd>
-    <dd>- Để khắc phục vấn đề này thì có thể sử dụng: Regularization, Validation,Thêm dữ liệu training,...</dd>
-    <dt>Underfitting:</dt>
-    <dd>- Là trường hợp mô hình chưa khái quá hóa được dữ liệu traning cũng như chưa khái quan hóa tập dữ liệu mới.</dd>
-    <dd>- Một mô hình học máy không phù hợp không phải là một mô hình phù hợp và sẽ hiển nhiên vì nó sẽ có hiệu suất kém trên dữ liệu đào tạo. Hoặc là mô hình quá nhỏ</dd>
-    <dd>- Chi phí lỗi traning error và validation error/test error đều cao thì có nghĩa là model đang bị underfit</dd>
-    <dd>- Underfitting xảy ra khi độ lệch quá lớn</dd>
-    <dd>- Để khắc phục vấn đề này thì ta cần tăng thời gian học lên hoặc tăng chất lượng mô hình lên hoặc thay đổi mô hình khác,...</dd>
-    <div class = 'center'>
-      <img src="img/overfit.png">
-      <br>
-      <p>Ví dụ trực quan về overfit và underfit.</p>
-    </div>
-    <h4>
-      11. Bias - Variance
-    </h4>
-      <div>
-    <dt>Bias</dt>
-    <dd>- nghĩa là độ lệch, biểu thị sự chênh lệch giữa giá trị trung bình mà mô hình dự đoán và giá trị thực tế của dữ liệu</dd>
-    <dd>- Low bias: thì ít giả định về hàm mục tiêu</dd>
-    <dd>- High bias: thì rất nhiều giả định về hàm mục tiêu và gây ra underfit và gây ra chi phí lỗi cao giữa cả 2 tập huấn luyện và tập kiểm tra</dd>
-    <dt>Variance</dt>
-    <dd>- nghĩa là phương sai, biểu thị độ phân tán của các giá trị mà mô hình dự đoán so với giá trị thực tế.</dd>
-    <dd>- Model quá phức tạp và gây ra overfitting và chi phí lỗi trên tập huấn luyện thấp mà trên tập kiểm tra thì cao</dd>
-    <dt>Trade off bias và phương sai</dt>
-    <dd>- Các thuật toán học máy tuyến tính thường có độ chệch cao nhưng độ sai lệch thấp.</dd>
-    <dd>- Các thuật toán học máy phi tuyến thường có độ chệch thấp nhưng độ sai lệch cao.</dd>
-    <dd>- Không có gì thoát khỏi mối quan hệ giữa độ chệch và phương sai trong học máy. Tăng độ chệch sẽ làm giảm phương sai. Tăng phương sai sẽ làm giảm độ chệch.</dd>
-    <dd>- Có một sự đánh đổi giữa hai mối quan tâm này và các thuật toán bạn chọn và cách bạn chọn để định cấu hình chúng đang tìm ra các số dư khác nhau trong sự đánh đổi này cho vấn đề của bạn. Trong thực tế, chúng tôi không thể tính toán các điều khoản sai lệch và phương sai thực sự bởi vì chúng tôi không biết chức năng đích cơ bản thực sự.
-        Tuy nhiên, với tư cách là một khuôn khổ, độ chệch và phương sai cung cấp các công cụ để hiểu hành vi của các thuật toán học máy trong việc theo đuổi hiệu suất dự đoán.</dd>
-          <div class = 'center'>
-      <img src="img/bias_vaarr.jpg">
-      <br>
-      <p>Bias and Variance trade off</p>
-    </div>
-      </div>
+
+
       <h4>
-      12. Gradient Descent
+      13. Gradient Descent
     </h4>
       <div>
       <p>
@@ -331,19 +515,37 @@ gradient đó. Khi gradient bằng 0 tức là ta đã tới một điểm cực
 chi phí (như MSE), cho đến khi thuật toán hội tụ tại điểm cực tiểu.
       </p>
           <div class = 'center'>
-      <img src="img/gd.png">
-      <br>
-      <p>Hình minh họa Gradient Descent</p>
+              <img src="img/gd.png" width= 80% height= 70%>
+              <br>
+              <p>Hình minh họa Gradient Descent</p>
           </div>
           <p>
-              - w &#8789; w - learning_rate * (dJ/dw) <br>
+              - Công thức tổng quát: <br><br> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <img src="img/CodeCogsEqn.svg"> <br><br>
               - Có một tham số rất quan trọng trong GD đó là learning rate (tốc độ học). Nếu learning rate quá lớn thì có thể tới điểm hội tụi nhanh tuy nhiên nó sẽ có thể vượt quá điểm tối ưu và có thể dừng ở điểm local còn learning rate quá nhỏ thì nó mất nhiều thời gian để nó tới điểm hội tụ
           </p>
           <div class = 'center'>
-              <img src="img/learning_rate.png">
+              <img src="img/learning_rate.png" width= 80% height= 70%>
               <br>
               <p>Hình minh họa learning rate trong GD</p>
           </div>
+          <span>Code</span>
+            <div>
+              <pre style="color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                <code class="language-python" style="font-family: Consolas;text-align: left">
+                  def update_weight(X,y,w,step_size,num_iters):
+                        costs = []                                             #Lưu lại các chi phí
+                        for _ in range(num_iters):                             #Lặp số vòng lặp chỉ định
+                            y_pr = predict(X,w)                                #Đưa ra dự đoán
+                            error = y_pr - y                                   #Tính chí phí
+                            for i in range(len(w)):                            #Lặp qua các trọng số
+                                devivative = feature_derivative(error,X[:,i])  #Đạo hàm
+                                w[i] = w[i] - step_size * devivative           #áp dụng theo công thức cập nhật trọng số GD
+                            cost = loss_function(X,y,w)
+                            costs.append(cost)  
+                        return w,costs                                         #Trả về trọng số đã được cập nhất và chi phí
+                </code>
+              </pre>
+        </div>
           <p>
               - Hàm lồi: nghĩa là đoạn thẳng nối hai điểm bất kỳ trên đường cong không bao giờ cắt đường cong đó và hàm lồi là 1 hàm liên tục. <br>
               - Hàm lồi rất tuyệt vời trong GD vì  việc đồ thị không có điểm cực tiểu mà chỉ có một giá trị nhỏ nhất vì vậy việc hội tụ sẽ nhanh hơn.<br>
@@ -354,12 +556,12 @@ chi phí (như MSE), cho đến khi thuật toán hội tụ tại điểm cực
           </p>
 
           <div class = 'center'>
-              <img src="img/convex_convex_non.png">
+              <img src="img/convex_convex_non.png" width= 80% height= 70%>
               <br>
               <p>Hàm lồi và hàm không lồi</p>
           </div>
-          <p>
-              Các biến thể của Gradient Descent:
+          <h5>
+              Các biến thể của Gradient Descent:</h5>
               <dt>- Batch Gradient Descent</dt>
           <dd>- Để tính toán GD thì chúng ta tính toán dựa trên hàm chi phí và việc tính toán này thì BGD sẽ tính toán trên toàn bộ tập dữ liệu trong 1 epochs</dd>
           <dd>- Việc sử dụng toàn bộ data để huấn luyện nó sẽ làm cho thuật toán chạy rất là chậm rất lâu để hội tụ</dd>
@@ -367,10 +569,10 @@ chi phí (như MSE), cho đến khi thuật toán hội tụ tại điểm cực
           <dd>- Bên cạnh tìm learning rate cho phù hợp thì số vòng lặp cũng rất quan trọng</dd>
           <dd>- Dùng tất cả dữ liệu trong training set cho mỗi lần thực hiện bước tính đạo hàm (n)</dd>
           <div class = 'center'>
-              <img src="img/batch_gd.jpeg">
+              <img src="img/batch_gd.jpeg" width= 80% height= 70%>
               <br>
               <p>Cost vs Epochs (<a href="https://www.bogotobogo.com/python/scikit-learn/scikit-learn_batch-gradient-descent-versus-stochastic-gradient-descent.php">Source: https://www.bogotobogo.com/python/scikit-learn/scikit-learn_batch-gradient-descent-versus-stochastic-gradient-descent.php)</a></p>
-              
+
           </div>
               <dt>- Stochastic Gradient Descent</dt>
           <dd>- Hạ Gradient Ngẫu nhiên (Stochastic Gradient Descent) lấy một mẫu (1) ngẫu nhiên trong tập huấn luyện tại mỗi bước và tính chỉ gradient dựa trên mẫu đó.</dd>
@@ -381,7 +583,7 @@ này sẽ dần tiến gần về cực tiểu, nhưng một khi đến đó nó
           <dd>- SGD nhờ đặc tính ngẫu nhiên có thể thoát ra khỏi cực tiểu địa phương, nên có khả năng đạt đến giá trị nhỏ nhất cao hơn Hạ Gradient theo Batch.</dd>
           <dd>- Do đó, sự ngẫu nhiên dù có thể giúp thoát khỏi điểm cực tiểu địa phương, nhưng cũng đồng nghĩa với việc không thể đạt được giá trị nhỏ nhất. Một giải pháp cho vấn đề này là từ từ giảm tốc độ học.</dd>
           <div class = 'center'>
-              <img src="img/sdg.jpeg">
+              <img src="img/sdg.jpeg" width= 80% height= 70%>
               <br>
               <p>Cost vs Epochs (<a href="https://adventuresinmachinelearning.com/stochastic-gradient-descent/">Cost vs Epochs in SGD (Source: https://adventuresinmachinelearning.com/stochastic-gradient-descent/)</a></p>
           </div>
@@ -395,51 +597,218 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
           <dd>- Tuy nhiên thuật toán này cũng khó vượt qua các điểm cực tiểu địa phương</dd>
           <dd>- Mini-batch cũng giống như SGD nó cũng xu hướng tiến tới điểm cực tiêu tuy nhiên hàm chí sẽ có thể tăng hoặc giảm liên tục và khi về điểm cực tiêu thì nó không dừng mà nhảy qua nhảy lại</dd>
           <dd>- Số lượng mẫu mini-batch sẽ được lấy ở khoảng 1 - n </dd>
-          </p>
+          
             <div class = 'center'>
-              <img src="img/mini-batch.jpeg">
+              <img src="img/mini-batch.jpeg" width= 80% height= 70%>
               <br>
               <p>Cost vs Epochs (<a href="https://stats.stackexchange.com/questions/310734/why-is-the-mini-batch-gradient-descents-cost-function-graph-noisy">Cost vs no of mini-batch (Source: https://stats.stackexchange.com/questions/310734/why-is-the-mini-batch-gradient-descents-cost-function-graph-noisy)</a></p>
           </div>
           </div>
+
     <h4>
-      13. Loss function
+      14. Loss function
     </h4>
       <div>
           <p>
               Các hàm tổn thất đóng một vai trò quan trọng trong bất kỳ mô hình thống kê nào - chúng xác định một mục tiêu mà hiệu suất của mô hình được đánh giá dựa trên và các tham số mà mô hình học được được xác định bằng cách giảm thiểu một hàm tổn thất đã chọn. Các hàm tổn thất xác định thế nào là một dự đoán tốt và không. Nói tóm lại, việc chọn đúng hàm tổn thất sẽ quyết định mức độ ổn định của công cụ ước tính của bạn.
           </p>
-          <dt>Loss functions for regression</dt>
-          <dd>
-              - Mean Absolute Error (MAE)
-          </dd>
-          <dd>
-              - Mean Squared Error (MSE)
-          </dd>
-          <dd>
-              - Mean Bias Error (MBE)
-          </dd>
+          <h5>Loss functions for regression</h5>
+          <p>Hồi quy liên quan đến việc dự đoán một giá trị cụ thể có bản chất liên tục. Ước tính giá nhà hoặc dự đoán giá cổ phiếu là những ví dụ về hồi quy bởi vì người ta hướng tới việc xây dựng một mô hình dự đoán một số lượng có giá trị thực.</p>
+          <ul>
+            <li>Mean Squared Error (MSE)</li>
+            <ul>
+              <li>Công thức:<br> <img src="img/mse.svg"></li>
+              <li>Là một phép đo trung bình bình phương giữa giá trị dự đoán và giá trị thực tế. Nó chỉ quan tâm đến mức độ lỗi trung bình bất kể hướng của chúng</li>
+              <li>Thêm vào đó MSE giúp tính toán gradient hiệu quả hơn</li>
+              <li>Kết quả luôn dương, thêm vào đó khi mắc sai lầm thì thì hàm chi phí lỗi nặng hơn bởi bình phương</li>
+              <li>Ưu điểm: MSE rất tốt trong việc đảm bảo model hoạt động tốt và không dự đoán outlier với chi phí lớn. Vì ta sẽ đặt trọng số lớn hơn vào các giá trị outlier để giảm chi phí xuống</li>
+              <li>Nhược điểm: Nếu mô hình đưa ra 1 dự đoán rất tệ thì chi phí lỗi bình phương lên rất lớn, nó rất nhạy cảm outlier, tuy nhiên trong thực tế chúng ta không quan tâm mấy đến outlier mà hướng tới một mô hình toàn diện hoạt động đủ tốt với đa số</li>
+            </ul>
+            <span>Code</span>
+            <div>
+              <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                <code class="language-python" style="font-family: Consolas;text-align: left">
+                  def MSE(yHat, y):
+                      return np.sum((yHat - y)**2) / y.size
+                </code>
+              </pre>
+        </div>
+            <li>Mean absolute error</li>
+            <ul>
+              <li>Công thức: <br><img src="img/mae.svg">  </li>
+              <li>Là 1 phép đo lường tổng độ lệch tuyệt đối giữa giá trị dự đoán và giá trị thực tế, cũng giống như MSE, nó đo độ lớn lớn không cần xem xét hướng</li>
+              <li>MAE phức tạp hơn cần lập trình tuyến tính thì mới dễ dàng tìm được gradient, và MAE mạnh mẽ với các điểm outlier vì nó không bình phương.</li>
+              <li>Ưu điểm: Chúng ta lấy giá trị tuyết đối, tất cả sai số sẽ được tính theo 1 thang đo tuyến tính, do đó không giống như MSE, không đặt quá nhiều trọng số vào outlier để giảm thang đó chung</li>
+              <li>Nhược điểm: Nếu chúng ta quan tâm tới các giá trị outlier thì MAE sẽ không hiệu quả. Nhưng khi các điểm ngoại lai cực hiếm gặp (như trong đường cong hình chuông), độ đo RMSE lại tốt hơn và được sử dụng phổ biến hơn.</li>
 
-          <dt>Loss functions for classification</dt>
-          <dd>
-              - Binary Cross Entropy Loss
-          </dd>
-          <dd>
-              - Categorical Cross Entropy Loss
-          </dd>
-          <dd>
-              - Hinge Loss
-          </dd>
+            </ul>
+            <span>Code</span>
+            <div>
+              <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                <code class="language-python" style="font-family: Consolas;text-align: left">
+                  def MAE(yHat, y):
+                      return np.sum(np.absolute(yHat - y)) / y.size
+                </code>
+              </pre>
+            </div>
+            <li>So sánh MAE và MSE</li>
+            <ul>
+              <li>Để tìm điểm cực tiểu của một hàm số ta nghĩ ngay tới việc tìm đạo hàm số rồi mới đi tìm điểm mà tại đó có đạo hàm bằng 0. Như vậy sẽ có bước đạo thì MSE sẽ dễ dàng đạo hàm hơn MAE. Tuy nhiên MAE nó sẽ đưa hiệu quả tốt hơn khi trong tập dữ liệu có các điểm outlier. </li>
+              <li>Trong MSE, chi phí lỗi bằng e, nếu e là chi phí lỗi cao thì lúc này e bình phương vô cùng lớn (e>1). Nếu bậc của e càng lớn thì giá trị hàm loss vô cùng lớn. Nếu như có điểm outlier trong tập dữ liệu, giá trị e vô cùng lớn, có thể tiến tới vô cùng.</li>
+              <li>Trong MAE, chi phí lỗi bằng e, nếu e là chi phí lỗi cao thì e được lấy giá trị tuyết đối cũng lớn, tuy nhỏ sẽ nhỏ hơn nhiều khi e bình phương. </li>
+              <li>Do đó khi tối ưu loss function, L2 phạt mạnh hơn với các điểm outlier và model sẽ bị kéo về
+                phía outlier hơn. Do đó MSE bị ảnh hưởng bởi outlier và L1 tốt hơn đối với các dữ liệu có outlier.
+                </li>
+              <li>Tiêu chí xây dựng hàm loss fucntion là không âm và loss càng nhỏ thì model càng tốt với dữ liêu.
+                Từ đầu đến giờ có lẽ các bạn vẫn thắc mắc tại sao trong các hàm loss chỉ dùng trị tuyệt đối, bậc 2,
+                thế bậc 2n thì sao? Câu trả lời là bạn chọn bậc càng cao thì càng bị ảnh hưởng bởi outlier</li>
+            </ul>
+          </ul>
+          
+
+          <h5>Loss functions for classification</h5>
+          <p>Các vấn đề phân loại liên quan đến việc dự đoán kết quả đầu ra của lớp rời rạc. Nó liên quan đến việc phân chia tập dữ liệu thành các lớp khác nhau và duy nhất dựa trên các tham số khác nhau để một bản ghi mới và chưa thấy có thể được đưa vào một trong các lớp. VD: Thư có thể được phân loại là thư rác hoặc không phải thư rác. Chúng ta hãy xem xét các hàm mất mát có thể được sử dụng cho các bài toán phân loại. </p>
+          <ul>
+            <li>Binary Cross Entropy Loss</li>
+            <ul>
+              <li>Là hàm chi phí hay được sử dụng trong vấn đề phân loại nhị phân, Entropy là thước đo ngẫu nhiên trong thông tin đang được xử lý, và entropy chéo là thước đo sự khác biệt của độ ngẫu nhiên giữa 2 biến ngẫu nhiên </li>
+              <li>Nó so sánh từng xác suất được dự đoán với kết quả đầu ra thực tế của lớp có thể là 1 hoặc 0, Sau đó, nó tính toán điểm phạt các xác suất dựa trên khoảng cách so với giá trị kỳ vọng. Điều này, có nghĩa là gần hay xa giá trị thực tế</li>
+              <li>Công thức: <br> <img src="img/entropy_loss_0_1.svg"> </li>
+            </ul>
+            <span>Code:</span>
+            <div>
+              <pre style="color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                <code class="language-python" style="font-family: Consolas;text-align: left">
+                  def CrossEntropy(yHat, y):
+                      if y == 1:
+                        return -log(yHat)
+                      else:
+                        return -log(1 - yHat)
+                </code>
+              </pre>
+        </div>
+            <li>Categorical cross entropy loss</li>
+            <ul>
+              <li>Hàm phân loại chéo là một hàm mất mát được sử dụng trong các nhiệm vụ phân loại nhiều lớp. Đây là những nhiệm vụ trong đó ví dụ chỉ có thể thuộc về một trong số nhiều danh mục có thể có và mô hình phải quyết định loại nào.</li>
+              <li>Công thức: <br><img src="img/as.svg"> </li>
+            </ul>
+            
+          </ul>
+           
           <a href="https://www.section.io/engineering-education/understanding-loss-functions-in-machine-learning/">Tham Khảo về Loss Function</a>
       </div>
       <h4>
-          14. Các phương thức đánh giá hiệu suất mô hình.
+          15. Các phương thức đánh giá hiệu suất mô hình.
       </h4>
       <div>
-          <dt>Regression</dt>
-          <dd>- Để đánh giá hiệu suất của mô hình hồi quy chúng ta không đưa ra độ chính của mô hình mà chúng ta cần tính toán chi phí lỗi giữa giá trị thực tế và giá trị dự đoán</dd>
-          <dt>Classification</dt>
-          <dd>- Để đánh giá của mô hình phân loại thì chúng ta có rất nhiều phương thức để đánh giá</dd>
+          <h5>* Regression</h5>
+          <p>Để đánh giá hiệu suất của mô hình hồi quy chúng ta không đưa ra độ chính của mô hình mà chúng ta cần tính toán chi phí lỗi giữa giá trị thực tế và giá trị dự đoán</p>
+          <ul>
+              <li>Các hàm mất mát hồi quy kể trên câu số 14</li>
+              <ul>
+                  <li>Như chúng ta đã biết, để đánh giá 1 bài toán hồi quy hoạt động có tốt hay không thì chúng ta sẽ dựa vào tính toán chi phí lỗi giữa dự đoán và thực tế, chi phí nhỏ thì càng thể hiện rằng mô hình hồi quy đang hoạt động 1 cách tốt</li>
+                  <li>Tuy nhiên, chi phí lỗi này chúng ta cần đánh giá khách quan trên các tập dữ liệu mình đang chia trước đó</li>
+              </ul>
+              <li>Root Mean squared error</li>
+              <ul>
+                  <li>Root mean squared error căn bản chính là căn bậc 2 MSE. Đó có lẽ là thống kê dễ giải thích nhất, vì nó có cùng đơn vị với đại lượng được vẽ trên trục tung.</li>
+                  <li>RMSE có thể hiểu là độ lệch chuẩn phần dư, phần dư là khoảng cách từ điểm dữ liệu tới đường hồi quy</li>
+                  <li>Khi đánh giá mức độ phù hợp của một mô hình với tập dữ liệu, chúng tôi sử dụng RMSE thường xuyên hơn vì nó được đo bằng các đơn vị giống như biến phản hồi.</li>
+                  <li>Công thức: <br><br> <img src="img/CodeCogsEqn1.svg" ></li>
+              </ul>
+              <li>R2-score</li>
+              <ul>
+                  <li>Là 1 thước đo thống kê thể hiện mức độ phù hợp của 1 mô hình hồi quy. Gía trị lý tưởng là 1 và giá trị càng 1 thì mô hình càng tốt</li>
+                  <li>R2 là phép so sánh giữa tổng phần dư của các bình phương (SSres) với tổng bình phương (SStot). </li>
+                  <li>SStot được tính toán bằng tổng bình phương của khoảng cách vuông góc giữa các điểm dữ liệu và đường trung bình</li>
+                  <div class = 'center'>
+                      <img src="img/average-fitted-model1.png" width="80%" height="50%">
+                  </div>
+
+                  <li>SSres được tính bằng tổng bình phương của khoảng cách vuông góc giữa các điểm dữ liệu và đường thẳng vừa vặn nhất</li>
+                  <div class = 'center'>
+                      <img src="img/best-fitted-model.png" width="80%" height="50%">
+                  </div>
+                  <li>Công thức tổng quát: <br><br> <img src="img/CodeCogsEqn2.svg"> </li>
+              </ul>
+          </ul>
+
+          <h5>* Classification</h5>
+          <p>Để đánh giá của mô hình phân loại thì chúng ta có rất nhiều phương thức để đánh giá</p>
+          <ul>
+              <li>Ma trận nhầm lẫn</li>
+              <ul>
+                  <li>nó là một phép đo hiệu suất cho vấn đề phân loại học máy trong đó đầu ra có thể là hai hoặc nhiều lớp. Đó là một bảng với 4 sự kết hợp khác nhau của các giá trị dự đoán và thực tế.</li>
+                  <div class="center">
+                      <img src="img/confused_matrix.jpeg"width="80%" height="50%">
+                      <br>
+                      <p>Ma trận nhầm lẫn (Image courtesy: My Photoshopped Collection)</p>
+                  </div>
+                  <li>Chúng ta sẽ tìm hiểu các thuật ngữ TP,FP,TN,FN</li>
+                  <div class="center">
+                      <img src="img/matran_nhamlan.jpeg" width="80%" height="50%"><br>
+                      <p>Ma trận nhầm lẫn (Image courtesy: My Photoshopped Collection)</p>
+                  </div>
+                  <li>TP: là bạn dự đoán dương tính và thực tế đúng - Bạn dự đoán người nữ đó mang thai - sự thật là đúng người đó có mạng thai</li>
+                  <li>FP: là bạn dự đoán dương tính và thực tế là sai - Bạn dự đoán người nam đó mạng thai - sự thật là không mang thai</li>
+                  <li>TN: là bạn dự đoán âm tính và thực tế là đúng - Bạn dự đoán người nam đó không mang thai - sự thật là người đó không mang thai</li>
+                  <li>FN: là bạn dự đoán âm tính và thực tế là sai - Bạn dự đoán người nữ đó không mang thai - sự thật người đó có mạng thai</li>
+              <li>Từ bảng ma trận nhầm lẫn này ta dễ dàng đánh giá các lớp mình đang phân loại như thế nào và điều chỉnh lại sao cho phù hợp. Còn trong trường hợp nhiều lớp thì nó cũng tính toán như vậy nhưng tính toán TP,TN,FP,FN hơi dài dòng một chút, vấn đề này mình sẽ cập nhật sau</li>
+              </ul>
+              <li>Độ chính xác</li>
+              <ul>
+                  <li>Độ chính xác chính là nó lượng có bao nhiêu quan sát, cả tích cực và tiêu cực đã được phân loại chính xác</li>
+              </ul>
+
+              <li>Precision</li>
+              <ul>
+                  <li>Từ bảng ma trận nhầm lẫn chúng ta tính toán precision, và chúng ta có thể hơn đơn giản là từ các lớp mình dự đoán là dương tính thì có bao nhiêu là lớp dương tính thực sự (How many ?)</li>
+                  <li>Precision càng lớn thì độ chính xác của điểm cần tìm càng cao, mục tiêu lý tưởng là precision là 1</li>
+                  <li>Tính toán Precision được tính như sau: <br> <img src="img/precision.svg" ></li>
+              </ul>
+              <li>Recall</li>
+              <ul>
+                  <li>Recall có thể hiểu đơn giản là từ tất cả lớp dương tính thì model dự đoán đúng được bao nhiêu (How many ?)</li>
+                  <li>Recall càng cao thì tỷ lệ bỏ sót càng ít, mục tiêu lý tưởng là recall là 1</li>
+                  <li>Tính toán Recall được tính như sau: <br> <img src="img/recall.svg"></li>
+              </ul>
+
+              <li>F1-Score</li>
+              <ul>
+                  <li>Trong mỗi model sau khi xây dựng xong thì chúng ta đều muốn đạt được 1 kết quả tốt, precision và recall đều đạt được mục tiêu lý tưởng, tuy nhiên trong thực tế vấn đề hơi khó giải quyết vì vậy mới ra đời F1-score để dung hòa 2 cái này lại</li>
+                  <li>F-score giúp đo lường độ chính xác và độ chính xác cùng một lúc. Nó sử dụng Harmonic Mean thay cho Arithmetic Mean bằng cách trừng phạt các giá trị cực đoan nhiều hơn.</li>
+                  <li>Công thức: <img src="img/f1.svg"></li>
+              </ul>
+              <li>ROC-AUC</li>
+              <ul>
+                  <li>Đường cong ROC-AUC là phép đo hiệu suất cho các vấn đề phân loại ở các ngưỡng cài đặt khác nhau. ROC là đường cong xác suất và AUC là diện tích dưới đường cong và là đại diện cho mức độ phân tách</li>
+                  <li>AUC cho biết mô hình có khả năng phân tách như thế nào. AUC càng cao thì mức độ phân tách càng tốt</li>
+                  <li>Để vẽ được đường cong ROC: nó dựa vào 2 trục đó TPR và FPR</li>
+                  <li>Một số ví dụ về ngưỡng: </li>
+                  <div class="center">
+                      <img src="img/threshold_1.png" width="80%" height="70%"><br>
+                      <p>AUC = 1</p>
+                  </div>
+                  <p>AUC = 1 Đây là một tình huống lý tưởng. Khi hai đường cong không trùng nhau có nghĩa là mô hình có một thước đo lý tưởng về khả năng phân tách. Nó hoàn toàn có thể phân biệt giữa lớp tích cực và lớp tiêu cực.</p>
+                  <div class="center">
+                      <img src="img/threshold_0_7.png" width="80%" height="70%"><br>
+                      <p>AUC = 0.7</p>
+                  </div>
+                  <p>Khi hai bản phân phối chồng lên nhau, chúng tôi đưa ra lỗi loại 1 và loại 2. Tùy thuộc vào ngưỡng, chúng tôi có thể giảm thiểu hoặc tối đa hóa chúng. Khi AUC là 0,7, có nghĩa là có 70% cơ hội để mô hình có thể phân biệt giữa lớp tích cực và lớp tiêu cực.</p>
+                   <div class="center">
+                      <img src="img/threshold_0_5.png" width="80%" height="70%" ><br>
+                      <p>AUC = 0.5</p>
+                  </div>
+                  <p>Đây là tình huống tồi tệ nhất. Khi AUC xấp xỉ 0,5, mô hình không có khả năng phân biệt để phân biệt giữa lớp tích cực và lớp tiêu cực.</p>
+                  <div class="center">
+                      <img src="img/threshold_0.png" width="80%" height="70%"><br>
+                      <p>AUC = 0</p>
+                  </div>
+                  <p>Khi AUC gần bằng 0, mô hình thực sự đang chuyển động qua lại các lớp. Nó có nghĩa là mô hình đang dự đoán một lớp tiêu cực là một lớp tích cực và ngược lại.</p>
+              <a href="https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5">Tham khảo bài viết ROC-AUC rất hay</a>
+              </ul>
+
+          </ul>
 
 
       </div>
@@ -448,8 +817,8 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
   </article>
 </section>
 
-<footer>
-  <p>Update sau nhé!!!!</p>
+<footer style="background-color: #3a97c2">
+  <marquee width="50%">Ở chương này mình đã trình bày các kiến thức nền tảng về Machine Learning, mặc dù chưa đầy đủ hết về mọi khía cạnh nhưng cũng giúp cho bạn hiểu rõ về ý tưởng chung. Các bạn cứ từng bước một mới đi sâu được nhé, mọi thắc mắc gì hoặc thiếu sót gì bạn có thể liên hệ với tôi </marquee>
 </footer>
 
 </body>

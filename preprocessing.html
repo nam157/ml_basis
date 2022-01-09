@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <link rel="icon" href="img/Machine%20learning.png" type="image/x-icon">
-<title>Machine Learning cơ bản</title>
+    <link href="source/prism.css" rel="stylesheet"/>
+<title>Hệ thống kiến thức Machine Learning</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -80,26 +81,17 @@ footer {
 </style>
 </head>
 <body>
+    <script src="source/prism.js"></script>
 <div class="wrapper-masthead">
       <div class="container">
-<<<<<<< HEAD
         <header  class="masthead clearfix" style="padding: 5px;color: #29bdff ; background-image:url(img/background.png)">
-=======
-        <header  class="masthead clearfix" style="padding: 5px;color: #29bdff ;background-image:url(img/background.png)">
->>>>>>> origin/master
           <div class="site-info">
-            <h2 class="site-name" style="text-align: center">Machine Learning cơ bản</h2>
+            <h2 class="site-name" style="text-align: center">Hệ thống kiến thức Machine Learning</h2>
             <p style="text-align: center;">Trong blog này, chúng ta sẽ tổng hợp toàn bộ kiến thức cơ bản về Học Máy</p>
               <div style="text-align: right">
-<<<<<<< HEAD
                   <a href="https://www.facebook.com/nam.150720/" target="_blank" style="color: #29bdff">Contact</a> &nbsp;
                   <a href="https://www.topcv.vn/xem-cv/AVNfC1QGVFkFAloCUgJfU1BRXVQGAQMKCA4BVAfe1b" target="_blank" style="color: #29bdff">About</a> &nbsp;
                   <a href="https://github.com/nam157" target="_blank" style="color: #29bdff">Github</a>
-=======
-                  <a href="https://www.facebook.com/nam.150720/" style="color: #29bdff">Contact</a> &nbsp;
-                  <a href="https://www.topcv.vn/xem-cv/AVNfC1QGVFkFAloCUgJfU1BRXVQGAQMKCA4BVAfe1b" target="_blank" style="color: #29bdff">About</a> &nbsp;
-                  <a href="https://github.com/nam157" style="color: #29bdff">Github</a>
->>>>>>> origin/master
 
               </div>
 
@@ -118,14 +110,25 @@ footer {
         <li><a href="classifi_cluster.html" style="color: darkblue">IV. Phân loại - Phân cụm</a></li><br>
         <li><a href="neural.html" style="color: darkblue">V. Neural Network</a></li>
     </ul>
-      <br><br>
+      <br><hr><br>
       <ul>
-          <h4>Gợi ý một số khóa học:</h4>
+          <h4>Gợi ý một số khóa học</h4>
           <ul>
-              <li style="color: darkblue">1. <a href="https://www.udemy.com/course/feature-engineering-for-machine-learning/" style="color: darkblue">Feature Engineering for Machine Learning</a> </li>
-              <li style="color: darkblue">2. <a href="https://www.udemy.com/course/feature-selection-for-machine-learning/" style="color: darkblue">Feature Selection for Machine Learning</a> </li>
+              <li style="color: darkblue">1. <a href="https://www.udemy.com/course/feature-engineering-for-machine-learning/" target="_blank" style="color: darkblue">Feature Engineering for Machine Learning</a> </li><br>
+              <li style="color: darkblue">2. <a href="https://www.udemy.com/course/feature-selection-for-machine-learning/" target="_blank" style="color: darkblue">Feature Selection for Machine Learning</a> </li>
           </ul>
       </ul>
+      <hr>
+      <ul>
+
+      <h4>Gợi ý một số cuốn sách</h4>
+      <ul>
+          <li><a href="https://www.amazon.com/Feature-Engineering-Machine-Learning-Principles/dp/1491953241" style="color: darkblue" target="_blank">1.Feature Engineering for Machine Learning</a></li>
+      </ul>
+      </ul>
+      <hr>
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61d9284c4df19ea7"></script>
+      <div class="addthis_inline_share_toolbox_ch26"></div>
   </nav>
 
   <article>
@@ -141,7 +144,7 @@ footer {
       <h4>1. Xử lý dữ liệu bị khuyết (Missing Data)</h4>
 
       <div>
-          <dt>Một số khái niệm về giả định dữ liệu:</dt>
+          <h5>Một số khái niệm về giả định dữ liệu:</h5>
           <dd>- Dữ liệu khuyết không phải ngẫu nhiên (MNAR), nếu có 1 cơ chế hoặc có 1 lý do nào đó khiến các giá trị bị khuyết được đưa vào tập dữ liệu.</dd>
           <dd>- Dữ liệu khuyết hoàn toàn ngẫu nhiên  (MCAR), dữ liệu khuyết hoàn toàn là ngẫu nhiên với xác suất khuyết là như nhau.</dd>
           <dd>- Dữ liệu khuyết ngẫu nhiên (MCR), xác suất của quan sát bị thuyết phụ thuộc vào thông tin sẵn có, nó độc lập các biến khác trong tập dữ liệu</dd>
@@ -151,7 +154,7 @@ footer {
           </div>
           <br>
 
-          <dt>Các phương pháp xử lý dữ liệu bị khuyết:</dt>
+          <h5>Các phương pháp xử lý dữ liệu bị khuyết:</h5>
           <div class="center">
           <img src="img/missing_data.jpg" width="650" height="350"><br>
           <p>Các kỹ thuật gán missing data</p>
@@ -217,10 +220,10 @@ footer {
                   <li>Nhược điểm: Mở rộng không gian đặc trưng, mất thời gian vì vẫn cần gán biến đầu nữa</li>
               </ul><br>
               <li>Phương pháp 9: Sử dụng KNN</li>
-              <a href="https://medium.com/@kyawsawhtoon/a-guide-to-knn-imputation-95e2dc496e">Mọi có thể đọc bài viết này tham khảo KNN Imputation</a>
+              <a href="https://medium.com/@kyawsawhtoon/a-guide-to-knn-imputation-95e2dc496e" target="_blank" style="color: darkblue">Mọi người có thể đọc bài viết này tham khảo KNN Imputation</a>
           </ul>
-          <a href="https://github.com/nam157/courses_ML/tree/main/pre-processing/Missing%20Data">Source code tham khảo</a><br>
-          <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3668100/">Bài viết tham khảo</a>
+          <a href="https://github.com/nam157/courses_ML/tree/main/pre-processing/Missing%20Data" target="_blank" style="color: darkblue">Source code tham khảo</a><br>
+          <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3668100/" target="_blank" style="color: darkblue">Bài viết tham khảo</a>
       </div>
       <h4>2. Mã hóa dữ liệu (Categorical Data Encoding )</h4>
       <div class="center">
@@ -237,9 +240,10 @@ footer {
                   <li>Ưu điểm: Dễ dàng thực hiện, không đưa ra giả định về dữ liệu hoặc phân phối biến, giữ được thông tin hạng mục</li>
                   <li>Nhược điểm: Mở rộng không gian đặc trưng, nhiều biến giả có thể giống nhau đưa ra thông tin dư thưa, không thể thêm thông tin sau khi đã mã hóa</li>
                   <li>Các thư viện hỗ trợ hay được sử dung: pandas,sklearn,feature-engine</li>
-              </ul>
+              </ul><br>
+              <span>Code</span>
               <div style="text-align: left">
-                  <pre style="background-color: rgb(11, 26, 69);text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style="text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         #Sử dụng thư viện feature_engine sẽ tiện hơn vì nó trả về dataframe dễ dàng đánh giá
                         from feature_engine.encoding import OneHotEncoder
@@ -259,9 +263,10 @@ footer {
                   <li>Ưu điểm: Dễ thực hiện, không mở rộng không gian đặc trưng qua nhiều, thích hợp mô hình tuyến tính</li>
                   <li>Nhược điểm: Dễ dàng mất thông tin khi bỏ qua nhãn, không thêm được thông tin sau khi mã hóa</li>
                   <li>Thư viện hỗ trợ hay được sử dụng: pandas,sklearn,feature-engine</li>
-              </ul>
+              </ul><br>
+              <span>Code</span>
               <div style="text-align: left">
-                  <pre style="background-color: rgb(11, 26, 69);text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style="text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         #Sử dụng thư viện feature_engine sẽ tiện hơn vì nó trả về dataframe dễ dàng đánh giá
                         from feature_engine.encoding import OneHotEncoder
@@ -281,9 +286,10 @@ footer {
                   <li>Ưu điểm: Dễ dàng triển khai, không mở rộng không gian đặc trưng</li>
                   <li>Nhược điểm: Không thu thập được thông tin về hạng mục,không thích hợp với mô hình tuyến tính</li>
                   <li>Thư viện hỗ trợ hay được sử dụng: pandas,sklearn,feature-engine</li>
-              </ul>
+              </ul><br>
+              <span>Code</span>
               <div style="text-align: left">
-                  <pre style="background-color: rgb(11, 26, 69);text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style="text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         #Sử dụng thư viện feature_engine sẽ tiện hơn vì nó trả về dataframe dễ dàng đánh giá
                         from feature_engine.encoding import OrdinalEncoder
@@ -301,9 +307,10 @@ footer {
                   <li>Ưu điểm: Nắm bắt thông tin hạng mục, tạo mối quan hệ đơn điệu giữa biến và mục tiêu,không mở rộng không gian đặc trưng</li>
                   <li>Nhược điểm: Dễ dẫn tới overfitting, khó kiểm định chéo với các thự viện hiện tại</li>
                   <li>Thư viện hỗ trợ hay được sử dụng: pandas,sklearn,feature-engine</li>
-              </ul>
+              </ul><br>
+              <span>Code</span>
               <div style="text-align: left">
-                  <pre style="background-color: rgb(11, 26, 69);text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style="text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         #Sử dụng thư viện feature_engine sẽ tiện hơn vì nó trả về dataframe dễ dàng đánh giá
                         from feature_engine.encoding import OrdinalEncoder
@@ -321,9 +328,10 @@ footer {
                   <li>Ưu điểm: Dễ dàng triển khai, không mở rộng không gian đặc trưng</li>
                   <li>Nếu 2 hạng mục khác nhau có cùng tần số xuất hiện trong tập dữ liệu, tức là chúng có số lượng quan sát giống nhau thì sẽ được thay thể bằng cùng 1 số: có thể mất thông tin có giá trị</li>
                   <li>Thư viện hỗ trợ hay được sử dụng: pandas,feature-engine</li>
-              </ul>
+              </ul><br>
+              <span>Code</span>
               <div style="text-align: left">
-                  <pre style="background-color: rgb(11, 26, 69);text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style="text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         #Sử dụng thư viện feature_engine sẽ tiện hơn vì nó trả về dataframe dễ dàng đánh giá
                         from feature_engine.encoding import CountFrequencyEncoder
@@ -336,7 +344,7 @@ footer {
                   </pre>
             </div>
           </ul>
-          <a href="https://github.com/nam157/courses_ML/tree/main/pre-processing/Categorical%20Encoding">Source code tham khảo</a><br>
+          <a href="https://github.com/nam157/courses_ML/tree/main/pre-processing/Categorical%20Encoding" target="_blank">Source code tham khảo</a><br>
       </div>
       <h4>3. Xử lý dữ liệu ngoại lai (Outliers) </h4>
       <div>
@@ -348,9 +356,10 @@ footer {
                   <li>Ưu điểm: dễ dàng, nhanh chóng</li>
                   <li>Nhược điểm: Các điểm outlier có thể là những thông tin rất ưu ích, nếu giá trị outlier quá nhiều và xóa nó đi sẽ mất phần lớn dữ liệu</li>
                   <li>Quan trọng là oulier cần phát hiện và chỉ loại bỏ trong tập traning không loại bỏ trong tập test</li>
-              </ul>
+              </ul><br>
+              <span>Code</span>
               <div style="text-align: left">
-                  <pre style="background-color: rgb(11, 26, 69);text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style="text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         def find_skewed_boundaries(df, variable, distance):
                             # tính các ranh giới bên ngoài có outlier
@@ -378,9 +387,10 @@ footer {
                   <li>Capping có thể thực hiện ở cả 2 đầu hoặc 1 đầu phân phối còn tùy thuộc vào biến và người dùng.</li>
                   <li>Ưu điểm: Không loại bỏ dữ liệu</li>
                   <li>Hạn chế là làm sai lệch phân phối</li>
-              </ul>
+              </ul><br>
+              <span>Code</span>
               <div style="text-align: left">
-                  <pre style="background-color: rgb(11, 26, 69);text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style="text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         from feature_engine.outliers import Winsorizer
                         windsoriser = Winsorizer(
@@ -394,7 +404,7 @@ footer {
                   </pre>
             </div>
           </ul>
-          <a href="https://github.com/nam157/courses_ML/blob/main/pre-processing/Outlier_scale/10.2%20X%E1%BB%AD%20l%C3%BD%20outlier.ipynb">Source code tham khảo</a><br>
+          <a href="https://github.com/nam157/courses_ML/blob/main/pre-processing/Outlier_scale/10.2%20X%E1%BB%AD%20l%C3%BD%20outlier.ipynb" target="_blank" style="color: darkblue">Source code tham khảo</a><br>
       </div>
       <h4>4. Co dãn đặc trưng (Feature Scaling)</h4>
       <div>
@@ -406,9 +416,10 @@ footer {
                   <li>Duy trì hình dạng phân phối ban đầu và outlier</li>
                   <li>Giá trị min/max của biến khác nhau thay đổi</li>
                   <li>Hầu hết mọi trường hợp đều sử dụng được phương thức này!</li>
-              </ul>
+              </ul><br>
+              <span>Code</span>
               <div>
-                  <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         from sklearn.preprocessing import StandardScaler
                         scaler = StandardScaler()
@@ -431,10 +442,10 @@ footer {
                   <li>Không duy trì hình dạng phân phối ban đầu</li>
                   <li>Nhạy cảm outlier</li>
                   <li>Trường hợp hay được sử dụng với biến đó xấp xỉ bằng phân phối chuẩn</li>
-              </ul>
-
+              </ul><br>
+              <span>Code</span>
               <div>
-                  <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style="color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         from sklearn.preprocessing import MinMaxScaler
                         scaler = MinMaxScaler()
@@ -458,9 +469,10 @@ footer {
                   <li>Công thức: <img src="https://latex.codecogs.com/svg.image?x&space;=&space;\frac{(x&space;-&space;mean(X))}{max(X)&space;-&space;min(X)}" title="x = \frac{(x - mean(X))}{max(X) - min(X)}" /></li>
               </ul>
           </ul>
-      </div>
+      </div><br>
+      <span>Code</span>
       <div>
-          <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+          <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                 <code class="language-python" style="font-family: Consolas;text-align: left">
                     scaler_mean = StandardScaler(with_mean=True, with_std=False)
 
@@ -513,9 +525,10 @@ footer {
                   <li>Loại bỏ các đặc trưng trùng lặp - đặc trưng không đổi- đặc trưng gần như không đổi</li>
                   <ul>
                       <li>Về cơ bản thì cách thức giống nhau, nó sẽ loại các đặc trưng về cơ bản là giống nhau, như vậy sẽ giúp cho tập dữ liệu của mình tránh các trường hợp dừ thừa</li>
-                  </ul>
+                  </ul><br>
+                  <span>Code</span>
                   <div>
-                  <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         from feature_engine.selection import (DropConstantFeatures,DropDuplicateFeatures)
                         pipe = Pipeline([
@@ -531,9 +544,10 @@ footer {
                       <li>Tương quan là phép đo lượng tuyến tính của 2 biến ngẫu nhiên, mức độ tương cao càng cao thì tuyến tính càng cao rất phù hợp cho các mô hình tuyến tính</li>
                       <li>Tuy nhiên, nếu 2 biến dự báo có tương cao, thì bản chất, chúng sẽ cung cấp thông tin dư thừa thông tin về mục tiêu, vì chúng ta có thể dự đoán biến tiêu chỉ cần 1 biến dự báo</li>
                       <li>Để tạo mô hình học máy tốt, chúng ta cần tìm những biến có tương quan cao với biến mục tiêu nhưng không tương với biến khác. Nói cách khác là, chúng ta muốn yếu tố dự đoán tương với mục tiêu chứ không tương lại với nhau</li>
-                  </ul>
+                  </ul><br>
+                  <span>Code</span>
                   <div>
-                  <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         from feature_engine.selection import DropCorrelatedFeatures
                         sel = DropCorrelatedFeatures(
@@ -555,9 +569,10 @@ footer {
                   <ul>
                       <li>Huấn luyện mô hình hồi quy tuyến tính và chúng ta thêm tham số regularization l1-norm vào.</li>
                       <li>Các trọng số trong mô hình Lasso luôn có xu hướng tiến về 0. Vì vậy chúng ta có thể dựa vào yếu tố này để lựa chọn đặc trưng, các trọng số w khác không thì tương đương với đặc trưng quan trọng và trong số w bằng 0 thì ngược lại</li>
-                  </ul>
+                  </ul><br>
+                  <span>Code</span>
                   <div>
-                  <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         from sklearn.feature_selection import SelectFromModel
                         from sklearn.linear_model import Lasso
@@ -581,9 +596,10 @@ footer {
                       <li>Nếu phép đo giảm nhiều hơn ngưỡng được thiết lập thì đặc trưng đó quan trọng và giữ lại, nếu không , xóa</li>
                       <li>Lặp lại các bước 2,3,4 cho đến khi các đặc trưng đc đánh giá </li>
                   </ul>
-
+                  <br>
+                  <span>Code</span>
                   <div>
-                  <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         # build initial model using all the features
                         model = GradientBoostingRegressor(n_estimators=10, max_depth=4, random_state=10)
@@ -608,9 +624,10 @@ footer {
                       <li>Tính toán các phép đo lường</li>
                       <li>Nếu phép đo lường tăng nhiều hơn ngưỡng đc thiết lập thì đặc trưng đó giữ lại còn không xóa</li>
                       <li>Lặp lại các bước trên khi nào đi qua hết các đặc trưng</li>
-                  </ul>
+                  </ul><br>
+                  <span>Code</span>
                   <div>
-                  <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         # build initial model using all the features
                         model = GradientBoostingRegressor(n_estimators=10, max_depth=4, random_state=10)
@@ -626,7 +643,6 @@ footer {
                   </pre>
                   </div>
                   </ul>
-<<<<<<< HEAD
               <a href="https://github.com/nam157/courses_ML/tree/main/pre-processing/Feature%20selection" style="color: darkblue">Source code tham khảo</a>
               <li>Rời rạc hóa (Discretisation)</li>
               <div class="center">
@@ -643,15 +659,16 @@ footer {
                           <li>Chia phạm vị giá trị có thể của các biến thành N bin hoặc các khoảng</li>
                           <li>Các khoảng/bin này sẽ có khoảng cách bằng nhau. Nó được thực hiện bằng cách lấy giá trị lớn nhất trừ cho giá trị nhỏ nhất rồi chia có khoảng mình mong muốn</li>
                           <li>Chúng ta sẽ sắp xếp các quan sát thuộc các bin đó, tuy nhiên cần chú ý nếu như là phân phối lệch thì không thể cải thiện lan truyền giá trị </li>
-                      </ul>
+                      </ul><br>
+                      <span>Code</span>
                       <div>
-                          <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                          <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                             <code class="language-python" style="font-family: Consolas;text-align: left">
-                                #Gọi thư viện feature_engine
-                                from feature_engine.discretisation import EqualWidthDiscretiser
-                                #Chọn 8 khoảng bằng nhau và lựa chọn biến để rời rạc hóa
-                                disc = EqualWidthDiscretiser(bins=8, variables = ['age', 'fare'])
-                                disc.fit(X_train)
+                    #Gọi thư viện feature_engine
+                    from feature_engine.discretisation import EqualWidthDiscretiser
+                    #Chọn 8 khoảng bằng nhau và lựa chọn biến để rời rạc hóa
+                    disc = EqualWidthDiscretiser(bins=8, variables = ['age', 'fare'])
+                    disc.fit(X_train)
                             </code>
                           </pre>
                       </div>
@@ -660,15 +677,16 @@ footer {
                           <li>Chia các phạm vi các giá trị có thể của biến thành một số khoảng mà mỗi khoảng lại chứa số quan sát xấp xỉ nhau, để tính ranh giới cho từng khoảng này, chúng ta sẽ tính các quantile của biến</li>
                           <li>Kỹ thuật này giúp cải thiện chêch lệch giá trị và nó cũng xử lý outlier khi chúng ta được phân bổ vào vùng đầu hoặc cuối.</li>
                           <li>Việc cải thiện chêch lệch giá trị sẽ giúp các mô hình tuyến tính giả định chêch lệch đều hơn, phân phối các giá trị của biến chuẩn hơn.</li>
-                      </ul>
+                      </ul><br>
+                      <span>Code</span>
                       <div>
-                          <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                          <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                             <code class="language-python" style="font-family: Consolas;text-align: left">
-                                #Gọi thư viện feature_engine
-                                from feature_engine.discretisation import EqualFrequencyDiscretiser
-                                #Chọn 10 khoảng theo quan sát và lựa chọn biến để rời rạc hóa
-                                disc = EqualFrequencyDiscretiser(q=10, variables = ['age', 'fare'])
-                                disc.fit(X_train)
+                    #Gọi thư viện feature_engine
+                    from feature_engine.discretisation import EqualFrequencyDiscretiser
+                    #Chọn 10 khoảng theo quan sát và lựa chọn biến để rời rạc hóa
+                    disc = EqualFrequencyDiscretiser(q=10, variables = ['age', 'fare'])
+                    disc.fit(X_train)
                             </code>
                           </pre>
                       </div>
@@ -677,13 +695,15 @@ footer {
                           <li>Rời rạc hóa sử dụng K-means gồm việc áp dụng phân cụm K-means vào biến liên tục để thu được các cụm khác nhau, mỗi cụm tương ứng với một bin mà chúng ta sẽ sắp xếp các giá trị của biến. </li>
                           <li>Rời rạc hóa sử dụng K-means không cải thiện chênh lệch giá trị. Nó giúp xử lý outlier, mặc dù outlier có thể có ảnh hưởng đến vị trí tâm của các cụm. </li>
                       </ul>
+                      <br>
+                      <span>Code</span>
                       <div>
-                          <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                          <pre style="color: whitesmoke; padding: 5px;width: auto; ">
                             <code class="language-python" style="font-family: Consolas;text-align: left">
-                                #Gọi thư viện feature_engine
-                                from feature_engine.discretisation import KBinsDiscretizer
-                                disc = KBinsDiscretizer(n_bins=4, encode='ordinal', strategy='kmeans')
-                                disc.fit(X_train[['age', 'fare']])
+                    #Gọi thư viện feature_engine
+                    from feature_engine.discretisation import KBinsDiscretizer
+                    disc = KBinsDiscretizer(n_bins=4, encode='ordinal', strategy='kmeans')
+                    disc.fit(X_train[['age', 'fare']])
                             </code>
                           </pre>
                       </div>
@@ -695,18 +715,19 @@ footer {
                           <li>Chúng ta sẽ sử dụng DT để xác định k bin tối ưu mà chúng ta cần xắp xếp các giá trị biến. Khi DT đưa ra quyết định , nó sẽ chỉ định một quan sát cho một trong n lá cuối của DT. Vì DT có số lượng xác định các lá hoặc nút kết thúc nên nó sẽ biến đổi một biến liên tục thành một đầu ra rời rạc.</li>
                           <li>DT giúp chúng ta xử lý outlier. Kỹ thuật này cũng hữu ích với các mô hình tuyến tính vì nó tránh việc phải thực hiện hai bước như chúng ta đã làm trước đây, khi rời rạc hóa biến trước tiên rồi sau đó mới mã hóa biến để có được mối quan hệ đơn điệu (sử dụng DT giúp chúng ta có thể làm hai việc cùng một lúc).</li>
                       </ul>
+                      <span>Code</span>
                       <div>
-                          <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                          <pre style="color: whitesmoke; padding: 5px;width: auto; ">
                             <code class="language-python" style="font-family: Consolas;text-align: left">
-                                from feature_engine.discretisation import DecisionTreeDiscretiser
-                                #Lựa chọn tham số: cv là kiểm định chéo, variables có biến rời rạc hóa, param_grid các tham số cần tối ưu
-                                treeDisc = DecisionTreeDiscretiser(cv=10, scoring='accuracy',
-                                                                   variables=['age', 'fare'],
-                                                                   regression=False,
-                                                                   param_grid={'max_depth': [1, 2, 3],
-                                                                              'min_samples_leaf':[10,4]})
+                from feature_engine.discretisation import DecisionTreeDiscretiser
+                #Lựa chọn tham số: cv là kiểm định chéo, variables có biến rời rạc hóa, param_grid các tham số cần tối ưu
+                treeDisc = DecisionTreeDiscretiser(cv=10, scoring='accuracy',
+                                                        variables=['age', 'fare'],
+                                                        regression=False,
+                                                        param_grid={'max_depth': [1, 2, 3],
+                                                        'min_samples_leaf':[10,4]})
 
-                                treeDisc.fit(X_train, y_train)
+                treeDisc.fit(X_train, y_train)
                             </code>
                           </pre>
                       </div>
@@ -721,17 +742,13 @@ footer {
 
 
 
-=======
-          </ul>
-          <a href="https://github.com/nam157/courses_ML/tree/main/pre-processing/Feature%20selection" style="color: darkblue">Source code tham khảo</a>
->>>>>>> origin/master
       </div>
 
   </article>
 </section>
 
-<footer>
-  <p>Update sau nhé!!!!</p>
+<footer style="background-color: #3a97c2">
+    <marquee width="50%">Ở chương này mình đã trình bày các phương thức để tiền xử dữ liệu sao 1 cách hoàn hảo trước khi đưa vào mô hình, mặc dù chưa đầy đủ hết về mọi khía cạnh nhưng cũng giúp cho bạn hiểu rõ về ý tưởng chung. Các bạn cứ từng bước một mới đi sâu được nhé, mọi thắc mắc gì hoặc thiếu sót gì bạn có thể liên hệ với tôi </marquee>
 </footer>
 
 </body>

@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <link rel="icon" href="img/Machine%20learning.png" type="image/x-icon">
-<title>Machine Learning cơ bản</title>
+    <link href="source/prism.css" rel="stylesheet"/>
+
+<title>Hệ thống kiến thức Machine Learning</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -59,9 +61,6 @@ section::after {
   display: table;
   clear: both;
 }
-h1 {
-   color: #29bdff;
-}
 /* Style the footer */
 footer {
   background-color: #777;
@@ -80,42 +79,308 @@ footer {
 </style>
 </head>
 <body>
-<div class="wrapper-masthead">
-      <div class="container">
-        <header  class="masthead clearfix" style="padding: 20px;color: #f8f8f8 ; background-color: #29bdff">
-          <div class="site-info">
-            <h2 class="site-name" style="text-align: center">Machine Learning cơ bản</h2>
-            <p style="text-align: center;">Trong blog này, chúng ta sẽ tổng hợp toàn bộ kiến thức cơ bản về Học Máy</p>
-              <div style="text-align: right">
-                  <a href="https://www.facebook.com/nam.150720/">Contact</a> &nbsp;
-                  <a href="https://www.topcv.vn/xem-cv/AVNfC1QGVFkFAloCUgJfU1BRXVQGAQMKCA4BVAfe1b" target="_blank" >About</a> &nbsp;
-                  <a href="https://github.com/nam157">Github</a>
+  <script src="source/prism.js"></script>
+  <div class="wrapper-masthead">
+    <div class="container">
+      <header  class="masthead clearfix" style="padding: 5px;color: #29bdff ; background-image:url(img/background.png)">
+        <div class="site-info">
+          <h2 class="site-name" style="text-align: center">Hệ thống kiến thức Machine Learning</h2>
+          <p style="text-align: center;">Trong blog này, chúng ta sẽ tổng hợp toàn bộ kiến thức cơ bản về Học Máy</p>
+            <div style="text-align: right">
+              <a href="https://www.facebook.com/nam.150720/" style="color: #29bdff" target="_blank">Contact</a> &nbsp;
+                <a href="https://www.topcv.vn/xem-cv/AVNfC1QGVFkFAloCUgJfU1BRXVQGAQMKCA4BVAfe1b" target="_blank" style="color: #29bdff">About</a> &nbsp;
+                <a href="https://github.com/nam157" style="color: #29bdff" target="_blank">Github</a>
 
-              </div>
+            </div>
 
-          </div>
-        </header>
-      </div>
+        </div>
+      </header>
     </div>
+  </div>
 
 <section>
-  <nav>
-    <ul  style="color: #29bdff" >
-        <li><a href="index.html">I. Giới thiệu Học Máy</a></li><br>
-        <li><a href="preprocessing.html">II. Tiền xử lý dữ liệu</a></li><br>
-        <li><a href="regression.html">III. Hồi quy</a></li><br>
-        <li><a href="classifi_cluster.html">IV. Phân loại - Phân cụm</a></li><br>
-        <li><a href="neural.html">V. Neural Network</a></li>
+<nav>
+  <h2>Mục lục</h2>
+  <ul  style="color: #29bdff" >
+    <li><a href="index.html" style="color: darkblue">I. Giới thiệu Học Máy</a></li><br>
+    <li><a href="preprocessing.html" style="color: darkblue">II. Tiền xử lý dữ liệu</a></li><br>
+    <li><a href="regression.html" style="color: darkblue">III. Hồi quy</a></li><br>
+    <li><a href="classifi_cluster.html" style="color: darkblue">IV. Phân loại - Phân cụm</a></li><br>
+    <li><a href="neural.html" style="color: darkblue">V. Neural Network</a></li>
+  </ul>
+  <br><hr><br>
+  <ul>
+    <h4>Gợi ý một số khóa học</h4>
+    <ul>
+            <li  style="color: darkblue">1. <a href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+MLP301x_1.1-A_EN+2020_T6/about" target="_blank"  style="color: darkblue">FUNiX: Giới thiệu về Học máy</a> </li><br>
+            <li  style="color: darkblue">2. <a href="https://courses.funix.edu.vn/courses/course-v1:FUNiX+MLP302x_01_EN+2020_T1/about" target="_blank"  style="color: darkblue">FUNiX: Machine Learning: Regression</a> </li><br>
+            <li  style="color: darkblue">3. <a href="https://www.udemy.com/course/machinelearning/" target="_blank"  style="color: darkblue">Machine Learning A-Z™: Hands-On Python & R In Data Science</a> </li><br>
+            <li  style="color: darkblue">4. <a href="https://www.coursera.org/learn/machine-learning" target="_blank"  style="color: darkblue">Machine Learning Andrew Ng</a></li><br>
+            <li  style="color: darkblue">4. <a href="https://www.coursera.org/learn/neural-networks-deep-learning" target="_blank"  style="color: darkblue">Neural Networks and Deep Learning</a></li><br>
+            <li  style="color: darkblue">4. <a href="https://www.coursera.org/learn/deep-neural-network" target="_blank" style="color: darkblue">Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization</a></li><br>
+
+
     </ul>
-  </nav>
+    <ul><hr>
+      <h4>Gợi ý một số cuốn sách</h4>
+      <ul>
+        <li><a href="https://machinelearningcoban.com/about/" style="color: darkblue" target="_blank" >1. Machine learning cơ bản (Vũ Hữu Tiệp)</a></li><br>
+        <li><a href="https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1492032646/ref=pd_sbs_1/131-3703266-5310848?pd_rd_w=qXJuJ&pf_rd_p=3676f086-9496-4fd7-8490-77cf7f43f846&pf_rd_r=TP4FRDNXN6YPQWGF6DK9&pd_rd_r=87642d24-8edb-4959-b4d2-2dd6bf60aec5&pd_rd_wg=9iAe4&pd_rd_i=1492032646&psc=1" style="color: darkblue" target="_blank">2.Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems (Aurélien Géron) </a></li><br>
+        <li><a href="https://www.amazon.com/Deep-Learning-Adaptive-Computation-Machine/dp/0262035618/ref=pd_sbs_2/131-3703266-5310848?pd_rd_w=qXJuJ&pf_rd_p=3676f086-9496-4fd7-8490-77cf7f43f846&pf_rd_r=TP4FRDNXN6YPQWGF6DK9&pd_rd_r=87642d24-8edb-4959-b4d2-2dd6bf60aec5&pd_rd_wg=9iAe4&pd_rd_i=0262035618&psc=1 "style="color: darkblue" target="_blank">3. Deep Learning (Adaptive Computation and Machine Learning series)(Ian Goodfellow)</a></li>
+      </ul>
+    </ul>
+  </ul>
+  <hr>
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61d9284c4df19ea7"></script>
+      <div class="addthis_inline_share_toolbox_ch26"></div>
+</nav>
 
   <article>
-    <h1>V. Neural Network</h1>
+    <h1 style="color: darkblue">V. Neural Network</h1>
+
+    <h4>1. Shallow neural network</h4>
+    
+    <div>
+      <ul>
+        <li>Khi nghe đến cái tên Neural Network, chúng ta có cảm giác nó bao gồm rất nhiều lớp ẩn nhưng có một loại mạng thần kinh với số lượng lớp ẩn ít. Mạng nơron nông chỉ bao gồm 1 hoặc 2 lớp ẩn. Hiểu được mạng nơron nông cho chúng ta cái nhìn sâu sắc về những gì chính xác đang diễn ra bên trong mạng nơron sâu.</li>
+        <div class="center">
+          <img src="img/shallownn.png" height="70%" width="90%"><br>
+          <span>Minh họa mạng nơ-ron nông</span>
+        </div>
+        <li>Cách hiểu đơn giản khác về mạng nơ-ron nông đó là về Logistic regression hay Perceptron learning algorithm</li>
+        <li>Neural network có thể hiểu là các stack xếp chồng của hồi quy logistic</li>
+        <li>Neural là 1 tính từ (nơ-ron),network chỉ là 1 cấu trúc, cách mà các nơ-ron đó liên kết với nhau, nên NN có thể tính toán lấy cảm hứng từ sự hoạt động của các nơ-ron hệ thần kinh</li>
+        <div class="center">
+        <img src="img/aq3.png" height="70%" width="90%">  
+        </div>
+        <li>
+          Chúng tính toán đơn giản với 2 bước:<br>
+          *Tính tổng linear: <img src="img/76.svg"><br>
+          *Áp dụng hàm sigmoid: <img src="img/77.svg"><br>
+          => Hàm sigmoid ở đây sẽ được gọi hàm kích hoạt (activation function)
+        </li>
+        <li>Mô hình tổng quát:<br>
+        *Layer đầu tiên là input layer, các layer ở giữa được gọi là hidden layer, layer cuối cùng được gọi là
+        output layer. Các hình tròn được gọi là node.<br>
+        *Mỗi mô hình luôn có 1 input layer, 1 output layer, có thể có hoặc không các hidden layer. Tổng số
+        layer trong mô hình được quy ước là số layer - 1 (không tính input layer).<br>
+        *Mỗi node trong hidden layer và output layer: Liên kết với tất cả các node ở layer trước đó với các hệ số w riêng, Diễn ra 2 bước: tính tổng linear và áp dụng activation function.
+        </li>
+        <li>Thỏa luận về hàm kích hoạt (activation function)<br>
+          * Hàm kích hoạt được sử dụng sau khi tính tổng linear trong neural network, các hàm kích hoạt này thường là các non-linear.<br>
+          * Hàm kích hoạt phải là phi tuyến tính bởi vì nếu hàm kích hoạt tuyến tính ở 1 layer thì layer này hay layer tiếp theo cũng sẽ tuyến tính vì vậy thì có thể góp lại thành 1 layer. Vì hợp của hàm tuyến tính sẽ ra 1 hàm tuyến tính.<br>
+          * Hàm kích hoạt sigmoid có giá trị nằm từ (0,1) và là 1 hàm liên tục. Công thức:  &emsp;<img src="img/siq.svg">, trong đó z là ma trận đầu vào. <br>
+          * Hàm kích hoạt tank có giá trị nằm ở từ (-1,1). Công thức: a = np.tanh(z), trong đó z là ma trận đầu vào.<br>
+          * Hàm tanh và hàm sigmoid thì hàm tanh được hay sử dụng nằm ở lớp ẩn hơn vì nó đưa giá trị về giá trị trung tâm,mean về 0 thay vì đưa về 0.5, dữ liệu nằm ở giữa thì tốt cho lớp kế tiếp. Còn hàm sigmoid thì được lựa chọn làm đầu ra khi bài toán phân loại nhị phân.<br>
+          <br><div class="center">
+            <img src="img/sig_tanh.png" height="70% " width="80%"><br>
+            <span>Minh họa về hàm kích hoạt sigmoid và tanh</span>
+          </div>
+          <br><br>
+          *Nhược điểm của 2 hàm tanh và sigmoid đó là đầu vào dương vô cùng hay âm vô cùng thì đạo hàm của 2 hàm này sẽ gần với 0, điều này sẽ ảnh hưởng tới việc các hệ số tương ứng với cái unit mình đang xét có thể không cập nhật được gì khi sử dụng GD (Vanishing gradient).
+          <br>
+          *Một hàm kích hoạt gần đây được sử dụng rộng rãi đó RELU: Hàm có công thức là: a = max(0,z). Có đạo hàm 1 khi điểm dương và 0 khi điểm âm . Mặc dù có nhược điểm đạo bằng 0 khi điểm âm tuy nhiên có thể khắc phục bằng việc tăng số hidden unit lên.
+          <br>
+          <div class="center">
+            <img src="img/89.png" height="70%" width="80%"><br>
+            <span>Một số hàm kích hoạt phổ biển và đạo hàm kích hoạt</span>
+          </div>
+        </li>
+        <li>
+          Tính toán cụ thể trong mạng nơ-ron hơn:<br>
+          <div class="center"><img src="img/09.png" height="70%" width="80%"><br>
+          <span>Kiến trúc mạng nơ-ron đơn giản</span>
+          </div>
+          <br>
+          *Hình dạng của các layer: nx1 (số lớp ẩn) = 4, nx2 (input) = 3<br>
+          *W1 là trọng số của lớp ẩn thứ 1 có dạng là (nx1,nx2) = (4,3)<br>
+          *b1 có dạng là (nx1,1) = (4,1)<br>
+          *z1 là kết quả của pt: <img src="img/872.svg"> có dạng là (4,3) * (1,4) + (4,1) = (nx1,1) = (4,1).<br>
+          *a1 là kết quả của phương trình z1 có dạng là (nx1,1) = (4,1).<br>
+          *W2 là trọng số lớp ẩn thứ 2 có dạng là (1,nx1) = (1,4)<br>
+          *b2 có dạng (1,1)<br>
+          *z2 có dạng là (1,1)<br>
+          *a2 có dạng là (1,1)<br>
+        </li>
+        <li>
+          Cập nhật trọng số theo phương pháp GD:<br>
+          *Lan truyền tiến(Feedforward): <br><br>
+          &emsp;&emsp;*<img src="img/53.svg"><br>
+          &emsp;&emsp;*<img src="img/67.svg"><br>
+          &emsp;&emsp;*<img src="img/83.svg"><br>
+          &emsp;&emsp;*<img src="img/90.svg"><br>
+          <div class="center">
+            <img src="img/ltt.png" height="70%" width="80%"><br>
+            <span>Lan truyền tiến (Feedforward)</span>
+          </div>
+          *Lan truyền ngược(backforward): <br><br>
+          *Áp dụng chain rule để tính toán đạo hàm.<br><br>
+          &emsp;&emsp;*<img src="img/123.svg"><br>
+          &emsp;&emsp;*<img src="img/1234.svg"><br>
+          &emsp;&emsp;*<img src="img/12345.svg"><br>
+          &emsp;&emsp;*<img src="img/av.svg"><br>
+          &emsp;&emsp;*<img src="img/98.svg"><br>
+          &emsp;&emsp;*<img src="img/74.svg"><br>
+          <div class="center">
+            <img src="img/ltn.png" height="70%" width="80%"><br>
+            <span>Lan truyền ngược(backforward)</span>
+          </div>
+        </li>
+        <li>Khởi tạo trọng số.<br>
+          *Trong mạng nơ-ron , chúng ta cần khởi tạo trọng số ngẫu nhiên, nếu chúng ta khởi tạo trọng số bằng 0 thì quá trình training nó sẽ không hoạt động bởi vì tất cả đơn vị ẩn giống hệt nhau, chính xác là tính toán các hàm như nhau, và tất cả đơn vị ẩn cập nhật như nhau ở từng lần lặp Gradient descent.<br>
+          *Tuy nhiên khởi tạo trọng số ngẫu nhiên quá lớn hoặc quá nhỏ thì ảnh hướng rất lớn tới vấn đế training và vấn Vanishing/ exploding gradient thường thì khởi tạo trọng số theo công thứ He Initialization / Xavier Initialization. <br>
+          *Khởi tạo được chọn tốt có thể: Tăng tốc độ hội tụ của gradient descent và Tăng tỷ lệ hội tụ gradient descent thành lỗi huấn luyện thấp hơn (và tổng quát hóa).
+        </li>
+      </ul>
+    </div>
+    <h4>2. Deep Neural Network</h4>
+    <div>
+      <ul>
+        <li>Chúng ta đã tìm hiểu qua mạng nơ-ron nông thì mạng nơ-ron sâu chính là bản nâng cấp của mạng nơ-ron nông, khi đó số lớp ẩn trong mạng nơ-ron được tăng lên. </li>
+        <li>Deep Neural Network được xây dựng với mục đích mô phỏng hoạt động não bộ phức tạp của con người và được áp dụng vào nhiều lĩnh vực khác nhau, mang lại thành công và những hiệu quả đáng kinh ngạc cho con người.</li>
+        <li>Mọi hoạt động hay tính toán đều tương tự như mạng nơ-ron nông, tuy nhiên deep neural network sẽ khó tính toán hơn 1 chút với số lớp ẩn tăng lên và cần tính toán kĩ lưỡng hơn tránh bị nhầm.</li>
+        <li>Một số ký hiệu mới: "l" chính là số lớp trong mạng, n[l] số nơ-ron của lớp cụ thể nào đó.</li>
+        <li>Trong deep neural network dễ nhầm lẫn nhất là kích thước hình dạng của các tham số khi chúng xây dựng model hoàn toàn bằng tay mà không sử dụng thư viện. Kích thước của W là (n[l],n[l-1]), b là (n[l],1), dW có shape tương tự với W, Z[l],A[l],dZ[l],dA[l] (n[l],m)</li>
+        <li>Một câu hỏi thú vị: Why Deep Representations ? Mạng lưới thần kinh sâu tìm mối quan hệ với dữ liệu (quan hệ đơn giản đến phức tạp). Lớp ẩn đầu tiên có thể đang làm gì, đang cố gắng tìm các hàm đơn giản như xác định các cạnh trong ảnh trên. Và khi chúng ta đi sâu hơn vào mạng, các chức năng đơn giản này kết hợp với nhau để tạo thành các chức năng phức tạp hơn như nhận diện khuôn mặt.</li>
+        <div class="center">
+          <img  src="img/93.png" height="70%" width="90%"><br>
+          <span>Minh họa mô hình deep neural network</span>
+        </div>
+        <li>Các tham số quan trọng: <br>
+          &emsp;*Learning rate.<br>
+          &emsp;*Số lớp ẩn. <br>
+          &emsp;*Số đơn vị ẩn nơ-ron<br> 
+          &emsp;*Số vòng lặp.<br>
+          &emsp;*Hàm kích hoạt<br>
+        </li>
+      </ul>
+    </div>
+    <h4>3. Né tránh vấn đề overfitting trong neural network</h4>
+    <div>
+      <span>Trong các bài toán của machine learning khi ta xây dựng mô hình thì đều có khả năng mô hình của bạn bị overfitting, thì trong bài toán neural network cũng vậy. Trong phần này mình sẽ giới thiệu các phương pháp tránh overfit, mặc dù mình đã có giới thiệu ở chương 1 nếu bạn chưa đọc thì hãy quay lại đọc đã nhé.</span>
+      <ul>
+        <li>Thì cũng là phương pháp thêm tham số tiêu chuẩn (Regularization):</li>
+        <ul>
+          <li>2 chuẩn mà ta có thể thêm vào đó là: L1-norm, L2-norm.</li>
+          <li>Trong bài toán  Shallow neural network điển hình ta sẽ sử dụng logistic regression để biểu diễn regularization<br>
+            * Hàm chi phí:            <img src="img/54.svg"><br>
+            * Khi thêm l1-norm vào:   <img src="img/55.svg"><br>
+            * Khi chúng ta thêm l1-norm vào thì chúng ta sẽ thu được 1 ma trận thưa thớt, chứa các trọng số bằng không mà chúng ta sử dụng L1 để nén mô hình làm cho mô hình đơn giản lại.<br>
+            * Khi thêm l2-norm vào:    <img src="img/56.svg"><br>
+            * L2-norm được sử dụng nhiều hơn.
+          </li>
+          <li>Regularization DNN<br>
+            *Hàm chi phí: <img src="img/01.svg"><br>
+            * Khi thêm l2-norm vào:   <img src="img/65.svg"><br>
+          </li>
+          <li>Câu hỏi: Tại số tiêu chuẩn có thể giúp model đỡ bị overfitting: Nếu lambda quá lớn - nhiều w sẽ gần bằng 0, điều này giúp mạng nơron đơn giản hơn (các bạn có thể coi nó hoạt động gần giống hồi quy logistic. Nếu lambda đủ tốt, nó sẽ giảm một vài trọng số khiến mạng nơron quá khớp. Nếu như chúng ta sử dụng hàm kích hoạt tanh, thì khi lambda quá lớn, w sẽ nhỏ (gần bằng 0) - chúng ta sẽ dùng các phần tuyến  tính của hàm kích hoạt tanh nên hãy đi từ kích hoạt phi tuyến tính tới gần tuyến tính, làm cho mạng nơron thành phân loại gần như tuyến tính.</li>
+
+        </ul>
+        <li>Dropout:</li>
+        <div class="center">
+          <img src="img/dropout.jpg" width="90%" height="80%"><br>
+          <span>Dropout</span>
+        </div>
+        <ul>
+          <li>Chính là loại ngẫu nhiên các đơn vị ra khỏi mạng nơ-ron, sẽ làm như vậy ở mỗi vòng lặp, nếu như vậy chúng ta sẽ làm việc mạng nơ-ron nhỏ hơn.</li>
+          <li>Sử dụng mạng nơron nhỏ hơn giống như có tác dụng điều chuẩn.<br>
+            *Không thể dựa vào một đặc trưng nên chúng ta cần trải rộng các trọng số.<br>
+            *Không thể chỉ ra dropout có tác động tương tự với điều chuẩn L2.<br>
+            *Dropout có thể có keep_prob khác ở mỗi lớp.
+            *Nếu như chúng ta sợ 1 số lớp quá khớp các lớp khác thì chúng ta có keep_prob thấp hơn vài lớp, nếu làm như lày thì khó kiểm định chéo.
+          </li>
+          <li>Kỹ thuật dropout được thực hiện như sau:</li>
+          <ul>
+          <li>Quá trình training: Đối với mỗi lớp ẩn, mỗi example, mỗi vòng lặp, ta sẽ bỏ học 1 cách ngẫu nhiên với xác suất (1 - p) cho mỗi nút mạng.</li>
+          <li>Sử dụng toàn bộ activations, nhưng giảm chúng với tỷ lệ p (do chúng ta bị miss p% hàm activation trong quá trình train).</li></ul>
+          <li>Nếu 1 lớp fully connected có quá nhiều tham số và chiếm hầu hết tham số, các nút mạng trong lớp đó quá phụ thuộc lẫn nhau trong quá trình huấn luyện thì sẽ hạn chế sức mạnh của mỗi nút, dẫn đến việc kết hợp quá mức.</li>
+          <li>Giá trị dropout tốt nhất là 0.2, khoảng dropout cho giá trị chấp nhận được là nằm trong đoạn từ 0 đến 0.5. Nếu dropout lớn hơn 0.5 thì kết quả hàm huấn luyện trả về khá tệ.</li>
+        </ul>
+        <li>Early stopping</li>
+        <div class="center">
+          <img src="img/early-stopping.png" height="70%" width="80%"><br>
+          <span>Early stopping</span>
+        </div>
+        <ul>
+        <li>Early stopping là một trong những chiến lược được sử dụng phổ biến vì nó rất đơn giản và khá hiệu quả. Nó đề cập đến quá trình dừng đào tạo khi lỗi đào tạo không còn giảm nữa nhưng lỗi xác nhận bắt đầu tăng lên.</li>
+        <li>Điều này ngụ ý rằng chúng tôi lưu trữ các thông số có thể đào tạo theo định kỳ và theo dõi lỗi xác thực. Sau khi quá trình đào tạo dừng lại, chúng tôi trả lại các thông số có thể đào tạo về điểm chính xác mà lỗi xác thực bắt đầu tăng lên, thay vì những thông số cuối cùng.</li>
+        <li>Một cách khác để nghĩ về việc dừng sớm là như một thuật toán lựa chọn siêu tham số rất hiệu quả, đặt số kỷ nguyên ở mức tốt nhất tuyệt đối. Về cơ bản, nó hạn chế quy trình tối ưu hóa ở một lượng nhỏ của không gian tham số có thể đào tạo gần với các tham số ban đầu</li>
+        </ul>
+        <li>Batch-normalization</li>
+        <div class="center">
+          <img src="img/normalization.png" height="50%" width="50%"><br>
+          <span>Chuẩn hóa dữ liệu</span>
+        </div>
+        <ul>
+          <li>Chuẩn hóa đầu vào: Chúng ta sẽ chuẩn hóa đầu vào sẽ giúp model hoạt động tốt hơn và thời gian trainnig cũng nhanh hơn.</li>
+          <li>Nếu như không chuẩn hóa thì hàm chi phí sẽ sâu và hình dạng không đồng nhất, tốn thời gian tối ưu.</li>
+          <li>Chúng ta thường ta chỉ chuẩn hóa đầu vào mà không biết có nên cần chuẩn hóa đầu vào của các lớp ẩn hay không ? Có nhé !!!</li>
+          <li>Phương trình: <img src="img/521.svg"> </li>
+          <li>Mặc dù chuẩn hóa batch ở các lớp ẩn có thể giống ở chuẩn hóa đầu vào đưa các giá trị mean = 0 và std = 1, tùy nhiên trong các lớp ẩn chúng ta không mong muốn dữ liệu đều đưa về như vậy, mean std có thể khác đi để tận dụng phi tuyến tính trong activation function. Để kiểm soát vấn đề mean,std chúng ta có thể điều chỉnh 2 tham số gamma và beta  </li>
+          <li>Điều này thêm nhiễu vào giá trị z[l] trong minibatch. Nó giống như dropout, điều này thêm nhiễu vào các kích hoạt của từng lớp ẩn</li>
+          <li>Câu hỏi: Tại sao BN lại hoạt động:<br>
+              * Lý do đầu tiên cũng giống lý do chúng ta chuẩn hóa X.<br>
+              * Lý do thứ hai là chuẩn hóa batch giảm vấn đề thay đổi (dịch chuyển) giá trị đầu vào.
+          </li>
+          <li>Một số ưu điểm BN:<br>
+            *BN tăng tốc đào tạo mạng nơ-ron sâu.<br>
+            *Đối với mini-batch đầu vào, chúng tôi tính toán các số liệu thống kê khác nhau. Điều này giới thiệu một số loại chính quy hóa. Quy định hóa đề cập đến bất kỳ hình thức kỹ thuật / ràng buộc nào hạn chế sự phức tạp của mạng nơ-ron sâu trong quá trình đào tạo.<br>
+            *BN cũng có ảnh hưởng có lợi đến dòng chảy gradient qua mạng. Nó làm giảm sự phụ thuộc của gradient vào quy mô của các tham số hoặc giá trị ban đầu của chúng. Điều này cho phép chúng tôi sử dụng tỷ lệ học tập cao hơn nhiều.
+          </li>
+          <li>Một số nhược điểm BN:
+            <br>
+            *Ước tính không chính xác thống kê lô với kích thước lô nhỏ, làm tăng lỗi mô hình. Trong các tác vụ như dự đoán video, phân đoạn và xử lý hình ảnh y tế 3D, kích thước lô thường quá nhỏ. BN cần số lượng lô đủ lớn<br>
+          </li>
+        </ul>
+      </ul>
+    </div>
+    <h4>4. Tối ưu mô hình</h4>
+    <h5>4.1. Gradient descent</h5>
+    <span>Phần này thì quay lại chương 1 mục số 13 để đọc nhé, mình viết kĩ ở đó rồi nên sẽ không viết lại nữa.</span>
+    <h5>4.2. Cải tiến Gradient descent </h5>
+    <div>
+      <ul>
+        <li>Thuật toán GD theo momentum:</li>
+        <ul>
+          <li>Thông thường GD là mini-bactch hoặc stochastics kết hợp với momentum.</li>
+          <li>Ý tưởng đơn giản đó là tính toán trung bình cộng theo số nhân rồi mới cập nhật trọng với các giá trị mới</li>
+          <li>Và có thêm 1 tham số mới đó beta, beta thường nằm ở 0.9 đến 0.98,  Beta = 0.9 thì thường nó sẽ tính 10 entry cuối,0.98 thì 50, 0.5 thì 2 entry</li>
+          <li>Khi beta này cao thì nó sẽ làm phằng trung bình các điểm dữ liệu bị lệch. Do vậy điều này giảm dao động trong GD, khiến đường dẫn tới cực tiểu nhanh hơn.</li>
+          <li>Công thức tổng quát: <img src="img/41.svg">, <img src="img/555.svg">  </li>
+          <li>Thuật toán momentum được ra đời nhằm khắc phục việc nghiệm của GD rơi vào một điểm local minimum không mong muốn.</li>
+          
+          
+            <img src="img/nomomentum1d.gif"> <img src="img/momentum1d.gif"><br>   
+            <p>Minh họa SGD và SGD with momentum(Nguồn: Machine learning cơ bản)</p>
+        </ul>
+        <li>Thuật toán RMSprop (root mean square prop):</li>
+        <ul>
+          <li>Đây cũng là 1 thuật tăng tốc độ GD, Về cơ bản thì RMSprop hoạt động khá tương tự Momentum</li>
+          <li>RMSprop có khiến hàm chi phí di chuyện chậm theo hướng dọc và nhanh hơn theo phương ngang</li>
+          <li>Công thức: <img src="img/893.svg"></li>
+          <li>Thuật toán RMSprop có thể cho kết quả nghiệm chỉ là local minimum chứ không đạt được global minimum như Momentum. Vì vậy người ta sẽ kết hợp cả 2 thuật toán Momentum với RMSprop cho ra 1 thuật toán tối ưu Adam.</li>
+        </ul>
+        <li>Thuật toán Adam:</li>
+        <ul>
+          <li>Như đã nói ở trên Adam là sự kết hợp của Momentum và RMSprop . Nếu giải thích theo hiện tượng vật lí thì Momentum giống như 1 quả cầu lao xuống dốc, còn Adam như 1 quả cầu rất nặng có ma sát, vì vậy nó dễ dàng vượt qua local minimum tới global minimum và khi tới global minimum nó không mất nhiều thời gian dao động qua lại quanh đích vì nó có ma sát nên dễ dừng lại hơn</li>
+          <li>Công thức:<br>
+            *vdw = (beta1 * vdw) + (1-beta1) * dw, vdb = (beta1 * vdb) + (1 - beta1) * db
+            <br>
+            *sdw = (beta2 * sdw) + (1 - beta2) * dw2 , sdb = (beta2 * sdb) + (1 - beta2) * db2<br>
+            *vdw = vdw / (1-beta1^t),vdb = vdb / (1-beta1^t)<br>
+            *sdw = sdw / (1-beta2^t),sdb = sdb / (1-beta2^t)<br>
+            *w = w - learing_rate * vdw / (sqrt(sdw) + epsilon)
+          </li>
+        </ul>        
+      </ul>
+    </div>
+    <a href="https://github.com/nam157/courses_ML/tree/main/Neural%20Network" style="color: darkblue"  target="_blank">Source code tham khảo</a><br>
+    <span>Còn thiếu nhiều phần sẽ được update sau nhé hihi!!!</span>
   </article>
 </section>
 
-<footer>
-  <p>Update sau nhé!!!!</p>
+<footer style="background-color: #3a97c2">
+  <marquee width="50%">Ở chương này mình đã tổng hợp kiến cơ bản về mạng nơ-ron. Mình sẽ viết blog deep learning sau nó sẽ cụ thể hơn . Mọi thắc mắc gì hoặc thiếu sót gì bạn có thể liên hệ với tôi </marquee>
 </footer>
 
 </body>
