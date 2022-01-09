@@ -301,21 +301,15 @@ footer {
       <h4>
       9. Overfitting - Underfitting
     </h4>
-<<<<<<< HEAD
     <h5>Overfitting:</h5>
-=======
-    <dt>Overfitting:</dt>
->>>>>>> 82182be8f9f00cea7c5ef6b80e350bee82493b21
     <dd>- Là trường hợp quá khớp với tập dữ liệu trainning có nghĩa là những điểm nhiễu trong tập dữ liệu training cũng học,
       trường hợp overfit xảy ra khi tập dữ liệu training quá nhỏ hoặc model có quá nhiều tham số.</dd>
     <dd>- Chi phí lỗi training error thấp mà validation error/test error quá cao thì điều có nghĩa tập dữ liệu overfit.</dd>
     <dd>- Overfitting xảy ra khi phương sai quá lớn</dd>
     <dd>- Để khắc phục vấn đề này thì có thể sử dụng: Regularization, Validation,Thêm dữ liệu training,...</dd>
-<<<<<<< HEAD
+
     <h5>Underfitting:</h5>
-=======
-    <dt>Underfitting:</dt>
->>>>>>> 82182be8f9f00cea7c5ef6b80e350bee82493b21
+
     <dd>- Là trường hợp mô hình chưa khái quá hóa được dữ liệu traning cũng như chưa khái quan hóa tập dữ liệu mới.</dd>
     <dd>- Một mô hình học máy không phù hợp không phải là một mô hình phù hợp và sẽ hiển nhiên vì nó sẽ có hiệu suất kém trên dữ liệu đào tạo. Hoặc là mô hình quá nhỏ</dd>
     <dd>- Chi phí lỗi traning error và validation error/test error đều cao thì có nghĩa là model đang bị underfit</dd>
@@ -330,7 +324,7 @@ footer {
       10. Bias - Variance
     </h4>
       <div>
-<<<<<<< HEAD
+
     <h5>Bias</h5>
     <dd>- nghĩa là độ lệch, biểu thị sự chênh lệch giữa giá trị trung bình mà mô hình dự đoán và giá trị thực tế của dữ liệu</dd>
     <dd>- Low bias: thì ít giả định về hàm mục tiêu</dd>
@@ -339,16 +333,6 @@ footer {
     <dd>- nghĩa là phương sai, biểu thị độ phân tán của các giá trị mà mô hình dự đoán so với giá trị thực tế.</dd>
     <dd>- Model quá phức tạp và gây ra overfitting và chi phí lỗi trên tập huấn luyện thấp mà trên tập kiểm tra thì cao</dd>
     <h5>Trade off bias và phương sai</h5>
-=======
-    <dt>Bias</dt>
-    <dd>- nghĩa là độ lệch, biểu thị sự chênh lệch giữa giá trị trung bình mà mô hình dự đoán và giá trị thực tế của dữ liệu</dd>
-    <dd>- Low bias: thì ít giả định về hàm mục tiêu</dd>
-    <dd>- High bias: thì rất nhiều giả định về hàm mục tiêu và gây ra underfit và gây ra chi phí lỗi cao giữa cả 2 tập huấn luyện và tập kiểm tra</dd>
-    <dt>Variance</dt>
-    <dd>- nghĩa là phương sai, biểu thị độ phân tán của các giá trị mà mô hình dự đoán so với giá trị thực tế.</dd>
-    <dd>- Model quá phức tạp và gây ra overfitting và chi phí lỗi trên tập huấn luyện thấp mà trên tập kiểm tra thì cao</dd>
-    <dt>Trade off bias và phương sai</dt>
->>>>>>> 82182be8f9f00cea7c5ef6b80e350bee82493b21
     <dd>- Các thuật toán học máy tuyến tính thường có độ chệch cao nhưng độ sai lệch thấp.</dd>
     <dd>- Các thuật toán học máy phi tuyến thường có độ chệch thấp nhưng độ sai lệch cao.</dd>
     <dd>- Không có gì thoát khỏi mối quan hệ giữa độ chệch và phương sai trong học máy. Tăng độ chệch sẽ làm giảm phương sai. Tăng phương sai sẽ làm giảm độ chệch.</dd>
@@ -631,11 +615,8 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
           <p>
               Các hàm tổn thất đóng một vai trò quan trọng trong bất kỳ mô hình thống kê nào - chúng xác định một mục tiêu mà hiệu suất của mô hình được đánh giá dựa trên và các tham số mà mô hình học được được xác định bằng cách giảm thiểu một hàm tổn thất đã chọn. Các hàm tổn thất xác định thế nào là một dự đoán tốt và không. Nói tóm lại, việc chọn đúng hàm tổn thất sẽ quyết định mức độ ổn định của công cụ ước tính của bạn.
           </p>
-<<<<<<< HEAD
           <h5>Loss functions for regression</h5>
-=======
-          <dt>Loss functions for regression</dt>
->>>>>>> 82182be8f9f00cea7c5ef6b80e350bee82493b21
+
           <p>Hồi quy liên quan đến việc dự đoán một giá trị cụ thể có bản chất liên tục. Ước tính giá nhà hoặc dự đoán giá cổ phiếu là những ví dụ về hồi quy bởi vì người ta hướng tới việc xây dựng một mô hình dự đoán một số lượng có giá trị thực.</p>
           <ul>
             <li>Mean Squared Error (MSE)</li>
@@ -663,7 +644,6 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
               <li>MAE phức tạp hơn cần lập trình tuyến tính thì mới dễ dàng tìm được gradient, và MAE mạnh mẽ với các điểm outlier vì nó không bình phương.</li>
               <li>Ưu điểm: Chúng ta lấy giá trị tuyết đối, tất cả sai số sẽ được tính theo 1 thang đo tuyến tính, do đó không giống như MSE, không đặt quá nhiều trọng số vào outlier để giảm thang đó chung</li>
               <li>Nhược điểm: Nếu chúng ta quan tâm tới các giá trị outlier thì MAE sẽ không hiệu quả. Nhưng khi các điểm ngoại lai cực hiếm gặp (như trong đường cong hình chuông), độ đo RMSE lại tốt hơn và được sử dụng phổ biến hơn.</li>
-<<<<<<< HEAD
 
             </ul>
             <span>Code</span>
@@ -691,23 +671,6 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
           
 
           <h5>Loss functions for classification</h5>
-=======
-
-            </ul>
-            <span>Code</span>
-            <div>
-              <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
-                <code class="language-python" style="font-family: Consolas;text-align: left">
-                  def mae(yHat, y):
-                      return np.sum(np.absolute(yHat - y)) / y.size
-                </code>
-              </pre>
-        </div>
-          </ul>
-          
-
-          <dt>Loss functions for classification</dt>
->>>>>>> 82182be8f9f00cea7c5ef6b80e350bee82493b21
           <p>Các vấn đề phân loại liên quan đến việc dự đoán kết quả đầu ra của lớp rời rạc. Nó liên quan đến việc phân chia tập dữ liệu thành các lớp khác nhau và duy nhất dựa trên các tham số khác nhau để một bản ghi mới và chưa thấy có thể được đưa vào một trong các lớp. VD: Thư có thể được phân loại là thư rác hoặc không phải thư rác. Chúng ta hãy xem xét các hàm mất mát có thể được sử dụng cho các bài toán phân loại. </p>
           <ul>
             <li>Binary Cross Entropy Loss</li>
@@ -742,11 +705,9 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
           15. Các phương thức đánh giá hiệu suất mô hình.
       </h4>
       <div>
-<<<<<<< HEAD
+
           <h5>* Regression</h5>
-=======
-          <dt>* Regression</dt>
->>>>>>> 82182be8f9f00cea7c5ef6b80e350bee82493b21
+
           <p>Để đánh giá hiệu suất của mô hình hồi quy chúng ta không đưa ra độ chính của mô hình mà chúng ta cần tính toán chi phí lỗi giữa giá trị thực tế và giá trị dự đoán</p>
           <ul>
               <li>Các hàm mất mát hồi quy kể trên câu số 14</li>
@@ -778,11 +739,8 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
               </ul>
           </ul>
 
-<<<<<<< HEAD
           <h5>* Classification</h5>
-=======
-          <dt>* Classification</dt>
->>>>>>> 82182be8f9f00cea7c5ef6b80e350bee82493b21
+
           <p>Để đánh giá của mô hình phân loại thì chúng ta có rất nhiều phương thức để đánh giá</p>
           <ul>
               <li>Ma trận nhầm lẫn</li>
