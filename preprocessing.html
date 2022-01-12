@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <link rel="icon" href="img/Machine%20learning.png" type="image/x-icon">
-<title>Machine Learning cơ bản</title>
+    <link href="source/prism.css" rel="stylesheet"/>
+<title>Hệ thống kiến thức Machine Learning</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -80,11 +81,12 @@ footer {
 </style>
 </head>
 <body>
+    <script src="source/prism.js"></script>
 <div class="wrapper-masthead">
       <div class="container">
         <header  class="masthead clearfix" style="padding: 5px;color: #29bdff ; background-image:url(img/background.png)">
           <div class="site-info">
-            <h2 class="site-name" style="text-align: center">Machine Learning cơ bản</h2>
+            <h2 class="site-name" style="text-align: center">Hệ thống kiến thức Machine Learning</h2>
             <p style="text-align: center;">Trong blog này, chúng ta sẽ tổng hợp toàn bộ kiến thức cơ bản về Học Máy</p>
               <div style="text-align: right">
                   <a href="https://www.facebook.com/nam.150720/" target="_blank" style="color: #29bdff">Contact</a> &nbsp;
@@ -108,7 +110,7 @@ footer {
         <li><a href="classifi_cluster.html" style="color: darkblue">IV. Phân loại - Phân cụm</a></li><br>
         <li><a href="neural.html" style="color: darkblue">V. Neural Network</a></li>
     </ul>
-      <br><br>
+      <br><hr><br>
       <ul>
           <h4>Gợi ý một số khóa học</h4>
           <ul>
@@ -116,12 +118,17 @@ footer {
               <li style="color: darkblue">2. <a href="https://www.udemy.com/course/feature-selection-for-machine-learning/" target="_blank" style="color: darkblue">Feature Selection for Machine Learning</a> </li>
           </ul>
       </ul>
+      <hr>
       <ul>
+
       <h4>Gợi ý một số cuốn sách</h4>
       <ul>
           <li><a href="https://www.amazon.com/Feature-Engineering-Machine-Learning-Principles/dp/1491953241" style="color: darkblue" target="_blank">1.Feature Engineering for Machine Learning</a></li>
       </ul>
       </ul>
+      <hr>
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61d9284c4df19ea7"></script>
+      <div class="addthis_inline_share_toolbox_ch26"></div>
   </nav>
 
   <article>
@@ -137,7 +144,7 @@ footer {
       <h4>1. Xử lý dữ liệu bị khuyết (Missing Data)</h4>
 
       <div>
-          <dt>Một số khái niệm về giả định dữ liệu:</dt>
+          <h5>Một số khái niệm về giả định dữ liệu:</h5>
           <dd>- Dữ liệu khuyết không phải ngẫu nhiên (MNAR), nếu có 1 cơ chế hoặc có 1 lý do nào đó khiến các giá trị bị khuyết được đưa vào tập dữ liệu.</dd>
           <dd>- Dữ liệu khuyết hoàn toàn ngẫu nhiên  (MCAR), dữ liệu khuyết hoàn toàn là ngẫu nhiên với xác suất khuyết là như nhau.</dd>
           <dd>- Dữ liệu khuyết ngẫu nhiên (MCR), xác suất của quan sát bị thuyết phụ thuộc vào thông tin sẵn có, nó độc lập các biến khác trong tập dữ liệu</dd>
@@ -147,7 +154,7 @@ footer {
           </div>
           <br>
 
-          <dt>Các phương pháp xử lý dữ liệu bị khuyết:</dt>
+          <h5>Các phương pháp xử lý dữ liệu bị khuyết:</h5>
           <div class="center">
           <img src="img/missing_data.jpg" width="650" height="350"><br>
           <p>Các kỹ thuật gán missing data</p>
@@ -236,7 +243,7 @@ footer {
               </ul><br>
               <span>Code</span>
               <div style="text-align: left">
-                  <pre style="background-color: rgb(11, 26, 69);text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style="text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         #Sử dụng thư viện feature_engine sẽ tiện hơn vì nó trả về dataframe dễ dàng đánh giá
                         from feature_engine.encoding import OneHotEncoder
@@ -259,7 +266,7 @@ footer {
               </ul><br>
               <span>Code</span>
               <div style="text-align: left">
-                  <pre style="background-color: rgb(11, 26, 69);text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style="text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         #Sử dụng thư viện feature_engine sẽ tiện hơn vì nó trả về dataframe dễ dàng đánh giá
                         from feature_engine.encoding import OneHotEncoder
@@ -282,7 +289,7 @@ footer {
               </ul><br>
               <span>Code</span>
               <div style="text-align: left">
-                  <pre style="background-color: rgb(11, 26, 69);text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style="text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         #Sử dụng thư viện feature_engine sẽ tiện hơn vì nó trả về dataframe dễ dàng đánh giá
                         from feature_engine.encoding import OrdinalEncoder
@@ -303,7 +310,7 @@ footer {
               </ul><br>
               <span>Code</span>
               <div style="text-align: left">
-                  <pre style="background-color: rgb(11, 26, 69);text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style="text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         #Sử dụng thư viện feature_engine sẽ tiện hơn vì nó trả về dataframe dễ dàng đánh giá
                         from feature_engine.encoding import OrdinalEncoder
@@ -324,7 +331,7 @@ footer {
               </ul><br>
               <span>Code</span>
               <div style="text-align: left">
-                  <pre style="background-color: rgb(11, 26, 69);text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style="text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         #Sử dụng thư viện feature_engine sẽ tiện hơn vì nó trả về dataframe dễ dàng đánh giá
                         from feature_engine.encoding import CountFrequencyEncoder
@@ -352,7 +359,7 @@ footer {
               </ul><br>
               <span>Code</span>
               <div style="text-align: left">
-                  <pre style="background-color: rgb(11, 26, 69);text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style="text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         def find_skewed_boundaries(df, variable, distance):
                             # tính các ranh giới bên ngoài có outlier
@@ -383,7 +390,7 @@ footer {
               </ul><br>
               <span>Code</span>
               <div style="text-align: left">
-                  <pre style="background-color: rgb(11, 26, 69);text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style="text-align: left; color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         from feature_engine.outliers import Winsorizer
                         windsoriser = Winsorizer(
@@ -412,7 +419,7 @@ footer {
               </ul><br>
               <span>Code</span>
               <div>
-                  <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         from sklearn.preprocessing import StandardScaler
                         scaler = StandardScaler()
@@ -438,7 +445,7 @@ footer {
               </ul><br>
               <span>Code</span>
               <div>
-                  <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style="color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         from sklearn.preprocessing import MinMaxScaler
                         scaler = MinMaxScaler()
@@ -465,7 +472,7 @@ footer {
       </div><br>
       <span>Code</span>
       <div>
-          <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+          <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                 <code class="language-python" style="font-family: Consolas;text-align: left">
                     scaler_mean = StandardScaler(with_mean=True, with_std=False)
 
@@ -521,7 +528,7 @@ footer {
                   </ul><br>
                   <span>Code</span>
                   <div>
-                  <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         from feature_engine.selection import (DropConstantFeatures,DropDuplicateFeatures)
                         pipe = Pipeline([
@@ -540,7 +547,7 @@ footer {
                   </ul><br>
                   <span>Code</span>
                   <div>
-                  <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         from feature_engine.selection import DropCorrelatedFeatures
                         sel = DropCorrelatedFeatures(
@@ -565,7 +572,7 @@ footer {
                   </ul><br>
                   <span>Code</span>
                   <div>
-                  <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         from sklearn.feature_selection import SelectFromModel
                         from sklearn.linear_model import Lasso
@@ -592,7 +599,7 @@ footer {
                   <br>
                   <span>Code</span>
                   <div>
-                  <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         # build initial model using all the features
                         model = GradientBoostingRegressor(n_estimators=10, max_depth=4, random_state=10)
@@ -620,7 +627,7 @@ footer {
                   </ul><br>
                   <span>Code</span>
                   <div>
-                  <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                  <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                     <code class="language-python" style="font-family: Consolas;text-align: left">
                         # build initial model using all the features
                         model = GradientBoostingRegressor(n_estimators=10, max_depth=4, random_state=10)
@@ -655,13 +662,13 @@ footer {
                       </ul><br>
                       <span>Code</span>
                       <div>
-                          <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                          <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                             <code class="language-python" style="font-family: Consolas;text-align: left">
-                                #Gọi thư viện feature_engine
-                                from feature_engine.discretisation import EqualWidthDiscretiser
-                                #Chọn 8 khoảng bằng nhau và lựa chọn biến để rời rạc hóa
-                                disc = EqualWidthDiscretiser(bins=8, variables = ['age', 'fare'])
-                                disc.fit(X_train)
+                    #Gọi thư viện feature_engine
+                    from feature_engine.discretisation import EqualWidthDiscretiser
+                    #Chọn 8 khoảng bằng nhau và lựa chọn biến để rời rạc hóa
+                    disc = EqualWidthDiscretiser(bins=8, variables = ['age', 'fare'])
+                    disc.fit(X_train)
                             </code>
                           </pre>
                       </div>
@@ -673,13 +680,13 @@ footer {
                       </ul><br>
                       <span>Code</span>
                       <div>
-                          <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                          <pre style=" color: whitesmoke; padding: 5px;width: auto; ">
                             <code class="language-python" style="font-family: Consolas;text-align: left">
-                                #Gọi thư viện feature_engine
-                                from feature_engine.discretisation import EqualFrequencyDiscretiser
-                                #Chọn 10 khoảng theo quan sát và lựa chọn biến để rời rạc hóa
-                                disc = EqualFrequencyDiscretiser(q=10, variables = ['age', 'fare'])
-                                disc.fit(X_train)
+                    #Gọi thư viện feature_engine
+                    from feature_engine.discretisation import EqualFrequencyDiscretiser
+                    #Chọn 10 khoảng theo quan sát và lựa chọn biến để rời rạc hóa
+                    disc = EqualFrequencyDiscretiser(q=10, variables = ['age', 'fare'])
+                    disc.fit(X_train)
                             </code>
                           </pre>
                       </div>
@@ -691,12 +698,12 @@ footer {
                       <br>
                       <span>Code</span>
                       <div>
-                          <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                          <pre style="color: whitesmoke; padding: 5px;width: auto; ">
                             <code class="language-python" style="font-family: Consolas;text-align: left">
-                                #Gọi thư viện feature_engine
-                                from feature_engine.discretisation import KBinsDiscretizer
-                                disc = KBinsDiscretizer(n_bins=4, encode='ordinal', strategy='kmeans')
-                                disc.fit(X_train[['age', 'fare']])
+                    #Gọi thư viện feature_engine
+                    from feature_engine.discretisation import KBinsDiscretizer
+                    disc = KBinsDiscretizer(n_bins=4, encode='ordinal', strategy='kmeans')
+                    disc.fit(X_train[['age', 'fare']])
                             </code>
                           </pre>
                       </div>
@@ -710,17 +717,17 @@ footer {
                       </ul>
                       <span>Code</span>
                       <div>
-                          <pre style="background-color: rgb(11, 26, 69); color: whitesmoke; padding: 5px;width: auto; ">
+                          <pre style="color: whitesmoke; padding: 5px;width: auto; ">
                             <code class="language-python" style="font-family: Consolas;text-align: left">
-                                from feature_engine.discretisation import DecisionTreeDiscretiser
-                                #Lựa chọn tham số: cv là kiểm định chéo, variables có biến rời rạc hóa, param_grid các tham số cần tối ưu
-                                treeDisc = DecisionTreeDiscretiser(cv=10, scoring='accuracy',
-                                                                   variables=['age', 'fare'],
-                                                                   regression=False,
-                                                                   param_grid={'max_depth': [1, 2, 3],
-                                                                              'min_samples_leaf':[10,4]})
+                from feature_engine.discretisation import DecisionTreeDiscretiser
+                #Lựa chọn tham số: cv là kiểm định chéo, variables có biến rời rạc hóa, param_grid các tham số cần tối ưu
+                treeDisc = DecisionTreeDiscretiser(cv=10, scoring='accuracy',
+                                                        variables=['age', 'fare'],
+                                                        regression=False,
+                                                        param_grid={'max_depth': [1, 2, 3],
+                                                        'min_samples_leaf':[10,4]})
 
-                                treeDisc.fit(X_train, y_train)
+                treeDisc.fit(X_train, y_train)
                             </code>
                           </pre>
                       </div>

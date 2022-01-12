@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <link rel="icon" href="img/Machine%20learning.png" type="image/x-icon">
-
-<title>Machine Learning cơ bản</title>
+    <link href="source/prism.css" rel="stylesheet"/>
+<title>Hệ thống kiến thức Machine Learning</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -90,11 +90,12 @@ footer {
 </style>
 </head>
 <body>
+<script src="source/prism.js"></script>
 <div class="wrapper-masthead">
       <div class="container">
         <header  class="masthead clearfix" style="padding: 5px;color: #29bdff ;background-image:url(img/background.png)">
           <div class="site-info">
-            <h2 class="site-name" style="text-align: center">Machine Learning cơ bản</h2>
+            <h2 class="site-name" style="text-align: center">Hệ thống kiến thức Machine Learning</h2>
             <p style="text-align: center; color: #29bdff;"> Trong blog này, chúng ta sẽ tổng hợp toàn bộ kiến thức cơ bản về Học Máy</p>
               <div style="text-align: right">
 
@@ -121,8 +122,8 @@ footer {
         <li><a href="neural.html"  style="color: darkblue">V. Neural Network</a></li>
     </ul>
     
-
-      <br><br>
+      
+      <br><hr><br>
       <ul>
           <h4>Gợi ý một số khóa học</h4>
           <ul>
@@ -134,6 +135,7 @@ footer {
             <li style="color: darkblue" >5. <a href="https://www.coursera.org/learn/ml-regression" target="_blank" style="color: darkblue">Machine Learning: Regression</a></li>
           </ul>
       </ul>
+      <hr>
       <ul>
         <h4>Gợi ý một số cuốn sách</h4>
         <ul>
@@ -142,6 +144,9 @@ footer {
           <li><a href="https://www.amazon.com/Deep-Learning-Adaptive-Computation-Machine/dp/0262035618/ref=pd_sbs_2/131-3703266-5310848?pd_rd_w=qXJuJ&pf_rd_p=3676f086-9496-4fd7-8490-77cf7f43f846&pf_rd_r=TP4FRDNXN6YPQWGF6DK9&pd_rd_r=87642d24-8edb-4959-b4d2-2dd6bf60aec5&pd_rd_wg=9iAe4&pd_rd_i=0262035618&psc=1 "style="color: darkblue" target="_blank">3. Deep Learning (Adaptive Computation and Machine Learning series)(Ian Goodfellow)</a></li>
         </ul>
       </ul>
+      <hr>
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61d9284c4df19ea7"></script>
+      <div class="addthis_inline_share_toolbox_ch26"></div>
   </nav>
 
   <article>
@@ -214,18 +219,18 @@ footer {
     </h4>
     <p>
     <dl>
-    <dt>Regression (Hồi quy):</dt>
+    <h5>Regression (Hồi quy):</h5>
       <dd>- Cơ bản là đầu ra của bài toán chính là dữ liệu liên tục</dd>
       <dd>- Một thuật toán Regression có thể dự đoán giá trị rời rạc nhưng giá trị rời rạc với đại lương nguyên </dd>
     <dd>- VD: Một căn nhà rộng x và có y phòng ngủ và cách trung tâm thành phố z sẽ có giá là bao nhiêu ?</dd>
-    <dt>Classification</dt>
+    <h5>Classification</h5>
       <dd>- Kết quả đầu ra chính là dữ liệu rời rạc (nhãn hoặc xác suất nhãn) </dd>
     <dd>- Một thuật toán classification có thể dự đoán giá trị liên tục nhưng giá trị liên tục ở dạng xác suất đối với nhãn</dd>
     <dd>VD: Gmail xác định xem một email có phải là spam hay không; các hãng tín dụng xác định xem một khách hàng có khả năng thanh toán nợ hay không</dd>
-    <dt>Deep neural network</dt>
+    <h5>Deep neural network</h5>
     <dd>- Cơ bản có thể hiểu là mạng nơ-ron nông(Logistic Regression) được nâng cấp số lớp ẩn lên </dd>
     <dd>- DNN có thể thực hiện nhiệm vụ 2 bài toán classification và regression </dd>
-    <dt>Điều quan trọng là phép đáng giá của Regression và Classification</dt>
+    <h5>Điều quan trọng là phép đáng giá của Regression và Classification</h5>
     <dd>- Dự đoán Classification có thể đánh giá bằng độ chính xác (accuracy),...</dd>
     <dd>- Dự đoán Regression có thể đánh giá bằng root mean squared error hoặc các hàm chi phí khác </dd>
   </dl>
@@ -233,7 +238,7 @@ footer {
     <h4>
       5. Unsupervised: Clustering,Auto Encoder Decoder, Luật Kết Hợp
     </h4>
-    <dt>Clustering:</dt>
+    <h5>Clustering:</h5>
     <dd>- Nhiệm vụ là chia dữ liệu vào cũng 1 nhóm, và các điểm trong nhóm đó giống nhau và khác với điểm dữ liệu trong nhóm khác.Về cơ bản là nó là tập hợp các đối tượng trên cơ sở giống nhau và không giống nhau giữa chúng</dd>
     <dd>VD: Ví dụ: phân nhóm khách hàng dựa trên hành vi mua hàng. Điều này cũng giống như việc ta đưa cho một đứa trẻ rất nhiều mảnh ghép với các hình thù và màu sắc khác nhau, ví dụ tam giác, vuông, tròn với màu xanh và đỏ, sau đó yêu cầu trẻ phân chúng thành từng nhóm. Mặc dù không cho trẻ biết mảnh nào tương ứng với hình nào hoặc màu nào, nhiều khả năng chúng vẫn có thể phân loại các mảnh ghép theo màu hoặc hình dạng</dd>
     <div class = 'center'>
@@ -241,10 +246,10 @@ footer {
       <br>
       <p>Ví dụ về phân cụm (3 cụm)</p>
     </div>
-    <dt>Luật Kết Hợp:</dt>
+    <h5>Luật Kết Hợp:</h5>
     <dd>- Là bài toán mà khi chúng ta muốn khám phá ra một quy luật dựa trên nhiều dữ liệu cho trước</dd>
     <dd>VD: Ví như những khách hàng mua mặt hàng này sẽ mua thêm mặt hàng kia; hoặc khan giả xem phim này sẽ có xu hướng thích xem phim kia, dựa vào đó ta có thể xây dựng những hệ thống gợi ý khách hàng (Recommendation System) nhằm thúc đẩy nhu cầu mua sắm hoặc xem phim….</dd>
-    <dt>Auto Encoder Decoder:</dt>
+    <h5>Auto Encoder Decoder:</h5>
     <dd>- Autoencoder là một mô hình mạng nơ-ron có thể được sử dụng để học cách biểu diễn dữ liệu thô được nén. Một bộ Autoencoder có 2 phần đó là encoder và decoder sub-models. Encoder cố gằng nén đầu vào và Decoder cố gắng tái tạo đầu vào</dd>
     <h4>
       6. Clustering and Classification
@@ -261,12 +266,12 @@ footer {
     </div>
       <h4>7. Học ngoại tuyến và Học trực tuyến</h4>
       <div>
-          <dt>Học ngoại tuyến:</dt>
+          <h5>Học ngoại tuyến:</h5>
           <dd>- Hay còn được gọi học theo batch là cách học không có khả năng gia tăng, mô hình sẽ được huấn luyện với tất cả các dữ liệu khả dụng.</dd>
           <dd>- Học như này sẽ tốt rất nhiều thời gian và tài nguyên tính toán và hệ thống hoàn tất mọi việc học khi triển khai vào thực tế</dd>
           <dd>- Nếu như ta có thêm dữ liệu mới và muốn cập nhật thì ta cần phải đào tạo lại hệ thống mới bao gồm dữ liệu cũ và dữ liệu mới</dd>
           <dd>- May mắn là hiện tại việc đào tạo và đánh giá hệ thống không quá khó khăn và hoàn toàn tự động</dd>
-          <dt>Học trực tuyến</dt>
+          <h5>Học trực tuyến</h5>
           <dd>- Nó khác với lại học ngoại tuyến đó là mô hình có khả năng gia tăng tuần tự truyền dữ liệu theo từng điểm hoặc lô nhỏ (mini-batch)</dd>
           <dd>- Phương pháp còn phù hợp với tài nguyên tính toán bị giới hạn</dd>
           <dd>- Các thuật toán học trực tuyến cũng có thể huấn luyện các hệ thống có dữ liệu khổng lồ mà không chứa hết trong bộ nhớ chính đó còn được gọi cái tên là: học out-of-core</dd>
@@ -276,7 +281,7 @@ footer {
         8. Model based learning và Instance based learning
     </h4>
       <div>
-          <dt>Instance-based learning</dt>
+          <h5>Instance-based learning</h5>
           <dd>- Còn được gọi là học trên mẫu và chúng ta có thể hiểu cách đơn giản là học thuộc lòng các mẫu </dd>
           <dd>- Để khai quát với các mẫu dữ liệu mới thì ta đi tính độ tương đồng so với dữ liệu mẫu đã học</dd>
           <div class="center">
@@ -285,7 +290,7 @@ footer {
               <p>Ví dụ về Instance-based learning</p>
           </div>
 
-          <dt>Model-based learning</dt>
+          <h5>Model-based learning</h5>
           <dd>- Còn được gọi là học theo mô hình, xây dựng một mô hình từ dự liệu rồi dùng mô hình đó để đưa ra dự đoán đó là một cách khác để khái quát hóa dữ liệu </dd>
           <div class = 'center'>
               <img src="img/model_based.jpg" width= 80% height= 70%>
@@ -296,13 +301,15 @@ footer {
       <h4>
       9. Overfitting - Underfitting
     </h4>
-    <dt>Overfitting:</dt>
+    <h5>Overfitting:</h5>
     <dd>- Là trường hợp quá khớp với tập dữ liệu trainning có nghĩa là những điểm nhiễu trong tập dữ liệu training cũng học,
       trường hợp overfit xảy ra khi tập dữ liệu training quá nhỏ hoặc model có quá nhiều tham số.</dd>
     <dd>- Chi phí lỗi training error thấp mà validation error/test error quá cao thì điều có nghĩa tập dữ liệu overfit.</dd>
     <dd>- Overfitting xảy ra khi phương sai quá lớn</dd>
     <dd>- Để khắc phục vấn đề này thì có thể sử dụng: Regularization, Validation,Thêm dữ liệu training,...</dd>
-    <dt>Underfitting:</dt>
+
+    <h5>Underfitting:</h5>
+
     <dd>- Là trường hợp mô hình chưa khái quá hóa được dữ liệu traning cũng như chưa khái quan hóa tập dữ liệu mới.</dd>
     <dd>- Một mô hình học máy không phù hợp không phải là một mô hình phù hợp và sẽ hiển nhiên vì nó sẽ có hiệu suất kém trên dữ liệu đào tạo. Hoặc là mô hình quá nhỏ</dd>
     <dd>- Chi phí lỗi traning error và validation error/test error đều cao thì có nghĩa là model đang bị underfit</dd>
@@ -317,11 +324,12 @@ footer {
       10. Bias - Variance
     </h4>
       <div>
-    <dt>Bias</dt>
+
+    <h5>Bias</h5>
     <dd>- nghĩa là độ lệch, biểu thị sự chênh lệch giữa giá trị trung bình mà mô hình dự đoán và giá trị thực tế của dữ liệu</dd>
     <dd>- Low bias: thì ít giả định về hàm mục tiêu</dd>
     <dd>- High bias: thì rất nhiều giả định về hàm mục tiêu và gây ra underfit và gây ra chi phí lỗi cao giữa cả 2 tập huấn luyện và tập kiểm tra</dd>
-    <dt>Variance</dt>
+    <h5>Variance</h5>
     <dd>- nghĩa là phương sai, biểu thị độ phân tán của các giá trị mà mô hình dự đoán so với giá trị thực tế.</dd>
     <dd>- Model quá phức tạp và gây ra overfitting và chi phí lỗi trên tập huấn luyện thấp mà trên tập kiểm tra thì cao</dd>
     <dt>Trade off bias và phương sai</dt>
@@ -355,29 +363,31 @@ footer {
                   </ul>
                   <br>
                   <span>Code</span>
+                  
                   <div>
-                    <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
-                      <code class="language-python" style="font-family: Consolas;text-align: left">
-            def update_weights_l2_norm(X,y,w,step_size,num_iters,l2_penlaty):  #Cập nhật trọng số khi thêm l2-norm vào.
+                    <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                      <code class="language-python"  style="font-family: Consolas;text-align: left">
+            def update_weights_l2_norm(X,y,w,step_size,num_iters,l2_penlaty): #Cập nhật trọng số khi thêm l2-norm vào
                   costs = []
                   for _ in range(num_iters):
-                  y_pr = predict(X,w)
-                  error = y_pr - y
-                  for i in range(len(w)):
-                      if i == 0:   #Khi lambda = 0 thì bài toán trở bài linear regression
-                          devivative  = feature_devivative(X[:,i],w[i],l2_penlaty,error,True)
-                      else:        #Khi lambda != 0 thì toán trở thành linear ridge
-                          devivative  = feature_devivative(X[:,i],w[i],l2_penlaty,error,False)
-                      w[i] = w[i] - step_size * devivative
-                      cost = loss_function(X,y,w,l2_penlaty)
+                    y_pr = predict(X,w)
+                    error = y_pr - y
+                    for i in range(len(w)):
+                        if i == 0:   #Khi lambda = 0 thì bài toán trở bài linear regression
+                            devivative  = feature_devivative(X[:,i],w[i],l2_penlaty,error,True)
+                        else:        #Khi lambda != 0 thì toán trở thành linear ridge
+                            devivative  = feature_devivative(X[:,i],w[i],l2_penlaty,error,False)
+                        w[i] = w[i] - step_size * devivative
+                        cost = loss_function(X,y,w,l2_penlaty)
                   costs.append(cost)
                   return w,costs
+          
                       </code>
                     </pre>
               </div>
               <span>Code</span>
                   <div>
-                    <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                    <pre style="color: rgb(2, 2, 2); padding: 1px;width: auto; ">
                       <code class="language-python" style="font-family: Consolas;text-align: left">
                 def update_weights_l1_norm(feature_matrix, output, initial_weights, l1_penalty, tolerance):
                         m,n = feature_matrix.shape
@@ -433,7 +443,7 @@ kết quả bài làm trên phần thứ hai là khả quan, ta có thể tự t
                   </div>
                   <span>Code</span>
                   <div>
-                    <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                    <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
                       <code class="language-python" style="font-family: Consolas;text-align: left">
                         from sklearn.model_selection import cross_val_score
                         def kford(model,X,y):
@@ -523,7 +533,7 @@ chi phí (như MSE), cho đến khi thuật toán hội tụ tại điểm cực
           </div>
           <span>Code</span>
             <div>
-              <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+              <pre style="color: rgb(2, 2, 2); padding: 1px;width: auto; ">
                 <code class="language-python" style="font-family: Consolas;text-align: left">
                   def update_weight(X,y,w,step_size,num_iters):
                         costs = []                                             #Lưu lại các chi phí
@@ -553,8 +563,8 @@ chi phí (như MSE), cho đến khi thuật toán hội tụ tại điểm cực
               <br>
               <p>Hàm lồi và hàm không lồi</p>
           </div>
-          <p>
-              Các biến thể của Gradient Descent:
+          <h5>
+              Các biến thể của Gradient Descent:</h5>
               <dt>- Batch Gradient Descent</dt>
           <dd>- Để tính toán GD thì chúng ta tính toán dựa trên hàm chi phí và việc tính toán này thì BGD sẽ tính toán trên toàn bộ tập dữ liệu trong 1 epochs</dd>
           <dd>- Việc sử dụng toàn bộ data để huấn luyện nó sẽ làm cho thuật toán chạy rất là chậm rất lâu để hội tụ</dd>
@@ -590,7 +600,7 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
           <dd>- Tuy nhiên thuật toán này cũng khó vượt qua các điểm cực tiểu địa phương</dd>
           <dd>- Mini-batch cũng giống như SGD nó cũng xu hướng tiến tới điểm cực tiêu tuy nhiên hàm chí sẽ có thể tăng hoặc giảm liên tục và khi về điểm cực tiêu thì nó không dừng mà nhảy qua nhảy lại</dd>
           <dd>- Số lượng mẫu mini-batch sẽ được lấy ở khoảng 1 - n </dd>
-          </p>
+          
             <div class = 'center'>
               <img src="img/mini-batch.jpeg" width= 80% height= 70%>
               <br>
@@ -605,7 +615,8 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
           <p>
               Các hàm tổn thất đóng một vai trò quan trọng trong bất kỳ mô hình thống kê nào - chúng xác định một mục tiêu mà hiệu suất của mô hình được đánh giá dựa trên và các tham số mà mô hình học được được xác định bằng cách giảm thiểu một hàm tổn thất đã chọn. Các hàm tổn thất xác định thế nào là một dự đoán tốt và không. Nói tóm lại, việc chọn đúng hàm tổn thất sẽ quyết định mức độ ổn định của công cụ ước tính của bạn.
           </p>
-          <dt>Loss functions for regression</dt>
+          <h5>Loss functions for regression</h5>
+
           <p>Hồi quy liên quan đến việc dự đoán một giá trị cụ thể có bản chất liên tục. Ước tính giá nhà hoặc dự đoán giá cổ phiếu là những ví dụ về hồi quy bởi vì người ta hướng tới việc xây dựng một mô hình dự đoán một số lượng có giá trị thực.</p>
           <ul>
             <li>Mean Squared Error (MSE)</li>
@@ -619,7 +630,7 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
             </ul>
             <span>Code</span>
             <div>
-              <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+              <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
                 <code class="language-python" style="font-family: Consolas;text-align: left">
                   def MSE(yHat, y):
                       return np.sum((yHat - y)**2) / y.size
@@ -637,17 +648,29 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
             </ul>
             <span>Code</span>
             <div>
-              <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+              <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
                 <code class="language-python" style="font-family: Consolas;text-align: left">
-                  def mae(yHat, y):
+                  def MAE(yHat, y):
                       return np.sum(np.absolute(yHat - y)) / y.size
                 </code>
               </pre>
-        </div>
+            </div>
+            <li>So sánh MAE và MSE</li>
+            <ul>
+              <li>Để tìm điểm cực tiểu của một hàm số ta nghĩ ngay tới việc tìm đạo hàm số rồi mới đi tìm điểm mà tại đó có đạo hàm bằng 0. Như vậy sẽ có bước đạo thì MSE sẽ dễ dàng đạo hàm hơn MAE. Tuy nhiên MAE nó sẽ đưa hiệu quả tốt hơn khi trong tập dữ liệu có các điểm outlier. </li>
+              <li>Trong MSE, chi phí lỗi bằng e, nếu e là chi phí lỗi cao thì lúc này e bình phương vô cùng lớn (e>1). Nếu bậc của e càng lớn thì giá trị hàm loss vô cùng lớn. Nếu như có điểm outlier trong tập dữ liệu, giá trị e vô cùng lớn, có thể tiến tới vô cùng.</li>
+              <li>Trong MAE, chi phí lỗi bằng e, nếu e là chi phí lỗi cao thì e được lấy giá trị tuyết đối cũng lớn, tuy nhỏ sẽ nhỏ hơn nhiều khi e bình phương. </li>
+              <li>Do đó khi tối ưu loss function, L2 phạt mạnh hơn với các điểm outlier và model sẽ bị kéo về
+                phía outlier hơn. Do đó MSE bị ảnh hưởng bởi outlier và L1 tốt hơn đối với các dữ liệu có outlier.
+                </li>
+              <li>Tiêu chí xây dựng hàm loss fucntion là không âm và loss càng nhỏ thì model càng tốt với dữ liêu.
+                Từ đầu đến giờ có lẽ các bạn vẫn thắc mắc tại sao trong các hàm loss chỉ dùng trị tuyệt đối, bậc 2,
+                thế bậc 2n thì sao? Câu trả lời là bạn chọn bậc càng cao thì càng bị ảnh hưởng bởi outlier</li>
+            </ul>
           </ul>
           
 
-          <dt>Loss functions for classification</dt>
+          <h5>Loss functions for classification</h5>
           <p>Các vấn đề phân loại liên quan đến việc dự đoán kết quả đầu ra của lớp rời rạc. Nó liên quan đến việc phân chia tập dữ liệu thành các lớp khác nhau và duy nhất dựa trên các tham số khác nhau để một bản ghi mới và chưa thấy có thể được đưa vào một trong các lớp. VD: Thư có thể được phân loại là thư rác hoặc không phải thư rác. Chúng ta hãy xem xét các hàm mất mát có thể được sử dụng cho các bài toán phân loại. </p>
           <ul>
             <li>Binary Cross Entropy Loss</li>
@@ -658,7 +681,7 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
             </ul>
             <span>Code:</span>
             <div>
-              <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+              <pre style="color: rgb(2, 2, 2); padding: 1px;width: auto; ">
                 <code class="language-python" style="font-family: Consolas;text-align: left">
                   def CrossEntropy(yHat, y):
                       if y == 1:
@@ -682,7 +705,9 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
           15. Các phương thức đánh giá hiệu suất mô hình.
       </h4>
       <div>
-          <dt>* Regression</dt>
+
+          <h5>* Regression</h5>
+
           <p>Để đánh giá hiệu suất của mô hình hồi quy chúng ta không đưa ra độ chính của mô hình mà chúng ta cần tính toán chi phí lỗi giữa giá trị thực tế và giá trị dự đoán</p>
           <ul>
               <li>Các hàm mất mát hồi quy kể trên câu số 14</li>
@@ -714,7 +739,8 @@ các mẫu ngẫu nhiên được gọi là các mini-batch</dd>
               </ul>
           </ul>
 
-          <dt>* Classification</dt>
+          <h5>* Classification</h5>
+
           <p>Để đánh giá của mô hình phân loại thì chúng ta có rất nhiều phương thức để đánh giá</p>
           <ul>
               <li>Ma trận nhầm lẫn</li>

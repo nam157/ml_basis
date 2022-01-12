@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <link rel="icon" href="img/Machine%20learning.png" type="image/x-icon">
-<title>Machine Learning cơ bản</title>
+  <link href="source/prism.css" rel="stylesheet"/>
+<title>Hệ thống kiến thức Machine Learning</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -80,11 +81,12 @@ footer {
 </style>
 </head>
 <body>
+  <script src="source/prism.js"></script>
 <div class="wrapper-masthead">
       <div class="container">
         <header  class="masthead clearfix" style="padding: 5px;color: #29bdff ; background-image:url(img/background.png)">
           <div class="site-info">
-            <h2 class="site-name" style="text-align: center">Machine Learning cơ bản</h2>
+            <h2 class="site-name" style="text-align: center">Hệ thống kiến thức Machine Learning</h2>
             <p style="text-align: center;">Trong blog này, chúng ta sẽ tổng hợp toàn bộ kiến thức cơ bản về Học Máy</p>
               <div style="text-align: right">
                 <a href="https://www.facebook.com/nam.150720/" style="color: #29bdff">Contact</a> &nbsp;
@@ -108,7 +110,7 @@ footer {
       <li><a href="classifi_cluster.html" style="color: darkblue">IV. Phân loại - Phân cụm</a></li><br>
       <li><a href="neural.html" style="color: darkblue">V. Neural Network</a></li>
     </ul>
-    <br><br>
+    <br><hr><br>
     <ul>
       <h4>Gợi ý một số khóa học</h4>
       <ul>
@@ -119,6 +121,7 @@ footer {
         <li style="color: darkblue" >5. <a href="https://www.coursera.org/learn/ml-classification" target="_blank" style="color: darkblue">Machine Learning: Classification</a></li><br>
         <li style="color: darkblue" >5. <a href="https://www.coursera.org/learn/ml-regression" target="_blank" style="color: darkblue">Machine Learning: Regression</a></li>
       </ul>
+      <hr>
       <ul>
         <h4>Gợi ý một số cuốn sách</h4>
         <ul>
@@ -128,6 +131,9 @@ footer {
         </ul>
       </ul>
     </ul>
+    <hr>
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61d9284c4df19ea7"></script>
+      <div class="addthis_inline_share_toolbox_ch26"></div>
   </nav>
 
   <article>
@@ -155,7 +161,7 @@ footer {
         <li>(1) Phương trình pháp tuyến: <img src="img/pt.svg"> </li><br>
         <span>Code</span>
                   <div>
-                    <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+                    <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
                       <code class="language-python" style="font-family: Consolas;text-align: left">
                         #Khởi tạo ngẫu nhiên X,y
                         X = 2 * np.random.rand(100, 1)
@@ -175,7 +181,7 @@ footer {
         <li>(2) Gradient Descent: <img src="img/gd_pt.svg"> </li>
         <span>Code</span>
         <div>
-          <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+          <pre style="color: rgb(2, 2, 2); padding: 1px;width: auto; ">
             <code class="language-python" style="font-family: Consolas;text-align: left">
                         def update_weight(X,y,w,step_size,num_iters):
                             costs = []
@@ -210,7 +216,7 @@ footer {
       </div>
       <span>Code</span>
         <div>
-          <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+          <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
             <code class="language-python" style="font-family: Consolas;text-align: left">
                   from sklearn.preprocessing import PolynomialFeatures
                   #Tăng lên bậc 2
@@ -236,7 +242,7 @@ footer {
         <li>(2) Gradient Descent: <img src="img/gd_pt.svg"> </li><br>
         <span>Code</span>
         <div>
-          <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+          <pre style="color: rgb(2, 2, 2); padding: 1px;width: auto; ">
             <code class="language-python" style="font-family: Consolas;text-align: left">
               #Đạo hàm hàm mất mát ridge
               def feature_devivative_ridge(X,w,lambdaa,error,flag):
@@ -276,7 +282,7 @@ footer {
         <div class="center"><img src="img/lasso_w.jpg"></div>
         <span>Code</span>
         <div>
-          <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+          <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
             <code class="language-python" style="font-family: Consolas;text-align: left">
               #Tính toán w 
               def lasso_step(i, feature_matrix, output, weights, l1_penalty):
@@ -343,7 +349,7 @@ footer {
         </div>
         <span>Code</span>
         <div>
-          <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+          <pre style="color: rgb(2, 2, 2); padding: 1px;width: auto; ">
             <code class="language-python" style="font-family: Consolas;text-align: left">
               N = 1000    
               def makeData(x):    
@@ -401,7 +407,7 @@ footer {
         <li>Cây quyết định không đặt giả định về dữ liệu huấn luyện (ngược lại với các mô hình tuyến tính). Nếu ko có ràng buộc thì thuật toán sẽ thích ứng với dữ liệu quá mức. Mô hình như này thường đường gọi là mô hình phi tham số, không phải là không có tham số mà nó số lượng tham số ko tham gia quyết định trước khi huấn luyện mà để mô hình khớp dữ liệu 1 các tự do. Để tránh vấn overfit ta cần đặt ràng buộc thì việc này như chúng ta đã biết đó là tiêu chuẩn</li>
         <span>Code</span>
         <div>
-          <pre style="background-color: rgb(211, 230, 169); color: rgb(2, 2, 2); padding: 1px;width: auto; ">
+          <pre style=" color: rgb(2, 2, 2); padding: 1px;width: auto; ">
             <code class="language-python" style="font-family: Consolas;text-align: left">
               #1 Importing the libraries
               import numpy as np
